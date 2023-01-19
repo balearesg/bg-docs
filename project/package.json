@@ -1,0 +1,16 @@
+{
+  "name": "@bg/docs",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@beyond-js/react-widgets": "^18.20.4",
+    "@mdx-js/mdx": "^2.2.1",
+    "@mdx-js/react": "^2.2.1",
+    "socket.io-client": "^4.5.3"
+  },
+  "devDependencies": {
+    "@beyond-js/local": "^0.1.2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "contents/esp",
+    "code": {
+        "mdx": {
+            "files": ["*"]
+        },
+        "ts": {
+            "files": ["*"]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"name": "home/page",
+	"widget": {
+		"route": "/${content}",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "main-page"
+		}
+	}
+}

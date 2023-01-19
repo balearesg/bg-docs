@@ -1,0 +1,14 @@
+{
+	"name": "home/subpage",
+	"widget": {
+		"route": "/${content}/${sub}",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "sub-page"
+		}
+	}
+}
