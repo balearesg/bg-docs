@@ -14,6 +14,7 @@
 	},
 	"params": {
 		"sidebarItems": [
+			{ "label": "How to use", "path": "/how-to-use" },
 			{ "label": "Compilacion QCH", "path": "/compilacion-qch" },
 			{ "label": "Plugins", "path": "/plugins" }
 		]
