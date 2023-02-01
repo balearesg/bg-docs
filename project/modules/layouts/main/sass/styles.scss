@@ -23,14 +23,15 @@
 		align-items: center;
 
 		.logo h1 {
-			padding: 0 0 0 20px;
+			padding: 0 0 0 10px;
 			color: var(--text-on-primary);
-			font-size: 24px;
+			font-size: 20px;
 			line-height: 1;
 			letter-spacing: 0;
 			font-weight: 500;
 		}
 		.toggle__btn.beyond-icon-button {
+			padding: 0 1rem 0 0;
 			position: relative;
 			top: auto;
 			left: auto;
