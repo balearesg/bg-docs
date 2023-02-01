@@ -1,10 +1,10 @@
-PASOS PARA ACTUALIZAR ENTORNO DE DESARROLLO DE QCH
+# PASOS PARA ACTUALIZAR ENTORNO DE DESARROLLO DE QCH
 
-1.- Descargar respositorio: https://source.cloud.google.com/socites-customers/qch_app branch master
+1.- Descargar [respositorio](https://source.cloud.google.com/socites-customers/qch_app) branch `master`
 
-2.- Ingresar en cloud : https://console.cloud.google.com/compute/instances
+2.- Ingresar en [clound](https://console.cloud.google.com/compute/instances)
 
-3.- Seleccionar proyecto: jida-services-apps
+3.- Seleccionar proyecto: `jida-services-apps`
 
 4.- Visualizar VM jida-service-dev
 
@@ -32,7 +32,11 @@ PASOS PARA ACTUALIZAR ENTORNO DE DESARROLLO DE QCH
 
 16.- En el cloud, ya parado en el directorio indicado, realizar un git pull origin master. Esto actualizara los archivos y estara lista la compilacion.
 
-NOTA 1: Existen unos archivos que se generan en la compilacion los cuales deben ser ajustados, este archivo es el config.js, por lo que este archivo no debe eliminarse del repositorio y tampoco debe copiarse el que se encuentra en el directorio builds a menos que se haya realizado un ajuste que modifique este archivo.
+### NOTA 1:
+
+Existen unos archivos que se generan en la compilacion los cuales deben ser ajustados, este archivo es el config.js, por lo que este archivo no debe eliminarse del repositorio y tampoco debe copiarse el que se encuentra en el directorio builds a menos que se haya realizado un ajuste que modifique este archivo.
 Otros de los archivos que no deben eliminarse del repositorio son: .htaccess, apple-app-site-association, policies y terms.
 
-NOTA 2: Para asegurarnos de que el codigo estará limpio, es recomendable primero en el repositorio eliminar los archivos y hacer un push, esto limpiar los archivos que esten en el repo) Sin eliminar los archivos que se indican en la NOTA 1.
+### NOTA 2:
+
+Para asegurarnos de que el codigo estará limpio, es recomendable primero en el repositorio eliminar los archivos y hacer un push, esto limpiar los archivos que esten en el repo) Sin eliminar los archivos que se indican en la NOTA 1.

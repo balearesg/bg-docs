@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Contents from '@bg/docs/contents';
 
-const DEFAULT_CONTENT = 'One';
+const DEFAULT_CONTENT = 'NotFound';
 
 export /*bundle*/
 function View({ uri }) {

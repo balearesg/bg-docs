@@ -1,9 +1,9 @@
 // IMPORTS
-import { default as __example } from './mdx/one.mdx';
-import { default as three } from './mdx/three.mdx';
-import { default as __secondExample } from './mdx/second-example.mdx';
+import { default as __notFound } from './mdx/not-found.mdx';
+import { default as __compilacionQch } from './mdx/compilacion-qch/compilacion-qch.mdx';
+import { default as __plugins } from './mdx/plugins/plugins.mdx';
 
 // EXPORTS
-export /*bundle*/ const GettingStarted = __example;
-export /*bundle*/ const OneSub = __secondExample;
-export /*bundle*/ const Three = three;
+export /*bundle*/ const NotFound = __notFound;
+export /*bundle*/ const CompilacionQch = __compilacionQch;
+export /*bundle*/ const Plugins = __plugins;

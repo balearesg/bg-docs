@@ -14,9 +14,8 @@
 	},
 	"params": {
 		"sidebarItems": [
-			{ "label": "Doc one", "path": "/" },
-			{ "label": "Doc two", "path": "/one", "subPath": "/sub" },
-			{ "label": "Doc three", "path": "/getting-started" }
+			{ "label": "Compilacion QCH", "path": "/compilacion-qch" },
+			{ "label": "Plugins", "path": "/plugins" }
 		]
 	},
 	"deployment": {

@@ -119,7 +119,7 @@ En este caso el template que debemos usar es el siguiente:
             label: 'Nombre de Sub pagina',
             path: "/primera-parte-del-nombre-del-export",
             "subPath": "/  segunda-parte-del-nombre-del-export"
-        s}
+        }
     ]
 }
 ```
