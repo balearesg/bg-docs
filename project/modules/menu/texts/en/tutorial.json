@@ -1,0 +1,9 @@
+{
+    "en": {
+        "/docs/tutorial/start": "Introduction",
+        "/docs/tutorial/first-module": "First module",
+        "/docs/tutorial/backend": "Backend",
+        "/docs/tutorial/bridge": "Bridge",
+        "/docs/tutorial/routing": "Routing"
+    }
+}
