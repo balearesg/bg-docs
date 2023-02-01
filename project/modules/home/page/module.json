@@ -7,6 +7,10 @@
 			"path": "/widget/ts",
 			"files": ["*"]
 		},
+		"sass": {
+			"path": "/widget/sass",
+			"files": ["*"]
+		},
 		"element": {
 			"name": "main-page"
 		}

@@ -1,15 +1,8 @@
 .sidebar {
-    &__list {
-        margin: 0;
-        padding: 0;
-        li {
-            padding: 1rem;
-            color: var(--text-on-primary);
-            list-style-type: none;
-            cursor: pointer;
-        }
+    li {
+        padding: 1rem;
+        color: var(--text-on-primary);
     }
-
     .beyond-element-image {
         max-width: 220px;
         width: 100%;

@@ -12,6 +12,12 @@
 	"modules": {
 		"path": "modules"
 	},
+	"params": {
+		"sidebarItems": [
+			{"label": "Doc one", "path": "/"},
+			{"label": "Doc two", "path": "/one", "subPath": "/sub"}
+		]
+	},
 	"deployment": {
 		"distributions": [
 			{
