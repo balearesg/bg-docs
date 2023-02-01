@@ -1,0 +1,41 @@
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+}
+.sidebar__list li {
+  padding: 1rem;
+  color: var(--text-on-primary);
+  list-style-type: none;
+  cursor: pointer;
+}
+.sidebar .beyond-element-image {
+  max-width: 220px;
+  width: 100%;
+}
+.sidebar .beyond-element-image img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar__header {
+  display: flex;
+  align-items: center;
+}
+.sidebar__header .logo h1 {
+  padding: 0 0 0 10px;
+  color: var(--text-on-primary);
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.sidebar__header .toggle__btn.beyond-icon-button {
+  padding: 0 1rem 0 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3NcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNDO0VBQ0M7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUlGO0VBQ0M7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7O0FBR0Y7RUFDQztFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBIiwiZmlsZSI6IiJ9 */

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,200;1,300;1,400;1,500;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+:root {
+  --font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Poppins", sans-serif;
+  --title-font: "Poppins", serif;
+  --gray-base: #000000;
+  --gray-darker: #333333;
+  --gray-dark: #707070;
+  --gray: #d3d3d3;
+  --gray-variant: #ededed;
+  --gray-light: #dfe0e2;
+  --gray-lighter: #f7f7f7;
+  --success: #22bb33;
+  --warning: #f7c700;
+  --error: #fb8787;
+  --border-error: #ff0c0c;
+  --info: hsla(211, 88%, 53%, 1);
+  --border-primary: 20px;
+  --border-secondary: 8px;
+  --primary: #004959;
+  --primary-dark: #002130;
+  --primary-light: #3c7586;
+  --primary-accent: #39A9DC;
+  --text-on-primary: #343434;
+  --secondary: #87c544;
+  --secondary-dark: #87c544;
+  --secondary-light: #baf874;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #343434;
+  --background: #FFFFFF;
+  --text-color: var(--gray-darker);
+  --surface:#F7F7F7;
+  --element-bg: #fff;
+  --border: #E7E7E7;
+  --border-variant: #E1E5EF;
+  --text: #FFFFFFDE;
+  --preload-bg: var(--secondary);
+  --input-bg: #FFFFFF;
+  --border-color: var(--border);
+  --icon-color: var(--primary);
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #39A9DC;
+    --primary-dark: #013248;
+    --primary-light: #3C7586;
+    --primary-accent: #39A9DC;
+    --text-on-primary: #FFFFFF;
+    --secondary: #87C544;
+    --secondary-dark: #55940A;
+    --secondary-light: #BAF874;
+    --secondary-accent: #F7C700;
+    --text-on-secondary: #EDEDED;
+    --background: #002130;
+    --text-color: var(--gray-darker);
+    --element-bg: #fff;
+    --border: transparent;
+    --border-variant: #E1E5EF;
+    --text: #FFFFFFDE;
+    --surface: #2D485A;
+    --icon-color: #fff;
+    --input-bg: #002130;
+    --border-color: var(--primary-dark);
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+
+html[data-beyond-mode=light] {
+  --primary: #004959;
+  --primary-dark: #002130;
+  --primary-light: #3c7586;
+  --primary-accent: #39A9DC;
+  --text-on-primary: #343434;
+  --secondary: #87c544;
+  --secondary-dark: #87c544;
+  --secondary-light: #baf874;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #343434;
+  --background: #FFFFFF;
+  --text-color: var(--gray-darker);
+  --surface:#F7F7F7;
+  --element-bg: #fff;
+  --border: #E7E7E7;
+  --border-variant: #E1E5EF;
+  --text: #FFFFFFDE;
+  --preload-bg: var(--secondary);
+  --input-bg: #FFFFFF;
+  --border-color: var(--border);
+  --icon-color: var(--primary);
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+html[data-beyond-mode=dark] {
+  --primary: #39A9DC;
+  --primary-dark: #013248;
+  --primary-light: #3C7586;
+  --primary-accent: #39A9DC;
+  --text-on-primary: #FFFFFF;
+  --secondary: #87C544;
+  --secondary-dark: #55940A;
+  --secondary-light: #BAF874;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #EDEDED;
+  --background: #002130;
+  --text-color: var(--gray-darker);
+  --element-bg: #fff;
+  --border: transparent;
+  --border-variant: #E1E5EF;
+  --text: #FFFFFFDE;
+  --surface: #2D485A;
+  --icon-color: #fff;
+  --input-bg: #002130;
+  --border-color: var(--primary-dark);
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+html {
+  background: var(--background);
+}
+ul,
+ol {
+  padding: 0 0.5rem;
+  width: 100%;
+}
+.page__container {
+  width: 100%;
+  padding: 0 1.2rem;
+}
+* {
+  font-family: var(--font-family);
+}

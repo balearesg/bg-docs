@@ -1,0 +1,31 @@
+.sidebar li {
+  padding: 1rem;
+  color: var(--text-on-primary);
+}
+.sidebar .beyond-element-image {
+  max-width: 220px;
+  width: 100%;
+}
+.sidebar .beyond-element-image img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar__header {
+  padding: 16px 16px 0 !important;
+  display: flex;
+  align-items: center;
+}
+.sidebar__header .logo h1 {
+  margin: 16px 0 0;
+  color: var(--text-on-primary);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.sidebar__header .toggle__btn.beyond-icon-button {
+  position: relative;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndpZGdldFxcc2Fzc1xcc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0k7RUFDSTtFQUNBOztBQUVKO0VBQ0k7RUFDQTs7QUFDQTtFQUNJO0VBQ0E7O0FBR1I7RUFDSTtFQUNBO0VBQ0E7O0FBQ0E7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUo7RUFDSSIsImZpbGUiOiIifQ== */
