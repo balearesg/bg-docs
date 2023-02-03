@@ -1,0 +1,13 @@
+{
+    "name": "components/html",
+    "code": {
+        "ts": {
+            "path": "/code/ts",
+            "files": ["*"]
+        },
+        "sass": {
+            "path": "/code/scss",
+            "files": ["*"]
+        }
+    }
+}
