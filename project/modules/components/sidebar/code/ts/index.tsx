@@ -5,13 +5,12 @@ import { DropdownSidebar } from "./sidebar";
 interface Props extends Partial<HTMLElement> {
   logo?: JSX.Element;
   onChange?: (isOpen: boolean) => void;
-  setIsOpen: any;
-  isOpen: boolean;
   items: any;
+  children: any
 }
 
 export /*bundle*/ function SidebarHeader(
-  props: PropsWithChildren<Props>
+  props: Props
 ): JSX.Element {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const cls: string = isOpen ? "main-content expand" : "main-content ";

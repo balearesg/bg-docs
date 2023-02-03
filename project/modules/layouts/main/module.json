@@ -1,5 +1,11 @@
 {
   "name": "layout/main",
+  "platforms": ["web"],
+  "txt": {
+    "path": "/txt",
+    "multilanguage": true,
+    "files": "*"
+  },
   "widget": {
     "is": "layout",
     "element": {

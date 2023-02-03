@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "./link";
-import { useTexts } from "@beyond/docs/store";
-
+import { useTexts } from '@bg/docs/hooks';
 interface ISpecs {
     items: string[];
 }
@@ -16,7 +15,7 @@ const Item = ({ href, texts }) => {
 };
 
 export /*bundle*/ function NextLinks({ items }: ISpecs) {
-    const [ready, texts] = useTexts("@beyond/docs/layout/menu");
+    const [ready, texts] = useTexts("@bg/docs/layout/main");
     if (!ready) return null;
     const output = items.map((href, i) => <Item texts={texts} key={`${href}.${i}`} href={href} />);
     // items

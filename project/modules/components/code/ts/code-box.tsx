@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Code } from './code';
-import { AppIconButton } from '@beyond/docs/ui/icons';
 import { Clipboard } from './clipboard';
 export /*bundle*/ function CodeBox({ title, language, children }) {
 	return (

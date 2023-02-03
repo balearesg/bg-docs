@@ -1,9 +1,9 @@
 import React from 'react'
 
-export function TitleDoc() : JSX.Element {
+export function TitleDoc({ title }): JSX.Element {
   return (
     <h1>
-        Documentación
+      {title}
     </h1>
   )
 }

@@ -1,12 +1,11 @@
 .main-content {
     width: calc(100% - 80px);
     margin-left: 80px;
-    display: flex;
     position: relative;
     margin-top: 60px;
     transition: all 200ms ease-in-out;
-    padding: 16px;
     color: var(--text-on-primary);
+    float: right;
     &.expand {
         width: calc(100% - 300px);
         margin-left: 300px;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppIconButton } from '@beyond/docs/ui/icons';
+import { BeyondIconButton } from '@bgroup/ui/icon';
 
 export function Clipboard({ text, message }) {
 	const ref = React.useRef(null);
@@ -46,7 +46,7 @@ export function Clipboard({ text, message }) {
 	return (
 		<div>
 			<div className="clipboard__container" data-text={text} ref={ref} onClick={onClick}>
-				<AppIconButton icon="copy" />
+				<BeyondIconButton icon="copy" />
 				<span className="action-copied">Copied</span>
 			</div>
 		</div>

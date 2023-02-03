@@ -1,15 +1,20 @@
 {
-	"name": "home/page",
+	"name": "main-page",
+	"platforms": ["web"],
 	"widget": {
 		"route": "/${content}",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"sass": {
 			"path": "/widget/sass",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "main-page"

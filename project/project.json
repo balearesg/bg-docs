@@ -7,16 +7,32 @@
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",
-		"supported": ["en", "es"]
+		"supported": [
+			"en",
+			"es"
+		]
 	},
 	"modules": {
 		"path": "modules"
 	},
 	"params": {
 		"sidebarItems": [
-			{ "label": "How to use", "path": "/how-to-use" },
-			{ "label": "Compilacion QCH", "path": "/compilacion-qch" },
-			{ "label": "Plugins", "path": "/plugins" }
+			{
+				"label": "How to use",
+				"path": "/how-to-use"
+			},
+			{
+				"label": "Compilacion QCH",
+				"path": "/compilacion-qch"
+			},
+			{
+				"label": "Plugins",
+				"path": "/plugins"
+			},
+			{
+				"label": "Components",
+				"path": "/components"
+			}
 		]
 	},
 	"deployment": {

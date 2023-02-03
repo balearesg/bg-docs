@@ -1,5 +1,4 @@
-import { string } from "prop-types";
-import React from "react";
+import React, { LegacyRef } from "react";
 interface IProps {
     src: string;
     className?: string;
@@ -8,7 +7,7 @@ interface IProps {
 interface IRef {
     ref: HTMLPictureElement | null;
 }
-export /*bundle*/ const SVGImage = React.forwardRef(({ src, className, name = "picture" }: IProps, ref) => {
+export /*bundle*/ const SVGImage = React.forwardRef(({ src, className, name = "picture" }: IProps, ref: LegacyRef<HTMLElement>) => {
     return (
         <picture
             ref={ref}

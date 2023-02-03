@@ -2,7 +2,7 @@ import * as React from "react";
 
 interface Props {
     children: string | number;
-    type: string;
+    type?: string;
 }
 
 export /*bundle*/ function PreTitle({ children, type = "h1" }: Props) {
