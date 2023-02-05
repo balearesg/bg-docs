@@ -1,14 +1,20 @@
-:host-context(html[data-beyond-mode="light"]) {
+@media (prefers-color-scheme: light) {
+  
   .code-container {
+    background: var(--app-editor-bg);
+    display: flex;
+    align-items: center;
+    background: #f5f7ff;
+    padding: 0 15px;
+    justify-content: space-between;
     code, pre {
       background: #f5f7ff;
       font-size: .9rem;
     }
 
     pre {
-      overflow-y: hidden;
-      overflow-x: auto;
-      padding: 15px;
+  
+      padding: 15px 0;
     }
 
     code[class*="language-"],

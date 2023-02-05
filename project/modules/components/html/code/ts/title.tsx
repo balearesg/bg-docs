@@ -34,5 +34,5 @@ export /*bundle*/ function Title(props: Props) {
 
     specs.id = id;
 
-    return <Selector {...specs}>{content}</Selector>;
+    return <Selector className="title-doc" {...specs}>{content}</Selector>;
 }

@@ -1,5 +1,6 @@
 // IMPORTS
-import { Title } from '@bg/docs/components/html';
+import { Title, Info, Link } from '@bg/docs/components/html';
+import { Code } from '@bg/docs/code';
 
 import { default as __notFound } from './mdx/not-found.mdx';
 import { default as __compilacionQch } from './mdx/compilacion-qch/compilacion-qch.mdx';

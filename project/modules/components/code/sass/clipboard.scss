@@ -1,7 +1,7 @@
 .action-copied {
 	position: absolute;
-	top: 1rem;
-	right: 3rem;
+	top: 0.5rem;
+    right: 2.5rem;
 	padding: 0.5rem;
 	background: rgba(0, 0, 0, 0.7);
 	border-radius: var(--border-radius-base);
@@ -23,14 +23,12 @@
 
 .clipboard__container {
 	svg {
-		fill: var(--app-accent-color);
+		fill: var(--text-on-primary);
 	}
 }
 .code-container.has-clipboard {
 	position: relative;
 	.clipboard__container {
-		position: absolute;
-		right: 1rem;
-		top: 0;
+	
 	}
 }

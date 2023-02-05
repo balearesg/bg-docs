@@ -1,0 +1,13 @@
+.link {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--primary);
+    letter-spacing: 0;
+    line-height: 1;
+    text-decoration-line: none;
+    font-weight: 400;
+    &:hover {
+        text-decoration-line: underline;
+        color: var(--primary-light);
+    }
+}

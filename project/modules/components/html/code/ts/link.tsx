@@ -11,12 +11,9 @@ interface IAttrs {
 
 export /*bundle*/
 function Link(props) {
-    const onClick = (event) => {
-        event.preventDefault();
-        routing.pushState(props.href);
-    };
+  
     return (
-        <a onClick={onClick} {...props}>
+        <a  href={props.href} target="_blank" className="link">
             {props.children}
         </a>
     );

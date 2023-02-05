@@ -1,23 +1,23 @@
-:host-context(html[data-beyond-mode="dark"]) {
+@media (prefers-color-scheme: dark) {
   .code-container {
+    background: var(--app-editor-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
     /**
    * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
    * Based on https://github.com/chriskempson/tomorrow-theme
    * @author Rose Pritchard
    */
     code:not(.inline-code, .inline), pre {
-      background: var(--app-editor-bg);
-      padding: 15px;
+   
+      padding: 15px 0;
       font-size: .8rem;
     }
 
     code, pre {
       font-size: .9rem;
-    }
-
-    pre {
-      overflow-y: hidden;
-      overflow-x: auto;
     }
 
     code[class*="language-"]:not(.inline-code),
@@ -27,7 +27,7 @@
       font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
       font-size: 14px;
       text-align: left;
-      white-space: pre;
+      white-space: pre-wrap;
       word-spacing: normal;
       word-break: normal;
       word-wrap: normal;
