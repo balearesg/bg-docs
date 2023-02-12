@@ -1,0 +1,18 @@
+{
+	"name": "layout-login",
+	"platforms": ["web"],
+	"widget": {
+		"is": "layout",
+		"element": {
+			"name": "layout-login"
+		},
+		"sass": {
+			"path": "scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
+}

@@ -19,6 +19,7 @@
 		}
 	}
 	&__header {
+		padding: 1rem 1.5rem;
 		display: flex;
 		align-items: center;
 
@@ -28,7 +29,17 @@
 			font-size: 20px;
 			line-height: 1;
 			letter-spacing: 0;
-			font-weight: 500;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			.badge {
+				font-size: 1rem;
+				background: var(--primary-light);
+				border-radius: 30px;
+				padding: 0.4rem 0.8rem;
+			}
 		}
 		.toggle__btn.beyond-icon-button {
 			padding: 0 1rem 0 0;

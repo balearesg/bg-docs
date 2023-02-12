@@ -4,8 +4,7 @@ import { TitleDoc } from './title-doc';
 import { Item } from './item';
 import config from '@bg/docs/config';
 import { SubItem } from './sub-item';
-import { useTexts } from '@bg/docs/hooks';
-import { module } from "beyond_context";
+import { URI, routing } from '@beyond-js/kernel/routing';
 
 declare global {
 	namespace JSX {
@@ -15,18 +14,24 @@ declare global {
 	}
 }
 export /*bundle*/
-	function Layout(): JSX.Element {
+function Layout(): JSX.Element {
 	const { sidebarItems } = config.params;
-	// const [ready, texts] = useTexts(module.specifier);
-	// console.log("🚀 ~ file: index.tsx:21 ~ Layout ~ texts", texts)
+
+	const user = JSON.parse(localStorage.getItem('session-jadmin'));
+	// TODO
+	const uri = new URI('/auth/login');
+	if (!user) routing.redirect(uri);
+
 	const output = sidebarItems.map((item, index: number) => {
 		if (!!item.children) return <SubItem key={index} item={item} />;
 		return <Item item={item} key={index} />;
 	});
 	//if (!ready) return;
 	return (
-		<SidebarHeader items={output} logo={<TitleDoc title={"title"} />}>
-			<beyond-layout-children />
-		</SidebarHeader>
+		<div>
+			<SidebarHeader items={output} logo={<TitleDoc />}>
+				<beyond-layout-children />
+			</SidebarHeader>
+		</div>
 	);
 }

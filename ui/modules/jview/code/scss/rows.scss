@@ -1,0 +1,124 @@
+@import "~template/sass/variables";
+.jview-component {
+  .list__item--row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 15px;
+    &:not(&:last-child) {
+      border-bottom: 1px solid #d1d8f599;
+    }
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    &.no-event {
+      pointer-events: none;
+    }
+    &:hover {
+      background-color: var(--gray-lighter);
+    }
+    .beyond-icon {
+      width: 20px;
+      height: 20px;
+      fill: var(--primary);
+      color: var(--primary);
+    }
+    .item__main-detail {
+      text-transform: lowercase;
+      font-size: 15px;
+      -webkit-margin-after: 0;
+      margin-block-end: 0;
+      -webkit-margin-before: 0;
+      margin-block-start: 0;
+      color: var(--primary-dark);
+      font-weight: 600;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .item__content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      .column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        .item__detail {
+          flex-basis: 40%;
+        }
+      }
+    }
+
+    .item__detail {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #757575;
+      .item__detail__title {
+        font-weight: 600;
+        color: #757575;
+        min-width: -webkit-fit-content;
+        min-width: -moz-fit-content;
+        min-width: fit-content;
+      }
+
+      .green {
+        color: var(--success);
+      }
+      .red {
+        color: var(--error);
+      }
+
+      h5,
+      h4,
+      h4,
+      h2,
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .list__item__actions {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    span {
+      max-width: 7.5rem;
+    }
+    .list__item--row {
+      .item__content {
+        row-gap: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 360px) {
+    span {
+      max-width: 10.5rem;
+    }
+    .list__item--row {
+      .item__detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .item__content .column:first-child {
+        flex-basis: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 280px) {
+    .list__item--row {
+      padding: 14px 0px;
+    }
+  }
+}

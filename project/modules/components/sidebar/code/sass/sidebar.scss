@@ -1,5 +1,6 @@
 .sidebar {
-	background: var(--surface);
+	border-right: 1px solid var(--background);
+	background: var(--primary-dark);
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -31,8 +32,14 @@
 			svg.beyond-icon {
 				width: 20px;
 				height: 20px;
-				fill: var(--text-on-primary);
+				fill: var(--surface);
 			}
+		}
+	}
+
+	&.closed {
+		.sidebar__header .toggle__btn svg.beyond-icon {
+			fill: var(--primary-light);
 		}
 	}
 
@@ -44,7 +51,7 @@
 			overflow-y: auto;
 		}
 		.sidebar__header .toggle__btn svg.beyond-icon {
-			fill: var(--primary-dark);
+			fill: var(--text-on-primary);
 		}
 	}
 
@@ -53,6 +60,13 @@
 		height: 100%;
 		height: 100%;
 		max-height: 80vh;
+
+		.documentation-subtitle {
+			padding: 0 0 0 1rem;
+			color: var(--text-on-primary);
+			font-weight: bold;
+		}
+
 		.sidebar-list {
 			height: 100%;
 			list-style: none;

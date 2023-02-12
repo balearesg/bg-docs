@@ -3,19 +3,22 @@
 	"scope": "bg",
 	"name": "docs",
 	"title": "docs",
-	"layout": "main-layout",
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",
-		"supported": [
-			"en",
-			"es"
-		]
+		"supported": ["en", "es"]
 	},
 	"modules": {
 		"path": "modules"
 	},
+	"libraries": {
+		"imports": ["@bg/auth-api", "@bg/auth-models", "@bg/mailer", "@jadmin/ui"]
+	},
+
 	"params": {
+		"application": {
+			"token": "abcdefg123"
+		},
 		"sidebarItems": [
 			{
 				"label": "How to use",
@@ -35,14 +38,36 @@
 			}
 		]
 	},
+	"static": {
+		"includes": ["assets"]
+	},
 	"deployment": {
 		"distributions": [
 			{
 				"name": "web",
-				"environment": "development",
 				"platform": "web",
 				"ports": {
 					"bundles": 3001
+				},
+				"ts": {
+					"compiler": "ts"
+				},
+				"default": true,
+				"environment": "development",
+				"backend": "backend"
+			},
+			{
+				"name": "backend",
+				"platform": "backend",
+				"environment": "development",
+				"ports": {
+					"bundles": 3004,
+					"http": 3009,
+					"inspect": 3006
+				},
+				"default": false,
+				"ts": {
+					"compiler": "tsc"
 				}
 			}
 		]

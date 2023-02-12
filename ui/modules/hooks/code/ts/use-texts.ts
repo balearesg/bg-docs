@@ -4,8 +4,10 @@ interface IDocsValue {
     ready?: boolean,
     texts?: object
 };
-
-type texts = { [key: string | number]: string };
+type UseText<T> = [
+    ready: boolean,
+    texts?: T
+]
 
 const value: IDocsValue = {};
 export /*bundle*/ const DocsContext: Context<IDocsValue> = createContext<IDocsValue>(value);
@@ -18,19 +20,18 @@ export /*bundle*/ const useDocsContext: () => IDocsValue = (): IDocsValue => use
  * @returns An array of two elements. The first element is a boolean, the second element is an object.
  */
 export /*bundle*/
-    function useTexts(moduleId: string): [boolean, texts] {
+    function useTexts<T>(moduleId: string): UseText<T> {
 
     const [ready, setReady] = useState<boolean>(false);
 
-    const [texts, setTexts] = useState<texts>({});
+    const [texts, setTexts] = useState<T>();
 
     useEffect((): () => void => {
 
         const modelTexts: CurrentTexts<unknown> = new CurrentTexts(moduleId);
-        console.log("🚀 ~ file: use-texts.ts:30 ~ useEffect ~ moduleId", moduleId)
-        console.log("🚀 ~ file: use-texts.ts:31 ~ useEffect ~ CurrentTexts", CurrentTexts)
-        const texts: texts = <texts>modelTexts.value
-        const triggerEvent : () => void = (): void => {
+
+        const triggerEvent: () => void = (): void => {
+            const texts: T = <T>modelTexts.value
             setReady(modelTexts.ready);
             setTexts(texts)
         };
@@ -40,6 +41,6 @@ export /*bundle*/
     }, []);
 
     const isReady: boolean = ready && !!texts;
-    
+
     return [isReady, texts];
 };

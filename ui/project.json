@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "scope": "jadmin",
+  "name": "ui",
+  "title": "jadmin",
+  "template": "template/template.json",
+  "node": {},
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en",
+      "es"
+    ]
+  },
+  "params": {},
+  "modules": {
+    "path": "./modules",
+    "externals": {}
+  },
+  "backend": {},
+  "deployment": {
+    "distributions": [
+      {
+        "name": "distribution-web",
+        "platform": "web",
+        "environment": "development",
+        "port": 3038,
+        "default": true,
+        "ts": {
+          "compiler": "tsc"
+        }
+      }
+    ]
+  }
+}

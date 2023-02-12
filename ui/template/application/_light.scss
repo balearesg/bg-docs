@@ -1,0 +1,47 @@
+@mixin properties() {
+ 
+  --gray-base: #000000;
+  --gray-darker: #333333;
+  --gray-dark: #5E5F5C;
+  --gray: #D3D3D3;
+  --gray-variant: #EDEDED;
+  --gray-light: #DFE0E2;
+  --gray-lighter: #F7F7F7;
+
+  --primary: #004959;
+  --primary-dark: #002130;
+  --primary-light: #3c7586;
+  --primary-accent: #1E85F1;
+  --text-on-primary: #343434;
+
+  --secondary: #87c544;
+  --secondary-dark: #87c544;
+  --secondary-light: #baf874;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #000000;
+
+  --background: var(--gray-lighter);
+  --text-color: var(--gray-darker);
+  --element-bg: #fff;
+  --border: #E7E7E7;
+  --border-variant: #E1E5EF;
+  --text: #FFFFFFDE;
+  --success: #22bb33;
+  --warning: #F7C700;
+  --error: #f04141;
+  --info: hsla(211, 88%, 53%, 1);
+  --chat-online: #43fc22;
+  --preload-bg: var(--secondary);
+  --main-color: hsla(211, 88%, 53%, 1);
+  --text-grey: #707070;
+  --text-gray-light: #757575;
+
+  --body-bg: #f5f8ff;
+  --box-bg: #fff;
+  --input-bg: #f5f8ff;
+  --txt-color: #2f2d2f;
+  --txt-second-color: #ccc;
+  --border-color: var(--border);
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}

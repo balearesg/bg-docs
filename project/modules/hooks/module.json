@@ -1,11 +1,9 @@
 {
-  "name": "hooks",
-  "code": {
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "hooks",
+	"code": {
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }

@@ -2,19 +2,16 @@
 	"name": "main-page",
 	"platforms": ["web"],
 	"widget": {
+		"layout": "main-layout",
 		"route": "/${content}",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"sass": {
 			"path": "/widget/sass",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"element": {
 			"name": "main-page"

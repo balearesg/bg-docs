@@ -1,0 +1,10 @@
+{
+  "name": "api",
+  "platforms": ["*"],
+  "ts": {
+    "path": "./ts",
+    "files": [
+      "*"
+    ]
+  }
+}

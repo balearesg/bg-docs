@@ -1,6 +1,7 @@
 {
 	"name": "home/subpage",
 	"widget": {
+		"layout": "main-layout",
 		"route": "/${content}/${sub}",
 		"is": "page",
 		"ts": {

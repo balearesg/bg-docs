@@ -1,0 +1,58 @@
+@import "~template/sass/variables";
+.jview-component {
+  font-size: 12px;
+  min-height: 9rem;
+  background-color: var(--element-bg);
+  padding: 1rem;
+  border-radius: var(--border-secondary);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  .card {
+    margin: 0.5rem 0 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 1rem;
+    &__content-search {
+      display: flex;
+    }
+    @media (max-width: 500px) {
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      .form-group-jview {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .jview-fetching {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.35);
+    cursor: no-drop;
+    display: none;
+    .beyond-element-spinner {
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 20;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      top: 45%;
+      margin: auto;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &.is-fetching {
+    .jview-fetching {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "app-icon",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "code": {
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

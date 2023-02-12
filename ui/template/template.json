@@ -1,0 +1,12 @@
+{
+  "application": {
+    "processor": "sass",
+    "path": "application",
+    "files": [
+      "application/custom-properties.scss",
+      "application/variables.scss",
+      "global/variables.scss",
+      "*"
+    ]
+  }
+}

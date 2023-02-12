@@ -1,1 +1,7 @@
-["/project/project.json"]
+[
+	"/project/project.json",
+	"../bg-auth/auth-api/package.json",
+	"../bg-auth/mailer/package.json",
+	"../bg-auth/auth-models/package.json",
+	"/ui/project.json"
+]
