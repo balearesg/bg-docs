@@ -1,23 +1,33 @@
-import * as React from 'react';
-import * as Contents from '@bg/docs/contents';
-import { useTexts } from '@bg/docs/hooks';
+import * as React from "react";
+import * as Contents from "@bg/docs/contents";
+import { useTexts } from "@bg/docs/hooks";
 import { module } from "beyond_context";
-const DEFAULT_CONTENT = 'NotFound';
+import { Home } from "./home";
+const DEFAULT_CONTENT = "Home";
 
 export /*bundle*/
 function View({ uri }) {
-	const content = uri.vars.get('content');
-	const contentId = !content ? DEFAULT_CONTENT : content;
-	// const [ready, texts] = useTexts(module.specifier);
-	// console.log("🚀 ~ file: index.tsx:12 ~ View ~ texts", texts)
-	const replace = (text) => text.replace(text[0], text[0].toUpperCase());
-	const name = contentId.split('-').map(replace).join('');
+    const content = uri.vars.get("content");
+    const contentId = !content ? DEFAULT_CONTENT : content;
 
-	const Content = Contents[name] || Contents[DEFAULT_CONTENT];
+    if (!content) {
+        return (
+            <div className="page__container">
+                <Home />
+            </div>
+        );
+    }
+    // const [ready, texts] = useTexts(module.specifier);
+    // console.log("🚀 ~ file: index.tsx:12 ~ View ~ texts", texts)
+    const replace = (text) => text.replace(text[0], text[0].toUpperCase());
+    const name = contentId.split("-").map(replace).join("");
 
-	return (
-		<div className="page__container">
-			<Content />
-		</div>
-	);
+    const Content = Contents[name] || Contents[DEFAULT_CONTENT];
+
+    console.log(0.1, content);
+    return (
+        <div className="page__container">
+            <Content />
+        </div>
+    );
 }

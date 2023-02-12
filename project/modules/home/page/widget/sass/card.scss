@@ -1,0 +1,22 @@
+.card {
+    padding: 1rem;
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--outline);
+    transition: 300ms ease-in all;
+    max-width: 300px;
+    min-width: 300px;
+    cursor: pointer;
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    &:hover {
+        background: var(--primary);
+    }
+}
+
+.card__container {
+    display: flex;
+    gap: 1rem;
+}

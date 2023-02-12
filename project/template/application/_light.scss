@@ -1,31 +1,57 @@
 @mixin properties() {
+    --primary: #004959;
+    --primary-dark: #002130;
+    --primary-light: #3c7586;
+    --primary-accent: #39a9dc;
+    --text-on-primary: #343434;
 
-  --primary: #004959;
-  --primary-dark: #002130;
-  --primary-light: #3c7586;
-  --primary-accent: #39A9DC;
-  --text-on-primary: #343434;
+    --secondary: #87c544;
+    --secondary-dark: #87c544;
+    --secondary-light: #baf874;
+    --secondary-accent: #f7c700;
+    --text-on-secondary: #343434;
 
-  --secondary: #87c544;
-  --secondary-dark: #87c544;
-  --secondary-light: #baf874;
-  --secondary-accent: #F7C700;
-  --text-on-secondary: #343434;
+    --background: #ffffff;
+    --text-color: var(--gray-darker);
+    --surface: #f7f7f7;
+    --element-bg: #fff;
+    --border: #e7e7e7;
+    --border-variant: #e1e5ef;
+    --text: #ffffffde;
 
-  --background: #FFFFFF;
-  --text-color: var(--gray-darker);
-  --surface:#F7F7F7;
-  --element-bg: #fff;
-  --border: #E7E7E7;
-  --border-variant: #E1E5EF;
-  --text: #FFFFFFDE;
- 
-  --preload-bg: var(--secondary);
-  --app-editor-bg: #f5f7ff;
-  --app-surface-notes: #e4e4e4;
+    --preload-bg: var(--secondary);
+    --app-editor-bg: #f5f7ff;
+    --app-surface-notes: #e4e4e4;
 
-  --input-bg: #FFFFFF;
-  --border-color: var(--border);
-  --icon-color: var(--primary);
-  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --input-bg: #ffffff;
+    --border-color: var(--border);
+    --icon-color: var(--primary);
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    /**
+    Nuevas
+    */
+
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --on-error: #ffffff;
+    --on-error-container: #410002;
+
+    --background: #f8fdff;
+    --on-background: #001f25;
+    --surface: #f8fdff;
+
+    --on-surface: #001f25;
+    --surface-variant: #dde3ea;
+    --on-surface-variant: #41474d;
+    --outline: #72787e;
+
+    --inverse-on-surface: #d6f6ff;
+    --inverse-surface: #00363f;
+    --inverse-primary: #8ccdff;
+    --shadow: #000000;
+
+    --surface-tint: #006493;
+    --outline-variant: #c1c7ce;
+    --scrim: #000000;
 }
