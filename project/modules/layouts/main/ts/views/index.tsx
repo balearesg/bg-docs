@@ -28,7 +28,7 @@ function Layout(): JSX.Element {
 	});
 	//if (!ready) return;
 	return (
-		<div>
+		<div className="main-layout">
 			<SidebarHeader items={output} logo={<TitleDoc />}>
 				<beyond-layout-children />
 			</SidebarHeader>

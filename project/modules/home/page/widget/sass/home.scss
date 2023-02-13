@@ -1,10 +1,26 @@
 .home {
+	padding: 1.2rem 0 0 0;
+	width: 100%;
 	min-height: 85vh;
 
+	h1 {
+		font-weight: 500;
+		text-align: center;
+		margin: 0;
+	}
+
+	p {
+		text-align: center;
+		margin: 1.2rem 0;
+	}
+
 	.card__container {
+		width: 100%;
 		height: 100%;
-		display: flex;
-		align-items: center;
-		gap: 1.2rem;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 332px);
+		justify-content: center;
+		gap: 1rem;
 	}
 }

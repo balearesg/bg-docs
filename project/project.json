@@ -2,7 +2,7 @@
 	"version": "1.0.0",
 	"scope": "bg",
 	"name": "docs",
-	"title": "docs",
+	"title": "BG Docs",
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",
