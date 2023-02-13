@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Code } from './code';
 import { Clipboard } from './clipboard';
+
 export /*bundle*/ function CodeBox({ title, language, children }) {
 	return (
 		<div className="code__box">

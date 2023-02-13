@@ -1,0 +1,10 @@
+.home {
+	min-height: 85vh;
+
+	.card__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+	}
+}

@@ -1,10 +1,13 @@
+import { ELink } from '@bg/docs/components/html';
+import { InlineCode, Code } from '@bg/docs/code';
+
 # PASOS PARA ACTUALIZAR ENTORNO DE DESARROLLO DE QCH
 
-1.- Descargar [respositorio](https://source.cloud.google.com/socites-customers/qch_app) branch `master`
+1.- Descargar <ELink href="https://source.cloud.google.com/socites-customers/qch_app">Repositorio</ELink> branch <InlineCode>master</InlineCode>
 
-2.- Ingresar en [clound](https://console.cloud.google.com/compute/instances)
+2.- Ingresar en <ELink href="https://console.cloud.google.com/compute/instances">Cloud</ELink>
 
-3.- Seleccionar proyecto: `jida-services-apps`
+3.- Seleccionar proyecto: <InlineCode>jida-services-apps</InlineCode>
 
 4.- Visualizar VM jida-service-dev
 
@@ -12,11 +15,13 @@
 
 6.- Luego de ingresar, escribir el comando sudo su
 
-7.- Navegar al directorio de la aplicacion mediante el comando cd /var/www/qch_app/qch_app
+7.- Navegar al directorio de la aplicacion mediante el comando
 
-8.- En el codigo local, validar que no exista la carpeta build dentro del directorio apps/app y en caso de existir, eliminarla.
+<Code>cd /var/www/qch_app/qch_app</Code>
 
-9.- Reiniciar el servicio y entrar en localhost:3020
+8.- En el codigo local, validar que no exista la carpeta build dentro del directorio <InlineCode>apps/app</InlineCode> y en caso de existir, eliminarla.
+
+9.- Reiniciar el servicio y entrar en <ELink href="http://localhost:3020/">localhost:3020</ELink>
 
 10.- Sobre la aplicacion presionar el 2do boton de derecha a izquierda.
 
@@ -24,7 +29,7 @@
 
 12.- Esperar a que el proceso termine (de una vez aparece una modal que dice que ya la compilacion termino, pero en realidad eso es un bug, hay que ir haciendo scroll sobre las lineas que van a apareciendo y al final dice done).
 
-13.- Una vez finalizada la compilacion, el codigo compilado se encontrara en el directorio "builds/client/web-production/code".
+13.- Una vez finalizada la compilacion, el codigo compilado se encontrara en el directorio <InlineCode>"builds/client/web-production/code"</InlineCode>.
 
 14.- Copiar los archivos de ese directorio y pegarlos en el directorio del repositorio descargado en el 1er paso. VER NOTA 1 Y NOTA 2
 

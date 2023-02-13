@@ -1,20 +1,16 @@
-import * as React from "react";
+import * as React from 'react';
 
-interface Iprops {
-    href: "string";
-    children?: JSX.Element;
-}
-
-interface IAttrs {
-    onClick?: () => void;
+interface IProps extends Partial<React.AnchorHTMLAttributes<HTMLAnchorElement>> {
+	href: 'string';
+	children?: any;
 }
 
 export /*bundle*/
-function ELink(props) {
-    const { href } = props;
-    return (
-        <a href={href} target="_blank" {...props} data-algo="algo">
-            {props.children}
-        </a>
-    );
+function ELink(props: IProps) {
+	const { href } = props;
+	return (
+		<a href={href} target="_blank" {...props} data-algo="algo">
+			{props.children}
+		</a>
+	);
 }
