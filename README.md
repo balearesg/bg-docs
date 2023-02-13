@@ -14,9 +14,9 @@ Antes de comenzar tienes que realizar los pasos acontinuacion listados para pode
 
 2. Hacer las instalaciones correspondientes:
 
-`cd project`
 
-`npm i`
+
+`npm i` en `cd project` y `cd ui`
 
 ## 🔥 Agregar tu contenido
 

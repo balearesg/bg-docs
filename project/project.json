@@ -59,6 +59,10 @@
 			{
 				"label": "Essential UI",
 				"path": "/essential-ui"
+			},
+			{
+				"label": "Mailer",
+				"path": "/mailer"
 			}
 		]
 	},
