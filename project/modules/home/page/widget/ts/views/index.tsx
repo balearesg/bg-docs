@@ -24,7 +24,6 @@ function View({ uri }) {
 
 	const Content = Contents[name] || Contents[DEFAULT_CONTENT];
 
-	console.log(0.1, content);
 	return (
 		<div className="page__container">
 			<Content />

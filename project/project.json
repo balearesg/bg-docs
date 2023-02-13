@@ -35,6 +35,18 @@
 			{
 				"label": "Components",
 				"path": "/components"
+			},
+			{
+				"label": "Auth Instalation",
+				"path": "/auth-instalation"
+			},
+			{
+				"label": "Auth Session",
+				"path": "/auth-session"
+			},
+			{
+				"label": "Auth User",
+				"path": "/auth-user"
 			}
 		]
 	},

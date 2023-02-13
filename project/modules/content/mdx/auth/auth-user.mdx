@@ -1,0 +1,35 @@
+import { ELink } from '@bg/docs/components/html';
+import { InlineCode, Code } from '@bg/docs/code';
+
+## Clase `User`
+
+Esta clase representa un usuario de la aplicación.
+
+Este objeto puede ser accedido sin problemas desde el objeto `session`: `session.user`;
+
+### Propiedades
+
+-   <InlineCode>id</InlineCode>: número, identificador único del usuario.
+-   <InlineCode>user</InlineCode>: string, nombre de usuario.
+-   <InlineCode>identifier</InlineCode>: string, identificador único generado por el sistema.
+-   <InlineCode>active</InlineCode>: número, indica si el usuario está activo o no.
+-   <InlineCode>statusId</InlineCode>: número, identificador del estado del usuario.
+-   <InlineCode>names</InlineCode>: string, nombres del usuario.
+-   <InlineCode>lastNames</InlineCode>: string, apellidos del usuario.
+-   <InlineCode>email</InlineCode>: string, correo electrónico del usuario.
+-   <InlineCode>sex</InlineCode>: número o `null`, indica el sexo del usuario (opcional).
+-   <InlineCode>profileImage</InlineCode>: string o `null`, dirección URL de la imagen de perfil del
+    usuario (opcional).
+-   <InlineCode>birthday</InlineCode>: string o `null`, fecha de nacimiento del usuario (opcional).
+-   <InlineCode>phone</InlineCode>: string o `null`, número de teléfono del usuario (opcional).
+-   <InlineCode>accountType</InlineCode>: string, tipo de cuenta del usuario.
+-   <InlineCode>facebookAccount</InlineCode>: string o `null`, dirección URL de la cuenta de
+    Facebook del usuario (opcional).
+-   <InlineCode>accessToken</InlineCode>: string, token de acceso generado por el sistema.
+
+### Método
+
+-   <InlineCode>{`set(params: Partial<IUser>)`}</InlineCode>: establece los valores de las
+    propiedades del objeto según los valores proporcionados en el objeto <InlineCode>
+    	params
+    </InlineCode>.

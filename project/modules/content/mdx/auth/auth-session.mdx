@@ -1,0 +1,46 @@
+import { ELink } from '@bg/docs/components/html';
+import { InlineCode, Code } from '@bg/docs/code';
+
+# Clase de Sessión
+
+La clase <InlineCode>`Session`</InlineCode> extiende de <InlineCode>ReactiveModel</InlineCode> y permite realizar acciones relacionadas con la autenticación de usuario.
+
+# Importaciones
+
+<Code>{`import {session} from '@bg/auth-api/entities.ts';`}</Code>
+
+**Desde la consola**
+
+<Code>
+	{`const {session} = await beyond.import('@bg/auth-api/entities.ts')
+`}
+</Code>
+
+## Propiedades
+
+-   <InlineCode>user</InlineCode>: una instancia de la clase `User`.
+-   <InlineCode>accessToken</InlineCode>: Un string que representa el token de acceso del usuario.
+-   <InlineCode>userId</InlineCode>: Un string que representa el ID del usuario.
+-   <InlineCode>valid</InlineCode>: un boolean que indica si la sesión actual es válida o no.
+
+## Métodos
+
+-   <InlineCode>login</InlineCode>: Inicia sesión con los parámetros proporcionados y actualiza la
+    `user` property.
+
+-   <InlineCode>register</InlineCode>: registra un nuevo usuario con los parámetros proporcionados y
+    actualiza la `user` property.
+
+-   <InlineCode>changePassword</InlineCode>: cambia la contraseña del usuario actual con los
+    parámetros proporcionados.
+
+-   <InlineCode>recoverPassword</InlineCode>: recupera la contraseña con los parámetros
+    proporcionados.
+
+-   <InlineCode>logout</InlineCode>: cierra la sesión actual y establece la `user` property.
+-   <InlineCode>validateCode</InlineCode>: valida un código con los parámetros proporcionados.
+-   <InlineCode>setPassword</InlineCode>: establece la contraseña con los parámetros proporcionados.
+
+## Exports
+
+Exporta una instancia de la clase <InlineCode>Session</InlineCode> llamada <InlineCode>session</InlineCode>.
