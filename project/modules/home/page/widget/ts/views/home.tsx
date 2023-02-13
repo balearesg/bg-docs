@@ -37,6 +37,10 @@ export function Home() {
                 <Card title="Entrenamiento" href="/trainee">
                     Implementacion de Essential-UI para la construccion de interfaces.
                 </Card>
+                
+                <Card title="Jview" href="/jview">
+                    Implementacion de Jview para la construccion de interfaces.
+                </Card>
             </div>
         </div>
     );
