@@ -1,13 +1,13 @@
 import { ELink } from '@bg/docs/components/html';
 import { InlineCode, Code } from '@bg/docs/code';
 
-## Clase `User`
+## 👽 Clase `User`
 
 Esta clase representa un usuario de la aplicación.
 
 Este objeto puede ser accedido sin problemas desde el objeto `session`: `session.user`;
 
-### Propiedades
+### 📚 Propiedades
 
 -   <InlineCode>id</InlineCode>: número, identificador único del usuario.
 -   <InlineCode>user</InlineCode>: string, nombre de usuario.
@@ -27,9 +27,10 @@ Este objeto puede ser accedido sin problemas desde el objeto `session`: `session
     Facebook del usuario (opcional).
 -   <InlineCode>accessToken</InlineCode>: string, token de acceso generado por el sistema.
 
-### Método
+### 😁 Método set
 
--   <InlineCode>{`set(params: Partial<IUser>)`}</InlineCode>: establece los valores de las
-    propiedades del objeto según los valores proporcionados en el objeto <InlineCode>
-    	params
-    </InlineCode>.
+-   <InlineCode>{`set(params: Partial<IUser>)`}</InlineCode>: Establece los valores de las
+    propiedades del objeto según los valores proporcionados, recibe un boolean como segundo
+    parametro para especificar si los valores no modificados deben ser establecidos como <InlineCode>
+    	undefined
+    </InlineCode> <InlineCode>params</InlineCode>.

@@ -47,6 +47,14 @@
 			{
 				"label": "Auth User",
 				"path": "/auth-user"
+			},
+			{
+				"label": "Beyond UI",
+				"path": "/beyond-ui"
+			},
+			{
+				"label": "Essential UI",
+				"path": "/essential-ui"
 			}
 		]
 	},
