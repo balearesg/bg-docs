@@ -13,6 +13,8 @@ import { default as _authSession } from './mdx/auth/auth-session.mdx';
 import { default as _authUser } from './mdx/auth/auth-user.mdx';
 import { default as __essentialUI } from './mdx/ui-libraries/essential-ui.mdx';
 import { default as __beyondUI } from './mdx/ui-libraries/beyond-ui.mdx';
+import { default as __standars } from './mdx/standards/development-process.mdx';
+import { default as __mailer } from './mdx/mailer/mailer.mdx';
 import { default as __jview } from './mdx/jview/jview.mdx';
 
 // EXPORTS
@@ -27,4 +29,6 @@ export /*bundle*/ const AuthSession = _authSession;
 export /*bundle*/ const AuthUser = _authUser;
 export /*bundle*/ const EssentialUi = __essentialUI;
 export /*bundle*/ const BeyondUi = __beyondUI;
+export /*bundle*/ const Standars = __standars;
+export /*bundle*/ const Mailer = __mailer;
 export /*bundle*/ const Jview = __jview;

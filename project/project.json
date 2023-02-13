@@ -33,6 +33,10 @@
 				"path": "/plugins"
 			},
 			{
+				"label": "Standars",
+				"path": "/standars"
+			},
+			{
 				"label": "Components",
 				"path": "/components"
 			},
@@ -55,6 +59,10 @@
 			{
 				"label": "Essential UI",
 				"path": "/essential-ui"
+			},
+			{
+				"label": "Mailer",
+				"path": "/mailer"
 			}
 		]
 	},
