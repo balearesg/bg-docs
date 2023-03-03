@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BeyondIconButton } from '@bgroup/ui/icon';
+import { BeyondIconButton } from '@bgroup/ui/icons';
 
 export function Clipboard({ text, message }) {
 	const ref = React.useRef(null);
