@@ -1,9 +1,14 @@
-import { session } from '@bg/auth-api/entities.ts';
+import { session } from '@bg/auth-api/wrapper.ts';
 
 export function SessionHandler(parent: any): void {
 	'use strict';
 
-	const noSession: Array<string> = ['/auth/login', '/auth/forget/password', '/auth/code', '/auth/set-forgotten-password'];
+	const noSession: Array<string> = [
+		'/auth/login',
+		'/auth/forget/password',
+		'/auth/code',
+		'/auth/set-forgotten-password',
+	];
 
 	parent.session = async (): Promise<{ pathname: any }> => {
 		const pathname: { pathname: any } = { pathname: '/auth/login' };

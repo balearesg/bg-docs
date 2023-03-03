@@ -1,6 +1,5 @@
 import { ReactiveModel } from '@bg/docs/reactive-model';
-import { session } from '@bg/auth-api/entities.ts';
-import config from '@bg/docs/config';
+import { session } from '@bg/auth-api/wrapper.ts';
 import { init } from './types';
 export class Model extends ReactiveModel {
 	#message: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { session, IUser } from '@bg/auth-api/entities.ts';
+import { session, IUser } from '@bg/auth-api/wrapper.ts';
 import { UserImage } from './user-img';
 import { useBinder } from '@jadmin/ui/hooks';
 
