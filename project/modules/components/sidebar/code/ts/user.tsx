@@ -10,7 +10,6 @@ export function User(): JSX.Element {
 	const [fetching, setFetching] = React.useState(session.fetching);
 	const email = session.isLogged && user.email && user.email.split('@')[0];
 
-	console.log('FETCHING => ', fetching);
 	useBinder([session], () => setUser(session.user), 'user-changed');
 	useBinder([session], () => setFetching(session.fetching), 'user.loading');
 
