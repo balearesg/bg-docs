@@ -32,6 +32,10 @@
 			display: flex;
 			flex-direction: column;
 			row-gap: 22px;
+
+			.beyond-element-input {
+				width: 97%;
+			}
 		}
 		.content-forget-remember {
 			display: flex;
