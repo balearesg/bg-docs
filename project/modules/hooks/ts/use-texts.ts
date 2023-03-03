@@ -26,8 +26,6 @@ function useTexts(moduleId: string): [boolean, texts] {
 
 	useEffect((): (() => void) => {
 		const modelTexts: CurrentTexts<unknown> = new CurrentTexts(moduleId);
-		console.log('🚀 ~ file: hooks.ts:30 ~ useEffect ~ moduleId', moduleId);
-		console.log('🚀 ~ file: hooks.ts:31 ~ useEffect ~ CurrentTexts', CurrentTexts);
 		const texts: texts = <texts>modelTexts.value;
 		const triggerEvent: () => void = (): void => {
 			setReady(modelTexts.ready);

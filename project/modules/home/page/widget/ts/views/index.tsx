@@ -18,7 +18,6 @@ function View({ uri }) {
 		);
 	}
 	// const [ready, texts] = useTexts(module.specifier);
-	// console.log("🚀 ~ file: index.tsx:12 ~ View ~ texts", texts)
 	const replace = (text) => text.replace(text[0], text[0].toUpperCase());
 	const name = contentId.split('-').map(replace).join('');
 
