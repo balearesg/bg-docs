@@ -16,6 +16,7 @@ import { default as __beyondUI } from './mdx/ui-libraries/beyond-ui.mdx';
 import { default as __standars } from './mdx/standards/development-process.mdx';
 import { default as __mailer } from './mdx/mailer/mailer.mdx';
 import { default as __jview } from './mdx/jview/jview.mdx';
+import { default as __compilationBackend } from './mdx/compilation-backend-external-packages/compilation-backend-external-packages.mdx';
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -32,3 +33,4 @@ export /*bundle*/ const BeyondUi = __beyondUI;
 export /*bundle*/ const Standars = __standars;
 export /*bundle*/ const Mailer = __mailer;
 export /*bundle*/ const Jview = __jview;
+export /*bundle*/ const CompilationBackend = __compilationBackend;
