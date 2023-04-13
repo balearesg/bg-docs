@@ -6,15 +6,22 @@
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",
-		"supported": ["en", "es"]
+		"supported": [
+			"en",
+			"es"
+		]
 	},
 	"modules": {
 		"path": "modules"
 	},
 	"libraries": {
-		"imports": ["@bg/auth-api", "@bg/auth-models", "@bg/mailer", "@jadmin/ui"]
+		"imports": [
+			"@bg/auth-api",
+			"@bg/auth-models",
+			"@bg/mailer",
+			"@jadmin/ui"
+		]
 	},
-
 	"params": {
 		"application": {
 			"token": "abcdefg123"
@@ -71,11 +78,18 @@
 			{
 				"label": "Mobile Compilations",
 				"path": "/compilation-mobile"
+			},
+			{
+				"label": "Configure Git",
+				"path": "/configure-git"
 			}
 		]
 	},
 	"static": {
-		"includes": ["assets", "modules/content/mdx"]
+		"includes": [
+			"assets",
+			"modules/content/mdx"
+		]
 	},
 	"deployment": {
 		"distributions": [
