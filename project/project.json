@@ -82,6 +82,10 @@
 			{
 				"label": "Configure Git",
 				"path": "/configure-git"
+			},
+			{
+				"label": "Debug Mobiles Apps",
+				"path": "/debug-mobile-apps"
 			}
 		]
 	},

@@ -1,0 +1,34 @@
+# Depuración de aplicaciones híbridas de Cordova en Android Studio y Xcode
+
+En este documento, aprenderás cómo depurar una aplicación híbrida de Cordova en Android Studio y Xcode. La depuración es un proceso importante que te ayudará a encontrar errores en tu aplicación y a solucionarlos. Para depurar una aplicación, necesitarás un dispositivo para probarla, así como Android Studio o Xcode.
+
+## ConfiguraciónConfiguración previa
+
+Antes de comenzar, asegúrate de que tengas lo siguiente:
+
+Un dispositivo Android o iOS para probar la aplicación.
+Android Studio o Xcode instalado en tu equipo.
+El SDK de Android o iOS instalado en tu equipo.
+Depuración en Android Studio
+
+### Para depurar una aplicación híbrida de Cordova en Android Studio, sigue estos pasos:
+
+1.- Abre Android Studio y haz clic en "Open an existing Android Studio project".
+2.- Busca la carpeta de tu proyecto de Cordova y selecciona la plataforma Android (platforms/android) como la carpeta del proyecto. Si aún no has agregado la plataforma, debes ejecutar el comando cordova platform add android en la terminal en la carpeta raíz de tu proyecto.
+Android Studio importará el proyecto y lo preparará para la depuración.
+3.- Conecta tu dispositivo Android al ordenador mediante un cable USB y asegúrate de que esté habilitado el modo de depuración USB en tu dispositivo.
+4.- Haz clic en el botón "Run" o "Debug" en la barra de herramientas de Android Studio para ejecutar la aplicación en modo de depuración.
+Android Studio iniciará la aplicación en modo de depuración en el dispositivo conectado y aparecerá el depurador.
+5.- Usa las herramientas de depuración de Android Studio para examinar la aplicación y buscar errores. Puedes establecer puntos de interrupción en el código, examinar las variables y las pilas de llamadas, y mucho más.
+
+### Depuración en Xcode
+
+Para depurar una aplicación híbrida de Cordova en Xcode, sigue estos pasos:
+
+1.- Abre Xcode y haz clic en "Open another project".
+2.- Busca la carpeta de tu proyecto de Cordova y selecciona la plataforma iOS (platforms/ios/[Nombre del proyecto].xcodeproj) como el archivo del proyecto. Si aún no has agregado la plataforma, debes ejecutar el comando cordova platform add ios en la terminal en la carpeta raíz de tu proyecto.
+Xcode importará el proyecto y lo preparará para la depuración.
+3.- Conecta tu dispositivo iOS al ordenador mediante un cable USB.
+4.- Haz clic en el botón "Run" o "Debug" en la barra de herramientas de Xcode para ejecutar la aplicación en modo de depuración.
+Xcode iniciará la aplicación en modo de depuración en el dispositivo conectado y aparecerá el depurador.
+5.- Usa las herramientas de depuración de Xcode para examinar la aplicación y buscar errores. Puedes establecer puntos de interrupción en el código, examinar las variables y las pilas de llamadas, y mucho más.
