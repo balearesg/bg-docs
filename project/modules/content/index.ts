@@ -40,3 +40,6 @@ export /*bundle*/ const CompilationBackend = __compilationBackend;
 export /*bundle*/ const CompilationMobile = __compilationMobile;
 export /*bundle*/ const ConfigureGit = __configureGit;
 export /*bundle*/ const DebugMobileApps = __debugApps;
+export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
+    return { user: `lorem ipsum ${index + 1}`, email: `lorem ipsum ${index + 1}`, id: "1", lastName: `lorem ipsum ${index + 1}` }
+})
