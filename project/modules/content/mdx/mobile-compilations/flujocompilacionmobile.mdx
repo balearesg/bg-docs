@@ -10,15 +10,12 @@ Como se sabe, disponemos de 2 versiones de beyond y de aplicaciones que corren c
 
 Los pasos para realizar una compilación de una app son los siguientes:
 
-Si se tiene una compilación previa, borrar la carpeta build, en caso de que no, proceder con el paso 2.
-Ingresamos en el dashboard y buscamos la aplicación que se desea compilar.
-Se presiona sobre la opción “compile client”
-
-Seleccionar el ambiente, el tipo de compilación y si se desea comprimir el archivo y generar las imágenes para los iconos y el splash.
-
-Luego presionar el botón de “build client”.
-
-Luego de haber realizado el build de la aplicación, ingresar dentro de la carpeta “code” la cual normalmente se encuentra en la raíz de la aplicación como tal, la misma está definida con el OS para el que se compiló (iOS, android, web). Dentro de esta carpeta “code”, se encontraran los archivos compilados de la aplicación.
+1. Si se tiene una compilación previa, borrar la carpeta build, en caso de que no, proceder con el paso 2.
+2. Ingresamos en el dashboard y buscamos la aplicación que se desea compilar.
+3. Se presiona sobre la opción “compile client”
+4. Seleccionar el ambiente, el tipo de compilación y si se desea comprimir el archivo y generar las imágenes para los iconos y el splash.
+5. Luego presionar el botón de “build client”.
+6. Luego de haber realizado el build de la aplicación, ingresar dentro de la carpeta “code” la cual normalmente se encuentra en la raíz de la aplicación como tal, la misma está definida con el OS para el que se compiló (iOS, android, web). Dentro de esta carpeta “code”, se encontraran los archivos compilados de la aplicación.
 
 
 ### Pasos a seguir para generar el archivo .apk o .ipa
@@ -27,10 +24,10 @@ Luego de haber realizado la compilación de los archivos en beyond, aún falta g
 
 La estructura de carpetas es la siguiente:
 
-Carpeta nombre de aplicación: Esta carpeta solo será el contenedor para identificar la compilación (no se comprime).
-Carpeta www: Dentro de esta carpeta, irá todo el código compilado desde beyond.}
-Carpeta resource: Esta carpeta contendrá las imágenes de splash e icono de la aplicación y cualquier otro archivo necesario, ya sea uno de configuracion externa, ejm: google-service-info.plist (archivo que se descarga para la configuración de firebase).
-Carpeta certificates: Esta carpeta contendrá los archivos de certificados, para iOS esto es obligatorio, pero para Android no, solo en el caso de que sea desarrollo, para producción de android si es necesario tener los certificados de la aplicación.
+1. Carpeta nombre de aplicación: Esta carpeta solo será el contenedor para identificar la compilación (no se comprime).
+2. Carpeta www: Dentro de esta carpeta, irá todo el código compilado desde beyond.}
+3. Carpeta resource: Esta carpeta contendrá las imágenes de splash e icono de la aplicación y cualquier otro archivo necesario, ya sea uno de configuracion externa, ejm: google-service-info.plist (archivo que se descarga para la configuración de firebase).
+4. Carpeta certificates: Esta carpeta contendrá los archivos de certificados, para iOS esto es obligatorio, pero para Android no, solo en el caso de que sea desarrollo, para producción de android si es necesario tener los certificados de la aplicación.
 
 Aparte de la estructura de directorios, también es necesario un archivo llamado voltbuilder.json, este archivo lo que indica son algunos parámetros para la compilación, ya sea, la ubicación y nombre de los certificados, el tipo de compilación y el ambiente. Y no menos importante, a la altura de este archivo, debemos tener el config.xml, archivo que se usa para definir algunos parámetros de la app, como los plugins que usa.
 
@@ -42,20 +39,18 @@ NOTA: SE DEBE REALIZAR LAS TAREAS ANTERIORES POR CADA OS, ES DECIR, DEBE HABER U
 
 La compilación de aplicaciones con la versión nueva, no es tan diferente a la version vieja, el cambio más puntualizado es que en la versión nueva se usan distribuciones, las cuales pueden ser de tipo:
 
-1.- Backend
-2.- Node
-3.- Android
-4.- iOS
-5.- Web
-6.- Npm
+1. Backend
+2. Node
+3. Android
+4. iOS
+5. Web
+6. Npm
 
 Pero la compilación sigue siendo la misma, beyond tomara los archivos del codigo y los compilara para la distribución elegida.
 
-Ingresamos en el dashboard y presionamos sobre el boton para compilar sobre la app.
-
-Seleccionar la distribucion y presionar boton compilar.
-
-Esperar a que el sistema finalice la compilación de archivos.
+1. Ingresamos en el dashboard y presionamos sobre el boton para compilar sobre la app.
+2. Seleccionar la distribucion y presionar boton compilar.
+3. Esperar a que el sistema finalice la compilación de archivos.
 
 El resultado de la compilación, es decir, los archivos generados se encontraran dentro de la carpeta beyond/build/distribution, donde distribution es la distribucion seleccionada.
 
@@ -69,11 +64,9 @@ Como se comentó anteriormente, con la nueva versión de beyond se pueden realiz
 
 Estos son los pasos a seguir para hacer la compilación y deployment de una web.
 
-Ingresamos en el dashboard y presionamos sobre el boton para compilar sobre la app.
-
-Seleccionar la distribucion y presionar boton compilar.
-
-Esperar a que el sistema finalice la compilación de archivos.
+1. Ingresamos en el dashboard y presionamos sobre el boton para compilar sobre la app.
+2. Seleccionar la distribucion y presionar boton compilar.
+3. Esperar a que el sistema finalice la compilación de archivos.
 
 El resultado de la compilación, es decir, los archivos generados se encontraran dentro de la carpeta beyond/build/distribution, donde distribution es la distribucion seleccionada.
 
@@ -91,19 +84,20 @@ Proc | Procedimiento para actualización de servicios
 
 ## COMPILACIÓN CON VOLTBUILDER
 
-Ingresar en https://volt.build/
-Iniciar sesion:
-user: developersjida@gmail.com
-pass: JD.v0ltb
-Ingresar en opcion “Upload”.
-Seleccionar OS: iOS o Android.
-Subir codigo compilado en .zip
+1. Ingresar en https://volt.build/
+2. Iniciar sesion:
+3. user: developersjida@gmail.com
+4. pass: JD.v0ltb
+5. Ingresar en opcion “Upload”.
+6. Seleccionar OS: iOS o Android.
+7. Subir codigo compilado en .zip
+
 DESARROLLO:
-En caso de android, descargar el apk y compartirlo o enviarlo.
-En caso de iOS, seleccionar “copy URL for use on device” y enviarla.
+1. En caso de android, descargar el apk y compartirlo o enviarlo.
+2. En caso de iOS, seleccionar “copy URL for use on device” y enviarla.
 PRODUCCIÓN:
-En caso de android, descargar el bundle y subirlo al market.
-En caso de iOS, el voltbuilder realiza la subida al market automaticamente.
+1. En caso de android, descargar el bundle y subirlo al market.
+2. En caso de iOS, el voltbuilder realiza la subida al market automaticamente.
 
 APLICACIONES YA CON ESTRUCTURA DE CARPETA PARA VOLTBUILDER
 

@@ -1,46 +1,60 @@
-import { Title } from '@bg/docs/components/html';
-import { InlineCode, Code } from '@bg/docs/code';
+import { Title } from "@bg/docs/components/html";
+import { InlineCode, Code } from "@bg/docs/code";
+import { Info } from "@bg/docs/components/html";
 
 <Title text="Jview." />
 
 A continuacion se explica la forma de implementar el componente Jview para el desarrollo de listados con paginacion.
 
-1. Importacion
+1. Importacion, para importarlo
 
-```js
-import { Jview } from '...route';
-```
+<Code>{`import {JView} from "@scope/docs/jview.code";`}</Code>
+
+<Info>La rura varia de acuerdo al scope y name del proyecto donde se este utilizando</Info>
 
 2. Armar objeto con las propiedades que necesita el Jview
 
--   <InlineCode>row: (required) </InlineCode> componente react con la estructura html deseada para la fila.
--   <InlineCode>pagerNext: (optional) _boolean_</InlineCode> bandera para indicar que se desea tener paginacion en la lista.
--   <InlineCode>total: (required) _number_</InlineCode> numero total de registros que manejara el Jview.{' '}
--   <InlineCode>entries: (required) _array_</InlineCode> arreglo con los elementos a mostrar en la pagina actual.{' '}
--   <InlineCode>rows: (required) _number_</InlineCode> numero de filas que se quieren mostrar en la pagina.{' '}
--   <InlineCode>total: (required) _number_</InlineCode> numero total de registros que manejara el Jview.{' '}
--   <InlineCode>currentPage: (optional) _number_</InlineCode> numero de la pagina donde se quiere posicionar.
--   <InlineCode>search: (optional) _boolean_</InlineCode> bandera para indicar que se agregue el buscador por defecto del
-    Jview.
--   <InlineCode>isSearch: (optional) _boolean_</InlineCode> bandera que indica el estado del Jview que se esta realizando
-    una busqueda.
--   <InlineCode>handleClear: (optional) _function_</InlineCode> callBack para limpiar la busqueda.
--   <InlineCode>handleSearch: (optional) _function_</InlineCode> callBack para realizar la busqueda.
--   <InlineCode>title: (optional) _string_</InlineCode> valor del titulo para el Jview.
--   <InlineCode>onNext: (optional) _function_</InlineCode> callBack para obtener los elementos de la nueva pagina.
--   <InlineCode>onPrev: (optional) _function_</InlineCode> callBack para obtener los elementos de la pagina anterior, por
-    defecto busca sobre el arreglo que tiene todos los elementos existentes dentro del Jview, este metodo onPrev se usa en
-    caso especiales.
--   <InlineCode>action: (optional) _string_</InlineCode> url del link a consultar para la paginacion, se realiza una llamada
-    http.
--   <InlineCode>header: (optional) </InlineCode> componente react con la estructura html deseada para el header del Jview.
--   <InlineCode>AdditionalElement: (optional) </InlineCode> componente react con la estructura html deseada como component
-    adicional en el Jview, normalmente se usa como complemento para las busquedas.
+- <InlineCode>row: (optional) </InlineCode> componente react con la estructura html
+  deseada para la fila. Si no se pasa debe haber una propiedad <strong>keys</strong>
+- <InlineCode>keys: (optional) string[]</InlineCode> Array de strings con las keys que se desean ver en el item, estos keys corresponde a los de los objetos de <strong>entries</strong>
+- <InlineCode>entries: (required) _array_</InlineCode> arreglo con los elementos
+  a mostrar en la pagina actual.{" "}
+- <InlineCode>pagerNext: (optional) _boolean_</InlineCode> bandera para indicar que
+  se desea tener paginacion en la lista.
+- <InlineCode>total: (required) _number_</InlineCode> numero total de registros que
+  manejara el Jview.{" "}
+- <InlineCode>`dataHead: (optional) Array<{label: string, id: number | string}`></InlineCode> Array de objetos, a partir de este se arma el header de la tabla
+- <InlineCode>rows: (required) _number_</InlineCode> numero de filas que se quieren
+  mostrar en la pagina.{" "}
+- <InlineCode>total: (required) _number_</InlineCode> numero total de registros que
+  manejara el Jview.{" "}
+- <InlineCode>currentPage: (optional) _number_</InlineCode> numero de la pagina donde
+  se quiere posicionar.
+- <InlineCode>search: (optional) _boolean_</InlineCode> bandera para indicar que
+  se agregue el buscador por defecto del Jview.
+- <InlineCode>isSearch: (optional) _boolean_</InlineCode> bandera que indica el estado
+  del Jview que se esta realizando una busqueda.
+- <InlineCode>handleClear: (optional) _function_</InlineCode> callBack para limpiar
+  la busqueda.
+- <InlineCode>handleSearch: (optional) _function_</InlineCode> callBack para realizar
+  la busqueda.
+- <InlineCode>title: (optional) _string_</InlineCode> valor del titulo para el Jview.
+- <InlineCode>onNext: (optional) _function_</InlineCode> callBack para obtener los
+  elementos de la nueva pagina.
+- <InlineCode>onPrev: (optional) _function_</InlineCode> callBack para obtener los
+  elementos de la pagina anterior, por defecto busca sobre el arreglo que tiene todos
+  los elementos existentes dentro del Jview, este metodo onPrev se usa en caso especiales.
+- <InlineCode>action: (optional) _string_</InlineCode> url del link a consultar para
+  la paginacion, se realiza una llamada http.
+- <InlineCode>header: (optional) </InlineCode> componente react con la estructura
+  html deseada para el header del Jview.
+- <InlineCode>AdditionalElement: (optional) </InlineCode> componente react con la
+  estructura html deseada como component adicional en el Jview, normalmente se usa
+  como complemento para las busquedas.
 
 El objeto puede recibir mas parametros ademas de los mencionados previamente como textos, callbacks, etc... que puede ser usados por los componentes react agregados en la configuracion.
 
 3.  Usar el componente Jview
 
-```sh
-<Jview {...values} />
-```
+ <Code>{`<Jview {...values} />`}</Code> 
+

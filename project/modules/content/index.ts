@@ -19,7 +19,8 @@ import { default as __jview } from "./mdx/jview/jview.mdx";
 import { default as __compilationBackend } from "./mdx/compilation-backend-external-packages/compilation-backend-external-packages.mdx";
 import { default as __compilationMobile } from "./mdx/mobile-compilations/flujocompilacionmobile.mdx";
 import { default as __configureGit } from "./mdx/configure-git/configure-git.mdx";
-import { default as __runningBovino } from "./mdx/configure-git/configure-git.mdx";
+import { default as __debugApps } from "./mdx/debug-mobile-apps/debug_aplicaciones_moviles.mdx";
+import { default as __runningBovino } from "./mdx/running-bovino/running-bovino.mdx";
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -39,4 +40,13 @@ export /*bundle*/ const Jview = __jview;
 export /*bundle*/ const CompilationBackend = __compilationBackend;
 export /*bundle*/ const CompilationMobile = __compilationMobile;
 export /*bundle*/ const ConfigureGit = __configureGit;
-export /*bundle*/ const runningBovino = __runningBovino;
+export /*bundle*/ const DebugMobileApps = __debugApps;
+export /*bundle*/ const RunningBovino = __runningBovino;
+export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
+  return {
+    user: `lorem ipsum ${index + 1}`,
+    email: `lorem ipsum ${index + 1}`,
+    id: "1",
+    lastName: `lorem ipsum ${index + 1}`,
+  };
+});
