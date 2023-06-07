@@ -90,6 +90,10 @@
 			{
 				"label": "Running Bovino",
 				"path": "/running-bovino"
+			},
+			{
+				"label": "Prettier Settings",
+				"path": "/prettier-settings"
 			}
 		]
 	},
