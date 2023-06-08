@@ -1,3 +1,5 @@
+import { Code } from "@bg/docs/code";
+
 # Configuración de prettier🔧
 
 ## 📌El archivo `prettier.json` se utiliza para definir las preferencias de formato y estilo en el formateador de código Prettier. Aquí tienes un ejemplo de cómo puedes configurar el archivo `prettier.json` con tus preferencias específicas:
@@ -7,7 +9,7 @@
 1. Abre un editor de texto y crea un nuevo archivo llamado `prettier.json`.
 2. Copia y pega el siguiente código en el archivo `prettier.json`:
 
-```json
+<Code>
 {
   "tabWidth": 4,
   "arrowParens": "avoid",
@@ -18,7 +20,7 @@
   "bracketSpacing": false,
   "configPath": "${workspaceFolder}/.prettierrc"
 }
-```
+</Code>
 
 3. Guarda el archivo prettier.json en la raíz de tu proyecto.
 4. Establece el prettier.json como archivo de configuración de prettier, esto se hace por medio de una opción del vscode llamada Config path.
@@ -29,9 +31,7 @@ Para ejecutar Prettier y formatear tu código según la configuración estableci
 
 Línea de comandos: Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando:
 
-```
-npx prettier --write
-```
+<Code>npx prettier --write</Code>
 
 Esto formatea todos los archivos dentro de la carpeta actual y sus subcarpetas.
 
