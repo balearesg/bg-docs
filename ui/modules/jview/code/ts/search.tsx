@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useState, useEffect } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIconButton } from "@bgroup/ui/icons";
 import { Dates } from "./dates";
 import { useJViewContext } from "./context";
 
