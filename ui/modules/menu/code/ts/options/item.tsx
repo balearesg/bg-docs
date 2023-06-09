@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useContext } from "react";
 import { ContextMenu } from '../context'
-import { BeyondIcon } from "@bgroup/ui/icon";
+import { BeyondIcon } from "@bgroup/ui/icons";
 
 export function Item({ item }): JSX.Element {
 
