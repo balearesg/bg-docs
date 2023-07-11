@@ -22,6 +22,7 @@ import { default as __configureGit } from "./mdx/configure-git/configure-git.mdx
 import { default as __debugApps } from "./mdx/debug-mobile-apps/debug_aplicaciones_moviles.mdx";
 import { default as __runningBovino } from "./mdx/running-bovino/running-bovino.mdx";
 import { default as __prettierSettings } from "./mdx/prettier-settings/prettier-settings.mdx";
+import { default as __howToInstallJadmin } from "./mdx/how-to-install-jadmin/how-to-install-jadmin.mdx";
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -44,6 +45,7 @@ export /*bundle*/ const ConfigureGit = __configureGit;
 export /*bundle*/ const DebugMobileApps = __debugApps;
 export /*bundle*/ const RunningBovino = __runningBovino;
 export /*bundle*/ const PrettierSettings = __prettierSettings;
+export /*bundle*/ const HowToInstallJadmin = __howToInstallJadmin;
 export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
   return {
     user: `lorem ipsum ${index + 1}`,

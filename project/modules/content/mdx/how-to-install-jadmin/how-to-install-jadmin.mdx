@@ -1,0 +1,45 @@
+import { Title } from "@bg/docs/components/html";
+import { Code } from "@bg/docs/code";
+
+<Title
+  tag="h2"
+  text="Como instalar y configurar el Jadmin en un nuevo proyecto💻"
+/>
+
+1. Lo primero que se necesita es tener en su **"packages.json"** la ruta de su proyecto hasta los package.json de los siguientes proyectos 🗺️:
+
+   - bg-auth/mailer/package.json
+   - bg-auth/auth-models/package.json
+   - bg/bg-auth/auth-api/package.json
+   - reactive-model/package.json
+   - jadmin/project/package.json
+   - jadmin/ui/package.json
+
+2. Una vez hecho lo siguiente es ir al `package.json` del proyecto donde quiera implementar el jadmin y agregar las siguientes dependencias:
+
+   ```
+   "libraries": {
+   	"imports": [
+   		"@bg/jadmin",
+   		"@bg/auth-api",
+   		"@jadmin/ui",
+   		"@bg/auth-models"
+   	]
+   },
+   ```
+
+3. Luego si no esta especificado copie la carpeta `routing ` del jadmin y pasela a su proyecto.
+
+4. Se vuelve a ubicar en su package.json y en la entrada params especificara los items que iran en la sidebar, (los items de la sidebar es dentro de params.application). la propiedad menu es un array de elementos con la siguiente forma:
+
+   ```
+       {
+        "name": "item name",
+        "icon": "icon to display",
+        "path": "to"
+       },
+   ```
+
+5. Asegurese de copiar tambien la carpeta template del jadmin y pasarla a su projecto. 📄
+
+Y con eso ya esta concluido!!! 🎉.

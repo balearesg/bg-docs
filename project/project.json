@@ -94,6 +94,10 @@
 			{
 				"label": "Prettier Settings",
 				"path": "/prettier-settings"
+			},
+			{
+				"label": "How to install jadmin",
+				"path": "/how-to-install-jadmin"
 			}
 		]
 	},
