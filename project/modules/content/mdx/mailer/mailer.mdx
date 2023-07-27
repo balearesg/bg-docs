@@ -2,6 +2,14 @@
 
 bg-mailer es una herramienta para enviar correos electrónicos HTML dinámicos. Con bg-mailer, puedes recibir un token asociado a una aplicación que se guarda en la base de datos y utilizar esa información para personalizar la plantilla HTML antes de enviar el correo electrónico.
 
+## Integracion
+
+1. Instalar bg-mailer es muy sencillo. Solo debes ejecutar el comando `npm i` para instalar todos los paquetes dependientes.
+
+2. Luego asegurate de que en tu `packages.json` este la ruta relativa del bg-mailer y su package.json.
+
+3. Asegurate tambien de tener en el package.json de tu proyecto el bg-mailer, esta en la entrada "Libraries" > "import :"
+
 ## Funciones principales
 
 El corazón de bg-mailer es la clase MailManager, que se encarga de administrar el proceso de envío. Hay dos funciones principales que debes conocer para usar bg-mailer:
@@ -9,10 +17,6 @@ El corazón de bg-mailer es la clase MailManager, que se encarga de administrar 
 - `hasPermission`: Esta función te dice si el token pasado por argumento pertenece a una aplicación registrada en la base de datos.
 
 - `send`: Esta función envía el correo electrónico, recibiendo como parámetros `{to, subject, module, data}`. `to` es el correo electrónico del destinatario, `subject` es el asunto del correo, `module` es el módulo a tomar de la base de datos y `data` son los valores que se establecerán en el documento HTML.
-
-## Instalación
-
-Instalar bg-mailer es muy sencillo. Solo debes ejecutar el comando `npm i` para instalar todos los paquetes dependientes.
 
 ## Uso
 
