@@ -98,6 +98,10 @@
 			{
 				"label": "How to install jadmin",
 				"path": "/how-to-install-jadmin"
+			},
+			{
+				"label": "Gmaps Integration",
+				"path": "/gmaps-integration"
 			}
 		]
 	},
