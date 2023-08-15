@@ -102,6 +102,10 @@
 			{
 				"label": "Gmaps Integration",
 				"path": "/gmaps-integration"
+			},
+			{
+				"label": "Chart Component",
+				"path": "/chart-component"
 			}
 		]
 	},
