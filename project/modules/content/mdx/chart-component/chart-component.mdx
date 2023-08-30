@@ -21,23 +21,36 @@ Para utilizar el componente `ChartComponent`, sigue los siguientes pasos:
 
 1. Importa el componente en tu archivo de React:
 
-<Code>{`import { ChartComponent } from './ChartComponent';`}</Code>
+<Code>{`import { ChartComponent } from '@bg/jadmin/chart';`}</Code>
 
 2. Crea un objeto con los datos que quieres graficar, este objeto debe tener la siguiente estructura:
 
 <Code>
-  {`
-const data = {
-  labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-  datasets: [
-    {
-      label: 'Ventas',
-      data: [12, 19, 3, 5, 2, 3],
-      fill: false,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.1,
-    },
-  ],
+  {`const data = {
+labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+datasets: [
+				{
+					label: 'Ventas',
+					data: [12, 19, 3, 5, 2, 3],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.6)', // Enero
+						'rgba(54, 162, 235, 0.6)', // Febrero
+						'rgba(255, 206, 86, 0.6)', // Marzo
+						'rgba(75, 192, 192, 0.6)', // Abril
+						'rgba(153, 102, 255, 0.6)', // Mayo
+						'rgba(255, 159, 64, 0.6)', // Junio
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+					],
+					borderWidth: 1,
+				},
+			],
 };
 `}
 </Code>
@@ -45,14 +58,15 @@ const data = {
 3. Utiliza el componente ChartComponent en tu renderizado de React:
 
 <Code>
-  {`
-function App() {
-  return (
-    <div>
-      <h1>Mi gráfico</h1>
-      <ChartComponent chartData={data} type="line" />
-    </div>
-  );
-}
-`}
+  {`function App() {
+	const ref = React.useRef();
+
+return (
+
+<div>
+  <h1>Mi gráfico</h1>
+  <ChartComponent chartData={data} ref={ref} type="line" />
+</div>
+); } `}
+
 </Code>
