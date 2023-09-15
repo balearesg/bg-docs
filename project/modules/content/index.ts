@@ -25,6 +25,8 @@ import { default as __prettierSettings } from "./mdx/prettier-settings/prettier-
 import { default as __howToInstallJadmin } from "./mdx/how-to-install-jadmin/how-to-install-jadmin.mdx";
 import { default as __gmapsIntegration } from "./mdx/gmaps-integration/gmaps-integration.mdx";
 import { default as __chartComponent } from "./mdx/chart-component/chart-component.mdx";
+import { default as __reactTypes } from "./mdx/react-types/react-types.mdx";
+
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -50,6 +52,7 @@ export /*bundle*/ const PrettierSettings = __prettierSettings;
 export /*bundle*/ const HowToInstallJadmin = __howToInstallJadmin;
 export /*bundle*/ const GmapsIntegration = __gmapsIntegration;
 export /*bundle*/ const ChartComponent = __chartComponent;
+export /*bundle*/ const ReactTypes = __reactTypes;
 export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
   return {
     user: `lorem ipsum ${index + 1}`,
