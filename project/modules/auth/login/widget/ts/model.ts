@@ -1,5 +1,6 @@
 import { ReactiveModel } from '@bg/docs/reactive-model';
 import { session } from '@bg/auth-api/wrapper.ts';
+import config from '@bg/docs/config';
 import { init } from './types';
 export class Model extends ReactiveModel {
 	#message: string;
@@ -32,7 +33,9 @@ export class Model extends ReactiveModel {
 		this.#error = false;
 		this.triggerEvent();
 		try {
-			const response = await session.login({ ...fields });
+			const appToken = config.params.application.token;
+			console.log('APP TOKEN => ', appToken);
+			const response = await session.login({ ...fields, appToken });
 			if (response?.error) throw new Error(response.error);
 		} catch (error) {
 			this.#error = true;
