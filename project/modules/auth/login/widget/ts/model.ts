@@ -34,7 +34,6 @@ export class Model extends ReactiveModel {
 		this.triggerEvent();
 		try {
 			const appToken = config.params.application.token;
-			console.log('APP TOKEN => ', appToken);
 			const response = await session.login({ ...fields, appToken });
 			if (response?.error) throw new Error(response.error);
 		} catch (error) {
