@@ -1,0 +1,51 @@
+# 🐾Pasos para correr la aplicacion de Bovino
+
+1.  Clone el repositorio de bovino.📁
+
+2.  Clonar el repositorio de beyond-2020 en caso de que no lo tenga.
+
+3.  En el repositorio de **"beyond-2020"** haga _"npm install"_ en cada carpeta donde este un `
+package.json`.
+
+                        [!NOTE]📌
+
+                        Se recommienda primero hacer "npm install" en todos los "package.json" para correr la app pero en muchas ocasiones explotan errores en la consola. Asi que se recommienda lo siguiente antes hacer "npm install":
+
+4.  En caso de no tener **"node-sass"** tiene que ejecutar el siguiente codigo en la terminal:
+
+    ```js
+    npm install node-sass
+    ```
+
+5.  Tambien asegurese de tener tener instalado la ultima version de `python`.
+
+6.  Ahora si haga `"npm install"` en cada carpeta de **"beyond-2020"** donde este un `package.json`.
+
+7.  Ahora dirijase a _bovino_ y verifique si tiene una carpeta **.beyond📁**, si no la tiene abra el **Run and bug🐞** y seleccione `node` y remplaze el codigo que ya existe ahi por el siguiente:
+
+    ```json
+    {
+      // Use IntelliSense to learn about possible attributes.
+      // Hover to view descriptions of existing attributes.
+      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "BeyondJS",
+          "runtimeExecutable": "beyond",
+          "args": ["run"]
+        }
+      ]
+    }
+    ```
+
+    si no sabe abrir el **Run and bug🐞** de vscode simplemente en la raiz del proyecto cree una carpeta **.vscode📁** y cree un arhivo `launch.json`.
+
+    - **.vscode**
+      - **launch.json**
+
+8.  Es necesario que haga `"npm install"` en cada carpeta de **"beyond-2020"** donde este un `package.json`.
+
+## listo!!! ya puede correr bovino en su maquina🎓🎉.

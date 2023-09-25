@@ -1,0 +1,22 @@
+import { ELink } from '@bg/docs/components/html';
+import { InlineCode, Code } from '@bg/docs/code';
+
+# Compilacion de servicios con importacion de paquetes externos
+
+## Cuando se debe realizar una compilacion de una distribucion de tipo backend pero se tienen paquetes externos, se debe realizar un tratamiento manual para que el codigo pueda consultar estos paquetes, los pasos a seguir son los siguientes:
+
+1.- Ingresar en el dashboar de beyond.
+
+2.- Realizar compilacion de distribucion backend del servicio.
+
+3.- Realizar compilacion de paquetes externos en tipo npm.
+
+4.- Realizar npm install sobre el codigo de la compilacion de la distribucion backend.
+
+5.- Crear directorio con el nombre del paquete externo dentro del directorio node_modules.
+
+6.- Tomar archivos compilados de los paquetes externos del tipo npm e ingresarlos dentro de la carpeta correspondiente dentro de node_modules.
+
+7.- Correr servicio de la aplicacion.
+
+## Con los pasos antes descritos, notaremos que el backend consigue y consulta correctamente los paquetes externos.
