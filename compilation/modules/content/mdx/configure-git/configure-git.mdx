@@ -1,0 +1,18 @@
+# Pasos para clonar la documentacion en **Cloud Source Repositories**
+
+[!NOTE]
+
+## 💻 Primeramente necesitamos saber que configuraremos nuestras credenciales git desde cero para que luego no lo hagamos por cada accion
+
+1. Para ello como primer paso debemos situar nuestro cursor con el mouse en la parte derecha superior de nuestra pantalla, exactamente en el boton que dice _clone_. luego nos saldra dos opciones: **autenticación SSH** y **⚪How to setup**. Es necesario que si no tenemos nuestras credenciales configuradas le demos al boton _How to setup_.
+
+2. Al darle click al boton _How to setup_ nos mostrara un modal el cual nosotros de las tres opciones de arriba que apareceran le demos a **Credenciales generadas manualmente** y de ahi la primera opcion de abajo que dice **Generar y almacenar tus credenciales de Git**. Aqui Google pedira que demos nuestro acceso y elijamos la cuenta donde tengamos nuestros permisos. Seguido a eso le daremos a permitir.
+
+3. Ahi entraremos a una pagina para configurar **Git** (que es un sistema de control de versiones) que es necesario que tengamos. Siguiendo con los paso veremos dos comandos que se nos presentaran. Copiaremos los dos y los guardaremos en un editor de texto cualquiera. Esto lo haremos para editar la parte **%USERPROFILE%** que sale de los comando.
+
+4. Para editar **%USERPROFILE%** primero tenemos que dirijirnos a nuestro disco duro **disco local c**💾
+   ahi entraremos en la carpeta usuarios y abriremos la carpeta del usuario que tengamos nosotros. Una vez hecho eso moveremos nuestro cursor a la barra de arriba que nos da la ruta de nuestra carpeta de usuario. Copiamos esa ruta y remplazamos **%USERPROFILE%** por la ruta que copiamos, ejemplo: _git config --global http.cookiefile "%USERPROFILE%\.gitcookies"_ ==> _git config --global http.cookiefile "tu/ruta/de/usuario\.gitcookies"_. Una vez hecho eso copiamos ahora si todo el comando que editamos.
+
+5. Cuando lo copiemos ahi mismo en nuestro disco duro (**disco local c**💾) en la carpteta de usuario en donde estemos usaremos **Git**, con git bash solo tenemos que abrir la terminal de bash presionando click derecho primero y buscaremos la opcion que dice **Git Bash Here** ahi le daremos y pegaremos el comando y lo ejecutaremos. De igual forma tendremos que hacer con el segundo comando que nos aparece en la pagina de _Configure Git_ es decir que tenemos que remplazar el **%USERPROFILE%** de los dos comandos antes de ejecutarlo en la terminal. Los dos comandos se ejecutan por separado.
+
+6. Y por ultimo copiaremos la url del repositorio luego abriremos git bash en la carpeta donde queramos clonar nuestro repositorio, una vez ubicados solo abrimos la terminal y pegamos y ejecutamos el comando copiado y listo; ya tendremos clonado el repositorio y habremos configurado las credenciales de git 😃.

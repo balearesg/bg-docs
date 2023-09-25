@@ -1,0 +1,49 @@
+import { Code } from "@bg/docs/code";
+import { Title } from "@bg/docs/components/html";
+import { Info } from "@bg/docs/components/html";
+import { ELink } from '@bg/docs/components/html';
+
+<Title text="Como hacer Deploy en BG Docs" />
+
+<Info>
+  Cuando querramos actualizar la pagina de bg-docs para incluir las documentaciones nuevas que hemos agregado tendremos que hacer una serie de pasos hacer el Deploy, aqui te los explico:  
+</Info>
+
+### Compilacion
+
+Cuando en nuestro repositorio local tengamos los cambios que querramos subir, tendremo que :
+
+1. primero correr nuestro servicio de beyond con el comando :
+
+<Code>{`beyond run`}</Code>
+
+2. Luego irnos al worskspaces de Beyond. Ahi sencillamente ubicaremos el paquete de bg-docs y procederemos a hacer la compilacion web para asegurarnos de que no hay errores.
+
+Una vez hecho eso, procederemos a nuestro segundo paso.
+
+### Clonacion de bg-docs-pages
+
+En la plataforma donde alojamos la web de bg-docs es en el repositorio de `bg-docs-pages` En este repositiorio procederemos a hacer los siguientes pasos :
+
+<ELink href="https://github.com/balearesg/bg-docs-page">Link de bg-docs-pages</ELink>
+
+3. Primero nos ubicaremos en el repositiorio de bg-docs-pages y copiaremos de ahi el codigo para clonar el repositiorio.
+
+<Code>{`git clone https://github.com/balearesg/bg-docs-page.git`}</Code>
+
+este codigo lo ejecutaremos en nuestra carpeta donde tendremos nuestros proyectos de bg.
+
+4. Luego nos dirigimos en bg-docs y en esta ruta *project\.beyond\builds\web\code* copiaremos el codigo adentro y nos ubicamos en la raiz de nuestro repositiorio local de bg-docs-pages y pegaremos el codigo que copiamos.
+
+#### Recomendacion:
+
+Es recomendable que antes de hacer un deploy hagamos un respaldo de los archivos que remplazaremos en bg-docs-pages para asi tener un respaldo de los archivos anteriores.
+
+### Netlify
+
+La plataforma que utilizamos para alojar la web es `Netlify`, es una plataforma de alojamiento web que permite a los desarrolladores alojar sitios web estáticos y aplicaciones web de una manera fácil y rápida.
+  
+5. En Netlify nos iremos a la parte de `Sites` ahi veremos la opcion y los pasos para hacer el deploy, basicamente es llevar la carpeta de bg-docs-pages al lugar que nos indica netlify para actualizar.
+
+Y listo, ya tendremos nuesto deploy listo!.
+

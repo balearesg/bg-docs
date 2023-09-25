@@ -1,0 +1,144 @@
+.main-content {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+  position: relative;
+  margin-top: 60px;
+  transition: all 200ms ease-in-out;
+  color: var(--text-on-primary);
+  float: right;
+}
+.main-content.expand {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+.container-sidebar-header {
+  box-shadow: 0 -1rem 15rem var(--black);
+  display: flex;
+}
+.container-sidebar-header .header {
+  position: fixed;
+  left: 80px;
+  background-color: var(--primary-dark);
+  transition: all 200ms ease-in-out;
+  width: calc(100% - 96px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 16px;
+  color: var(--text-on-primary);
+  z-index: 9;
+}
+.container-sidebar-header .header.expand {
+  left: 300px;
+  width: calc(100% - 316px);
+}
+.sidebar {
+  border-right: 1px solid var(--background);
+  background: var(--primary-dark);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 300px;
+  height: 100%;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.sidebar__header {
+  height: min-content;
+  padding: 2rem 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar__header .logo {
+  width: 100%;
+  margin: 0 auto;
+}
+.sidebar__header .toggle__btn {
+  background: transparent;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+.sidebar__header .toggle__btn svg.beyond-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--surface);
+}
+.sidebar.closed .sidebar__header .toggle__btn svg.beyond-icon {
+  fill: var(--primary-light);
+}
+.sidebar:hover, .sidebar.open {
+  left: 0;
+}
+.sidebar:hover ul, .sidebar.open ul {
+  overflow-y: auto;
+}
+.sidebar:hover .sidebar__header .toggle__btn svg.beyond-icon, .sidebar.open .sidebar__header .toggle__btn svg.beyond-icon {
+  fill: var(--text-on-primary);
+}
+.sidebar__nav {
+  padding: 0 20px 20px 20px;
+  height: 100%;
+  height: 100%;
+  max-height: 80vh;
+}
+.sidebar__nav .documentation-subtitle {
+  padding: 0 0 0 1rem;
+  color: var(--text-on-primary);
+  font-weight: bold;
+}
+.sidebar__nav .sidebar-list {
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar__nav .sidebar-list li {
+  margin-bottom: 10px;
+}
+.content-user {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  min-width: 135px;
+}
+.content-user .user-img {
+  width: 39px;
+  height: 39px;
+}
+.content-user .user-img svg {
+  fill: var(--text-on-primary);
+  stroke: var(--text-on-primary);
+}
+.content-user .user-info {
+  display: flex;
+  flex-direction: column;
+}
+.content-user .user-info strong {
+  color: var(--text-on-secondary);
+  font-size: 16px;
+}
+.content-user .user-info span {
+  color: var(--secondary);
+  font-size: 13px;
+}
+.content-user .user-info strong,
+.content-user .user-info span {
+  letter-spacing: 0px;
+  line-height: 1;
+}
+.content-user:before {
+  content: " ";
+  width: 1px;
+  background-color: var(--gray);
+  height: 31px;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvZGVcXHNhc3NcXGNvbnRlbnQuc2NzcyIsImNvZGVcXHNhc3NcXGhlYWRlci5zY3NzIiwiY29kZVxcc2Fzc1xcc2lkZWJhci5zY3NzIiwiY29kZVxcc2Fzc1xcdXNlci5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBQ0E7RUFDSTtFQUNBOztBQ1ZSO0VBQ0M7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7O0FDbEJIO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBQ0E7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0M7RUFDQTtFQUNBOztBQU1GO0VBQ0M7O0FBSUY7RUFFQzs7QUFFQTtFQUNDOztBQUVEO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7O0FDNUVKO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBOztBQUVBO0VBQ0M7RUFDQTs7QUFJRjtFQUNDO0VBQ0E7O0FBQ0E7RUFDQztFQUNBOztBQUVEO0VBQ0M7RUFDQTs7QUFFRDtBQUFBO0VBRUM7RUFDQTs7QUFHRjtFQUNDO0VBQ0E7RUFDQTtFQUNBIiwiZmlsZSI6IiJ9 */

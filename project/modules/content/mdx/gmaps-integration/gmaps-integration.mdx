@@ -1,0 +1,22 @@
+import { Code } from "@bg/docs/code";
+
+# Integracion de gmaps
+
+## Pasos para la integracion 💻 :
+
+1. `"Gmaps"` utiliza la libreria de google maps por tanto se necesita hacer un "npm install" de la libreria, instale gmaps en su paquete:
+
+<Code>{`@googlemaps/js-api-loader`}</Code>{" "}
+
+2. Una vez hecho proceda a agregar en el `"packages.json"` de su proyecto la ruta relativa de donde tenga el `"package.json"` de gmaps.
+
+3. Asegurese tambien de que en su `"package.json"` en la entrada **"libraries"** > **"import"** este el scope y nombre de gmaps:
+
+<Code>{`
+"libraries": {
+    "imports": [
+        "@bgroup/gmaps"
+    ]
+},`}</Code>{" "}
+
+Y asi estaria terminada la integracion de Gmaps 🔥 !
