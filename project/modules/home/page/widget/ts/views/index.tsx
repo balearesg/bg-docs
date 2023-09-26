@@ -17,12 +17,10 @@ function View({ uri }) {
 			</div>
 		);
 	}
-	// const [ready, texts] = useTexts(module.specifier);
 	const replace = (text) => text.replace(text[0], text[0].toUpperCase());
 	const name = contentId.split('-').map(replace).join('');
 
 	const Content = Contents[name] || Contents[DEFAULT_CONTENT];
-
 	return (
 		<div className="page__container">
 			<Content />

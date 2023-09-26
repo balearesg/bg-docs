@@ -6,6 +6,12 @@ export function SubItem({ item }): JSX.Element {
 	const [isOpen, setIsOpen] = React.useState(false);
 	const children = item.children.map((subItem) => <Item item={subItem} />);
 
+	const items = {
+		label: item[0],
+		path : item[1],
+		subPath : item[2]
+	}
+
 	function toggleOpen() {
 		setIsOpen(!isOpen);
 	}
@@ -19,8 +25,8 @@ export function SubItem({ item }): JSX.Element {
 
 	return (
 		<>
-			<li onClick={navigate} data-sub={item.subPath} data-path={item.path}>
-				{item.label}
+			<li onClick={navigate} data-sub={items.subPath} data-path={items.path}>
+				{items.label}
 			</li>
 
 			{isOpen && children}
