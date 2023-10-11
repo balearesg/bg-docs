@@ -1,15 +1,15 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle", "@bg/auth-api@1.0.0/wrapper.bridge", "@beyond-js/kernel@0.1.8/core", "@bg/auth-api@1.0.0/prototypes", "@bg/auth-api@1.0.0/entities.ts"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.9/bundle", "@bg/auth-api@1.0.0/wrapper.bridge", "@beyond-js/kernel@0.1.9/core", "@bg/auth-api@1.0.0/prototypes", "@bg/auth-api@1.0.0/entities.ts"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, bimport, __Bundle, __pkg, ims, session, __beyond_pkg, hmr;
   _export("session", void 0);
   return {
-    setters: [function (_beyondJsKernel018Bundle) {
-      dependency_0 = _beyondJsKernel018Bundle;
+    setters: [function (_beyondJsKernel019Bundle) {
+      dependency_0 = _beyondJsKernel019Bundle;
     }, function (_bgAuthApi100WrapperBridge) {
       dependency_1 = _bgAuthApi100WrapperBridge;
-    }, function (_beyondJsKernel018Core) {
-      dependency_2 = _beyondJsKernel018Core;
+    }, function (_beyondJsKernel019Core) {
+      dependency_2 = _beyondJsKernel019Core;
     }, function (_bgAuthApi100Prototypes) {
       dependency_3 = _bgAuthApi100Prototypes;
     }, function (_bgAuthApi100EntitiesTs) {
@@ -17,7 +17,7 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "@bg/auth-api@1.0.0/wrapper.b
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@bg/auth-models", "1.0.0"], ["@bg/notifications", null], ["@bg/mailer", "1.0.0"], ["@beyond-js/backend", "0.1.4"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/react-18-widgets", "0.0.3"], ["@beyond-js/react-widgets", "18.21.1"], ["@beyond-js/widgets", "0.1.5"], ["dayjs", "1.11.7"], ["express", "4.18.2"], ["firebase", "9.17.1"], ["googleapis", "111.0.0"], ["jsonwebtoken", "9.0.0"], ["mysql2", "3.1.1"], ["nodemailer", "6.9.1"], ["sequelize", "6.28.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@bg/auth-api", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@bg/auth-models", "1.0.0"], ["@bg/notifications", null], ["@bg/mailer", "1.0.0"], ["@beyond-js/backend", "0.1.4"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/react-18-widgets", "0.0.3"], ["@beyond-js/react-widgets", "18.21.1"], ["@beyond-js/widgets", "0.1.3"], ["dayjs", "1.11.7"], ["express", "4.18.2"], ["firebase", "9.17.1"], ["googleapis", "111.0.0"], ["jsonwebtoken", "9.0.0"], ["mysql2", "3.1.1"], ["nodemailer", "6.9.1"], ["sequelize", "6.28.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@bg/auth-api", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({

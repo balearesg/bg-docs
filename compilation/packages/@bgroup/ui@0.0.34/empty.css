@@ -1,0 +1,42 @@
+.beyond-element-empty {
+  text-align: center;
+  color: var(--gray);
+  padding: 30px;
+  display: flex;
+  flex-flow: row;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+.beyond-element-empty .content {
+  justify-items: center;
+  display: flex;
+  margin: auto;
+  flex-flow: column;
+}
+.beyond-element-empty h3 {
+  margin: 15px 0 0;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.beyond-element-empty h3:first-letter {
+  text-transform: uppercase;
+}
+.beyond-element-empty a {
+  color: var(--gray-light);
+  font-size: 18px;
+}
+.beyond-element-empty a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.beyond-element-empty svg {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  margin: auto;
+  fill: var(--gray);
+}
+
+
+/*# sourceMappingURL=empty.css.map*/

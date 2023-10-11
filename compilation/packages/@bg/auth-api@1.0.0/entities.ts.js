@@ -1,4 +1,4 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle", "@bg/auth-api@1.0.0/bridge", "@bg/auth-api@1.0.0/prototypes", "@bg/auth-api@1.0.0/entities.bridge"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.9/bundle", "@bg/auth-api@1.0.0/bridge", "@bg/auth-api@1.0.0/prototypes", "@bg/auth-api@1.0.0/entities.bridge"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, bimport, __Bundle, __pkg, ims, IProfile, Profile, Profiles, IUser, DEFAULT_USER, User, Users, __beyond_pkg, hmr;
@@ -12,8 +12,8 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "@bg/auth-api@1.0.0/bridge", 
     Users: void 0
   });
   return {
-    setters: [function (_beyondJsKernel018Bundle) {
-      dependency_0 = _beyondJsKernel018Bundle;
+    setters: [function (_beyondJsKernel019Bundle) {
+      dependency_0 = _beyondJsKernel019Bundle;
     }, function (_bgAuthApi100Bridge) {
       dependency_1 = _bgAuthApi100Bridge;
     }, function (_bgAuthApi100Prototypes) {
@@ -23,7 +23,7 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "@bg/auth-api@1.0.0/bridge", 
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@bg/auth-models", "1.0.0"], ["@bg/notifications", null], ["@bg/mailer", "1.0.0"], ["@beyond-js/backend", "0.1.4"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/react-18-widgets", "0.0.3"], ["@beyond-js/react-widgets", "18.21.1"], ["@beyond-js/widgets", "0.1.5"], ["dayjs", "1.11.7"], ["express", "4.18.2"], ["firebase", "9.17.1"], ["googleapis", "111.0.0"], ["jsonwebtoken", "9.0.0"], ["mysql2", "3.1.1"], ["nodemailer", "6.9.1"], ["sequelize", "6.28.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@bg/auth-api", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@bg/auth-models", "1.0.0"], ["@bg/notifications", null], ["@bg/mailer", "1.0.0"], ["@beyond-js/backend", "0.1.4"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/react-18-widgets", "0.0.3"], ["@beyond-js/react-widgets", "18.21.1"], ["@beyond-js/widgets", "0.1.3"], ["dayjs", "1.11.7"], ["express", "4.18.2"], ["firebase", "9.17.1"], ["googleapis", "111.0.0"], ["jsonwebtoken", "9.0.0"], ["mysql2", "3.1.1"], ["nodemailer", "6.9.1"], ["sequelize", "6.28.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@bg/auth-api", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({

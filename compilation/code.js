@@ -1,4 +1,4 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle", "@beyond-js/kernel@0.1.8/styles", "react@18.2.0", "@bgroup/ui@0.0.31/icons", "prismjs@1.29.0"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.9/bundle", "@beyond-js/kernel@0.1.9/styles", "react@18.2.0", "@bgroup/ui@0.0.34/icons", "prismjs@1.29.0"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, bimport, __Bundle, __pkg, ims, CodeBox, Code, InlineCode, __beyond_pkg, hmr;
@@ -8,20 +8,20 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "@beyond-js/kernel@0.1.8/styl
     InlineCode: void 0
   });
   return {
-    setters: [function (_beyondJsKernel018Bundle) {
-      dependency_0 = _beyondJsKernel018Bundle;
-    }, function (_beyondJsKernel018Styles) {
-      dependency_1 = _beyondJsKernel018Styles;
+    setters: [function (_beyondJsKernel019Bundle) {
+      dependency_0 = _beyondJsKernel019Bundle;
+    }, function (_beyondJsKernel019Styles) {
+      dependency_1 = _beyondJsKernel019Styles;
     }, function (_react) {
       dependency_2 = _react;
-    }, function (_bgroupUi0031Icons) {
-      dependency_3 = _bgroupUi0031Icons;
+    }, function (_bgroupUi0034Icons) {
+      dependency_3 = _bgroupUi0034Icons;
     }, function (_prismjs) {
       dependency_4 = _prismjs;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.31"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.6.0"], ["@beyond-js/kernel", "0.1.8"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.4"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.34"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.7.2"], ["@beyond-js/kernel", "0.1.9"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.9"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
