@@ -34,7 +34,7 @@ System.register(["@beyond-js/kernel@0.1.8/bundle"], function (_export, _context)
           exports.txt = {
             "password": "password",
             "email": "email",
-            "login": "Estoy testeando con Gabriel",
+            "login": "Login",
             "error": "An error has occurred",
             "forgetPassword": "Have you forgotten your password?",
             "success_recoverPassword": "Password changed successfully",

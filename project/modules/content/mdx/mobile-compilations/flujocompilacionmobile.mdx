@@ -80,7 +80,19 @@ Las compilaciones de estos tipos de distribución normalmente se refieren a un c
 
 PUBLICACION DE SERVICIO BEYOND MANUALMENTE.docx
 
-Proc | Procedimiento para actualización de servicios
+Proc | Procedimiento para actualización de servicios.
+
+## COMPILACIÓN CON CORDOVA COMMAND LINE
+
+1. Instalar cordova mediante el comando npm -i cordova -g
+2. Abrir linea de comando sobre el directorio a compilar (el que contiene todos los archivos incluyendo el config.xm, www, etc)
+3. Correr el comando cordova platform add (sistema operativo) ya sea android o ios ejm: cordova platform add android.
+4. Correr el comando cordova platform rm (sistema operativo) y volver a correr el paso anterior (Esto debido a que muchas veces cordova da un error y se debe realizar este paso).
+5. Correr comando npm i cordova-common -g (esto es una dependencia de cordova).
+6. Por ultimo correr el comando cordova build (sistema operativo).
+7. Buscar el apk dentro de (proyecto/plaatform/android/build/output/app.apk)
+
+Nota: Para ios es necesario realizar estas mismas acciones pero desde una pc con sistema operativo mac OS, ya que, en windows no funciona.
 
 ## COMPILACIÓN CON VOLTBUILDER
 
