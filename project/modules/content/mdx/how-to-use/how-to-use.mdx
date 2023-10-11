@@ -96,10 +96,11 @@ Luego de eso vamos a la seccion `// Exports` y al final de esta vamos a agregar 
 
 ### 👏 Ya casi estamos! Solo quedaria disponibilizar nuestro contenido en el menu para que pueda ser accedido por otros
 
-1. Nos dirigimos al archivo `project\project.json`
+1. Nos dirigimos a la siguiente ruta `project\modules\layouts\main\ts\menu\index.ts`
 2. Lo abrimos
-3. Nos vamos a la linea `16`como podemos ver nos encontraremos una propiedad `sidebarItems` que es un array que contiene los items que aparecen en el menu
+3. Nos encontraremos con una constante `sidebarItems` que es un arreglo de arreglos.
 4. Nos vamos a ir al final de la lista de items y crearemos el nuestro siguiendo un patron:
+
 
 Los items del menu tienen una estructura definida y que puede variar segun el caso, solo hay dos casos disponibles:
 
@@ -111,27 +112,19 @@ Los items del menu tienen una estructura definida y que puede variar segun el ca
 En este caso el template que debemos usar es el siguiente:
 
 <Code>
-	{`
-    {"label": "Nombre del menu que querramos agregar", "path": "/getting-started"}
-`}
+	{`["Nombre del menu que querramos agregar", "/url-de-nuestra-pagina", []]`}
 </Code>
 
 ### Se quiere agregar una pagina con submenues (con sub contenidos)
 
+Estructura de los items de `sidebarItems`:
+
+- La primera posicion de estos subarreglos es el label que querramos que se vea en el menu.
+    - La segunda posicion sera la ruta url de nuestra pagina.
+        - La tercera posicion del arreglo es otro arreglo que seran las paginas con submenus o subcontenidos a dentros de estas.
+
 <Code>
-	{`
-{
-    "label": "Nombre del menu que querramos agregar",
-    "path": "path de la pagina que queremso que aparezca cuando cliqueemos la opcion, puede ser otra pagina o una pagina introductoria",
-    "children": [
-        {
-            label: 'Nombre de Sub pagina',
-            path: "/primera-parte-del-nombre-del-export",
-            "subPath": "/  segunda-parte-del-nombre-del-export"
-        }
-    ]
-}
-`}
+	{`["Nombre del menu que querramos agregar", "/url-de-nuestra-pagina", [["Nombre del submenu", "/url-de-nuestra-subpagina", []]]]`}
 </Code>
 
 el submenu lo podemos repetir cuantas veces como sea necesario cuidando que este dentro de `children`.

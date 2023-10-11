@@ -24,78 +24,8 @@
 	},
 	"params": {
 		"application": {
-			"token": "abcdefg123"
-		},
-		"sidebarItems": [
-			{
-				"label": "How to use",
-				"path": "/how-to-use"
-			},
-			{
-				"label": "Compilacion QCH",
-				"path": "/compilacion-qch"
-			},
-			{
-				"label": "Plugins",
-				"path": "/plugins"
-			},
-			{
-				"label": "Standars",
-				"path": "/standars"
-			},
-			{
-				"label": "Components",
-				"path": "/components"
-			},
-			{
-				"label": "Auth Instalation",
-				"path": "/auth-instalation"
-			},
-			{
-				"label": "Auth Session",
-				"path": "/auth-session"
-			},
-			{
-				"label": "Auth User",
-				"path": "/auth-user"
-			},
-			{
-				"label": "Beyond UI",
-				"path": "/beyond-ui"
-			},
-			{
-				"label": "Essential UI",
-				"path": "/essential-ui"
-			},
-			{
-				"label": "Mailer",
-				"path": "/mailer"
-			},
-			{
-				"label": "Service Compilation B-E-P",
-				"path": "/compilation-backend"
-			},
-			{
-				"label": "Mobile Compilations",
-				"path": "/compilation-mobile"
-			},
-			{
-				"label": "Configure Git",
-				"path": "/configure-git"
-			},
-			{
-				"label": "Debug Mobiles Apps",
-				"path": "/debug-mobile-apps"
-			},
-			{
-				"label": "Running Bovino",
-				"path": "/running-bovino"
-			},
-			{
-				"label": "Prettier Settings",
-				"path": "/prettier-settings"
-			}
-		]
+			"token": "docsbg"
+		}
 	},
 	"static": {
 		"includes": [

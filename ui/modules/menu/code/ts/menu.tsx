@@ -1,6 +1,6 @@
 import * as React from "react";
 import {routing} from "@beyond-js/kernel/routing";
-import {BeyondIcon} from '@bgroup/ui/icons';
+import {BeyondIcon} from "@bgroup/ui/icons";
 import {Client} from "./options/client";
 import {ContextMenu} from "./context";
 import {BeyondScrollContainer} from "@bgroup/ui/perfect-scrollbar";

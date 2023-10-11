@@ -1,21 +1,153 @@
 {
-  "name": "@bg/docs",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@beyond-js/react-widgets": "18.20.4",
-    "@bgroup/ui": "^0.0.34",
-    "@mdx-js/mdx": "^2.2.1",
-    "@mdx-js/react": "^2.2.1",
-    "prismjs": "^1.29.0",
-    "socket.io-client": "^4.5.3",
-    "@beyond-js/kernel": "~0.1.8",
-    "@beyond-js/local": "^0.1.2",
-    "@beyond-js/backend": "^0.1.4"
-  },
-  "devDependencies": {
-    "@beyond-js/local": "^0.1.2"
-  }
+	"name": "@bg/docs",
+	"version": "0.0.1",
+	"description": "",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@beyond-js/react-widgets": "18.20.4",
+		"@bgroup/ui": "^0.0.34",
+		"@mdx-js/mdx": "^2.2.1",
+		"@mdx-js/react": "^2.2.1",
+		"prismjs": "^1.29.0",
+		"socket.io-client": "^4.5.3",
+		"@beyond-js/kernel": "~0.1.8",
+		"@beyond-js/local": "^0.1.2",
+		"@beyond-js/backend": "^0.1.4"
+	},
+	"devDependencies": {
+		"@beyond-js/local": "^0.1.2"
+	},
+	"modules": {
+		"path": "modules"
+	},
+	"libraries": {
+		"imports": [
+			"@bg/auth-api",
+			"@bg/auth-models",
+			"@bg/mailer",
+			"@jadmin/ui"
+		]
+	},
+	"params": {
+		"application": {
+			"token": "docsbg"
+		},
+		"sidebarItems": [
+			{
+				"label": "How to use",
+				"path": "/how-to-use"
+			},
+			{
+				"label": "Compilacion QCH",
+				"path": "/compilacion-qch"
+			},
+			{
+				"label": "Plugins",
+				"path": "/plugins"
+			},
+			{
+				"label": "Standars",
+				"path": "/standars"
+			},
+			{
+				"label": "Components",
+				"path": "/components"
+			},
+			{
+				"label": "Auth Instalation",
+				"path": "/auth-instalation"
+			},
+			{
+				"label": "Auth Session",
+				"path": "/auth-session"
+			},
+			{
+				"label": "Auth User",
+				"path": "/auth-user"
+			},
+			{
+				"label": "Beyond UI",
+				"path": "/beyond-ui"
+			},
+			{
+				"label": "Essential UI",
+				"path": "/essential-ui"
+			},
+			{
+				"label": "Mailer",
+				"path": "/mailer"
+			},
+			{
+				"label": "Service Compilation B-E-P",
+				"path": "/compilation-backend"
+			},
+			{
+				"label": "Mobile Compilations",
+				"path": "/compilation-mobile"
+			},
+			{
+				"label": "Configure Git",
+				"path": "/configure-git"
+			},
+			{
+				"label": "Debug Mobiles Apps",
+				"path": "/debug-mobile-apps"
+			},
+			{
+				"label": "Running Bovino",
+				"path": "/running-bovino"
+			},
+			{
+				"label": "Prettier Settings",
+				"path": "/prettier-settings"
+			},
+			{
+				"label": "How to install jadmin",
+				"path": "/how-to-install-jadmin"
+			},
+			{
+				"label": "Gmaps Integration",
+				"path": "/gmaps-integration"
+			},
+			{
+				"label": "Chart Component",
+				"path": "/chart-component"
+			}
+		]
+	},
+	"static": {
+		"includes": [
+			"assets",
+			"modules/content/mdx"
+		]
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "web",
+				"platform": "web",
+				"ports": {
+					"bundles": 3001
+				},
+				"default": true,
+				"environment": "development",
+				"backend": "backend"
+			},
+			{
+				"name": "backend",
+				"platform": "backend",
+				"environment": "development",
+				"ports": {
+					"bundles": 3004,
+					"http": 3009,
+					"inspect": 3006
+				},
+				"default": false,
+				"ts": {
+					"compiler": "tsc"
+				}
+			}
+		]
+	}
 }

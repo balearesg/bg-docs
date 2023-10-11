@@ -1,0 +1,67 @@
+.form-group-select {
+  position: relative;
+}
+.form-group-select svg.beyond-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  stroke: var(--icon-color);
+  width: 12px;
+  height: 12px;
+}
+.jadmin-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11.06px;
+}
+.jadmin-input .beyond-element-input, .jadmin-input .beyond-element-textarea {
+  margin: 0;
+  border-radius: var(--border-primary);
+  border: 1px solid var(--input-bg);
+  background-color: var(--input-bg);
+}
+.jadmin-input .beyond-element-input input, .jadmin-input .beyond-element-textarea input {
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: var(--text-on-primary);
+}
+.jadmin-input .beyond-element-input input:focus, .jadmin-input .beyond-element-textarea input:focus {
+  color: var(--text-on-primary);
+}
+.jadmin-input .beyond-element-input:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled), .jadmin-input .beyond-element-input:focus-within:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled), .jadmin-input .beyond-element-textarea:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled), .jadmin-input .beyond-element-textarea:focus-within:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled) {
+  border-color: var(--primary-light);
+}
+.jadmin-input .beyond-element-input:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled) input, .jadmin-input .beyond-element-input:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled) textarea, .jadmin-input .beyond-element-textarea:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled) input, .jadmin-input .beyond-element-textarea:hover:not(.jadmin-input .beyond-element-input.disabled, .jadmin-input .beyond-element-textarea.disabled) textarea {
+  color: var(--text-on-primary);
+}
+.jadmin-input .beyond-element-input button.beyond-icon-button svg.beyond-icon, .jadmin-input .beyond-element-textarea button.beyond-icon-button svg.beyond-icon {
+  fill: var(--icon-color);
+}
+.jadmin-input .beyond-element-input .beyond-element-input-error, .jadmin-input .beyond-element-textarea .beyond-element-input-error {
+  bottom: -1.25rem;
+  color: var(--border-error);
+  font-size: 12px;
+}
+.jadmin-input .beyond-element-input.error, .jadmin-input .beyond-element-textarea.error {
+  border-color: var(--border-error);
+}
+.jadmin-input .beyond-element-textarea {
+  min-height: 135px;
+}
+.jadmin-input .beyond-element-textarea textarea {
+  min-height: inherit;
+}
+.jadmin-input .label-jadmin {
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: var(--text-on-primary);
+  font-weight: 300;
+  line-height: 1;
+  text-transform: lowercase;
+}
+.jadmin-input .label-jadmin::first-letter {
+  text-transform: uppercase;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvZGVcXHNhc3NcXHNlbGVjdC5zY3NzIiwiY29kZVxcc2Fzc1xcc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSTs7QUFDQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUNSUjtFQUNJO0VBQ0E7RUFDQTs7QUFDQTtFQUNJO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0k7RUFDQTtFQUNBOztBQUNBO0VBQ0k7O0FBR1I7RUFFSTs7QUFFSjtFQUVJOztBQUVMO0VBQ0s7O0FBSUo7RUFDSTtFQUNBO0VBQ0E7O0FBRUo7RUFDSTs7QUFHUjtFQUNJOztBQUNBO0VBQ0k7O0FBR1I7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBQ0E7RUFDSSIsImZpbGUiOiIifQ== */

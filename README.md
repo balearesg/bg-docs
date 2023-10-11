@@ -1,8 +1,7 @@
 # 📚 Pasos para agregar contenido en bg - docs
 
-Lo que vamos a ver acontinuacion son los pasos que tenemos que seguir para poder agregar contenido en bg - docs,;
-desde donde agregar tu archivo mdx hasta que pasos seguir para que tu opcion aparezca en el menu como contenido
-disponible!
+Lo que vamos a ver acontinuacion son los pasos que tenemos que seguir para poder agregar contenido en bg - docs,; desde
+donde agregar tu archivo mdx hasta que pasos seguir para que tu opcion aparezca en el menu como contenido disponible!
 
 ## 🛠 Setup de bg-docs
 
@@ -13,8 +12,6 @@ Antes de comenzar tienes que realizar los pasos acontinuacion listados para pode
 `git clone https://github.com/balearesg/bg-docs.git`
 
 2. Hacer las instalaciones correspondientes:
-
-
 
 `npm i` en `cd project` y `cd ui`
 
@@ -28,7 +25,9 @@ Para agregar la pagina que quieras en bg-docs tu contenido debe seguir unas dire
 
 Unas vez cumplidas estas simples pautas podemos comenzar a listar los pasos a seguir:
 
-Los contenidos en bg-docs se posicionan en `project\modules\content\mdx` siguiendo una estructura basada en el contenido propio y dependiendo del caso esta puede ser un conjunto de archivos si el contenido se divide en partes, o si es solo una pagina un simple archivo, veamoslo con ejemplos:
+Los contenidos en bg-docs se posicionan en `project\modules\content\mdx` siguiendo una estructura basada en el contenido
+propio y dependiendo del caso esta puede ser un conjunto de archivos si el contenido se divide en partes, o si es solo
+una pagina un simple archivo, veamoslo con ejemplos:
 
 ### Ejemplo de implementacion con una unica pagina:
 
@@ -78,13 +77,17 @@ Podremos ver que el archivo se divide en dos secciones
 ...
 ```
 
-2. Vamos a irnos a la seccion imports y en el final de las importaciones (justo antes de que comience la seccion `// Exports`) vamos a agregar:
+2. Vamos a irnos a la seccion imports y en el final de las importaciones (justo antes de que comience la seccion
+   `// Exports`) vamos a agregar:
 
 `import {default as __gettingStarted } from ./mdx/getting-started-folder/getting-started.mdx`
 
-Donde `__gettingStarted` es el nombre de nuestro contenido (es necesario mantener los `__` al principio del nombre), el `getting-started-folder` es la carpeta que creamos antes (donde esta nuestro contenido) y `getting-started.mdx` es el nombre de nuestro archivo con formato `.mdx`
+Donde `__gettingStarted` es el nombre de nuestro contenido (es necesario mantener los `__` al principio del nombre), el
+`getting-started-folder` es la carpeta que creamos antes (donde esta nuestro contenido) y `getting-started.mdx` es el
+nombre de nuestro archivo con formato `.mdx`
 
-Luego de eso vamos a la seccion `// Exports` y al final de esta vamos a agregar la exportacion de nuestro/s contenido/s siguiendo las pautas anteriormente marcadas:
+Luego de eso vamos a la seccion `// Exports` y al final de esta vamos a agregar la exportacion de nuestro/s contenido/s
+siguiendo las pautas anteriormente marcadas:
 
 `export /*bundle*/ const GettingStarted = __gettingStarted;`
 
@@ -92,7 +95,8 @@ Luego de eso vamos a la seccion `// Exports` y al final de esta vamos a agregar 
 
 1. Nos dirigimos al archivo `project\project.json`
 2. Lo abrimos
-3. Nos vamos a la linea `16`como podemos ver nos encontraremos una propiedad `sidebarItems` que es un array que contiene los items que aparecen en el menu
+3. Nos vamos a la linea `16`como podemos ver nos encontraremos una propiedad `sidebarItems` que es un array que contiene
+   los items que aparecen en el menu
 4. Nos vamos a ir al final de la lista de items y crearemos el nuestro siguiendo un patron:
 
 Los items del menu tienen una estructura definida y que puede variar segun el caso, solo hay dos casos disponibles:
@@ -125,5 +129,9 @@ En este caso el template que debemos usar es el siguiente:
 ```
 
 el submenu lo podemos repetir cuantas veces como sea necesario cuidando que este dentro de `children`.
+
+# Como publicar/subir bg-docs
+
+///
 
 ### 🏅Listo! Ya tendriamos nuestro contenido en bg-docs!
