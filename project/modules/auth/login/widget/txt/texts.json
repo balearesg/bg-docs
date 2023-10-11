@@ -2,7 +2,7 @@
 	"en": {
 		"password": "password",
 		"email": "email",
-		"login": "Estoy testeando con Gabriel",
+		"login": "Login",
 		"error": "An error has occurred",
 		"forgetPassword": "Have you forgotten your password?",
 		"success_recoverPassword": "Password changed successfully",
