@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import * as React from "react";
-import {routing} from "@beyond-js/kernel/routing";
-import {BeyondIcon} from "@bgroup/ui/icons";
-import {Client} from "./options/client";
-import {ContextMenu} from "./context";
-import {BeyondScrollContainer} from "@bgroup/ui/perfect-scrollbar";
-=======
 import * as React from 'react';
 import { routing } from '@beyond-js/kernel/routing';
 import { BeyondIcon } from '@bgroup/ui/icons';
 import { Client } from './options/client';
 import { ContextMenu } from './context';
 import { BeyondScrollContainer } from '@bgroup/ui/perfect-scrollbar';
->>>>>>> eaadb1b5269e58e72daff8da82b416c5aee9edbe
 
 type props = {
 	open: boolean;

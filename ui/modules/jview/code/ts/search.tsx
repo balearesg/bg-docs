@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { SyntheticEvent, useState, useEffect } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icons";
-import { Dates } from "./dates";
-import { useJViewContext } from "./context";
-=======
 import React, { SyntheticEvent, useState, useEffect } from 'react';
 import { BeyondIconButton } from '@bgroup/ui/icons';
 import { Dates } from './dates';
 import { useJViewContext } from './context';
->>>>>>> eaadb1b5269e58e72daff8da82b416c5aee9edbe
 
 export function Search(): JSX.Element {
 	type init = {
