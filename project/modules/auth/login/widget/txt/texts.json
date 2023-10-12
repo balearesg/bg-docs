@@ -2,7 +2,7 @@
 	"en": {
 		"password": "password",
 		"email": "email",
-		"login": "Que pasa",
+		"login": "Login",
 		"error": "An error has occurred",
 		"forgetPassword": "Have you forgotten your password?",
 		"success_recoverPassword": "Password changed successfully",
@@ -14,7 +14,7 @@
 	"es": {
 		"password": "Contraseña",
 		"email": "Correo electrónico",
-		"login": "Que pasa",
+		"login": "Inicio de sesion",
 		"error": "Ha ocurrido un error",
 		"forgetPassword": "¿Ha olvidado su contraseña?",
 		"success_recoverPassword": "Contraseña cambiada exitosamente",
