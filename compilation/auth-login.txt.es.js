@@ -29,12 +29,12 @@ System.register(["@beyond-js/kernel@0.1.9/bundle"], function (_export, _context)
       INTERNAL MODULE: ./txt
       *********************/
       ims.set('./txt', {
-        hash: 3157033840,
+        hash: 1699713082,
         creator: function (require, exports) {
           exports.txt = {
             "password": "Contraseña",
             "email": "Correo electrónico",
-            "login": "Login",
+            "login": "Que pasa",
             "error": "Ha ocurrido un error",
             "forgetPassword": "¿Ha olvidado su contraseña?",
             "success_recoverPassword": "Contraseña cambiada exitosamente",
