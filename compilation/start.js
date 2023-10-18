@@ -1,18 +1,18 @@
-System.register(["@beyond-js/kernel@0.1.9/bundle", "@beyond-js/kernel@0.1.9/transversals", "@beyond-js/widgets@0.1.5/render", "@bg/auth-api@1.0.0/wrapper.ts", "@beyond-js/kernel@0.1.9/routing"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.8/bundle", "@beyond-js/kernel@0.1.8/transversals", "@beyond-js/widgets@0.1.3/render", "@bg/auth-api@1.0.0/wrapper.ts", "@beyond-js/kernel@0.1.8/routing"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, Transversal, __beyond_transversal, widgets, bundles;
   return {
-    setters: [function (_beyondJsKernel019Bundle) {
-      dependency_0 = _beyondJsKernel019Bundle;
-    }, function (_beyondJsKernel019Transversals) {
-      dependency_1 = _beyondJsKernel019Transversals;
-    }, function (_beyondJsWidgets015Render) {
-      dependency_2 = _beyondJsWidgets015Render;
+    setters: [function (_beyondJsKernel018Bundle) {
+      dependency_0 = _beyondJsKernel018Bundle;
+    }, function (_beyondJsKernel018Transversals) {
+      dependency_1 = _beyondJsKernel018Transversals;
+    }, function (_beyondJsWidgets013Render) {
+      dependency_2 = _beyondJsWidgets013Render;
     }, function (_bgAuthApi100WrapperTs) {
       dependency_3 = _bgAuthApi100WrapperTs;
-    }, function (_beyondJsKernel019Routing) {
-      dependency_4 = _beyondJsKernel019Routing;
+    }, function (_beyondJsKernel018Routing) {
+      dependency_4 = _beyondJsKernel018Routing;
     }],
     execute: function () {
       ({
@@ -65,7 +65,7 @@ System.register(["@beyond-js/kernel@0.1.9/bundle", "@beyond-js/kernel@0.1.9/tran
         "type": "start"
       }, function (ims, exports) {
         const bimport = specifier => {
-          const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.34"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.7.2"], ["@beyond-js/kernel", "0.1.9"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.9"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+          const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.31"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.6.0"], ["@beyond-js/kernel", "0.1.8"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.4"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
           return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
         };
         /***************************************

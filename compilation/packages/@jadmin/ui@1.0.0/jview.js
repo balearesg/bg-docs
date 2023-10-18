@@ -1,4 +1,4 @@
-System.register(["@beyond-js/kernel@0.1.9/bundle", "@beyond-js/kernel@0.1.9/styles", "react@18.2.0", "@beyond-js/kernel@0.1.9/core", "@jadmin/ui@1.0.0/api", "@bgroup/ui@0.0.34/form", "@jadmin/ui@1.0.0/utils", "@bgroup/ui@0.0.34/empty", "@bgroup/ui@0.0.34/icons", "@bgroup/ui@0.0.34/perfect-scrollbar", "@bgroup/ui@0.0.34/spinner"], function (_export, _context2) {
+System.register(["@beyond-js/kernel@0.1.8/bundle", "@beyond-js/kernel@0.1.8/styles", "react@18.2.0", "@beyond-js/kernel@0.1.8/core", "@jadmin/ui@1.0.0/api", "@bgroup/ui@0.0.31/form", "@jadmin/ui@1.0.0/utils", "@bgroup/ui@0.0.31/empty", "@bgroup/ui@0.0.31/icons", "@bgroup/ui@0.0.31/perfect-scrollbar", "@bgroup/ui@0.0.31/spinner"], function (_export, _context2) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, dependency_7, dependency_8, dependency_9, dependency_10, bimport, __Bundle, __pkg, ims, Controller, JView, __beyond_pkg, hmr;
@@ -7,32 +7,32 @@ System.register(["@beyond-js/kernel@0.1.9/bundle", "@beyond-js/kernel@0.1.9/styl
     JView: void 0
   });
   return {
-    setters: [function (_beyondJsKernel019Bundle) {
-      dependency_0 = _beyondJsKernel019Bundle;
-    }, function (_beyondJsKernel019Styles) {
-      dependency_1 = _beyondJsKernel019Styles;
+    setters: [function (_beyondJsKernel018Bundle) {
+      dependency_0 = _beyondJsKernel018Bundle;
+    }, function (_beyondJsKernel018Styles) {
+      dependency_1 = _beyondJsKernel018Styles;
     }, function (_react2) {
       dependency_2 = _react2;
-    }, function (_beyondJsKernel019Core) {
-      dependency_3 = _beyondJsKernel019Core;
+    }, function (_beyondJsKernel018Core) {
+      dependency_3 = _beyondJsKernel018Core;
     }, function (_jadminUi100Api) {
       dependency_4 = _jadminUi100Api;
-    }, function (_bgroupUi0034Form) {
-      dependency_5 = _bgroupUi0034Form;
+    }, function (_bgroupUi0031Form) {
+      dependency_5 = _bgroupUi0031Form;
     }, function (_jadminUi100Utils) {
       dependency_6 = _jadminUi100Utils;
-    }, function (_bgroupUi0034Empty) {
-      dependency_7 = _bgroupUi0034Empty;
-    }, function (_bgroupUi0034Icons) {
-      dependency_8 = _bgroupUi0034Icons;
-    }, function (_bgroupUi0034PerfectScrollbar) {
-      dependency_9 = _bgroupUi0034PerfectScrollbar;
-    }, function (_bgroupUi0034Spinner) {
-      dependency_10 = _bgroupUi0034Spinner;
+    }, function (_bgroupUi0031Empty) {
+      dependency_7 = _bgroupUi0031Empty;
+    }, function (_bgroupUi0031Icons) {
+      dependency_8 = _bgroupUi0031Icons;
+    }, function (_bgroupUi0031PerfectScrollbar) {
+      dependency_9 = _bgroupUi0031PerfectScrollbar;
+    }, function (_bgroupUi0031Spinner) {
+      dependency_10 = _bgroupUi0031Spinner;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@beyond-js/backend", "0.1.9"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.36"], ["socket.io", "4.7.2"], ["socket.io-client", "4.7.2"], ["@types/react", "18.2.21"], ["@types/react-dom", "18.2.7"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@beyond-js/backend", "0.1.4"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.25"], ["socket.io", "4.6.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({

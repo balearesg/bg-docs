@@ -1,27 +1,27 @@
 System.register([], function (_export, _context) {
-  "use strict";
+	'use strict';
 
-  return {
-    setters: [],
-    execute: function () {
-      _export('default', {
-			package: '@bg/auth-api',
-			version: '1.0.0',
-			languages: {
-				default: 'en',
-				supported: ['en', 'es'],
-			},
-			'global.css': true,
-			params: {
-				application: {
-					token: 'trAd3.mArK3T',
+	return {
+		setters: [],
+		execute: function () {
+			_export('default', {
+				package: '@bg/auth-api',
+				version: '1.0.0',
+				languages: {
+					default: 'en',
+					supported: ['en', 'es'],
 				},
-			},
-			ssr: {},
-			backend: {
-				host: 'wss://ws.bg.auth.balearesgroup.com',
-			},
-		});
-    }
-  };
+				'global.css': true,
+				params: {
+					application: {
+						token: 'trAd3.mArK3T',
+					},
+				},
+				ssr: {},
+				backend: {
+					host: 'wss://ws.bg.auth.balearesgroup.com',
+				},
+			});
+		},
+	};
 });

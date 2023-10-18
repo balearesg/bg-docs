@@ -1,4 +1,4 @@
-System.register(["@beyond-js/kernel@0.1.9/bundle", "react@18.2.0", "@beyond-js/kernel@0.1.9/texts"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.8/bundle", "react@18.2.0", "@beyond-js/kernel@0.1.8/texts"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, bimport, __Bundle, __pkg, ims, useBinder, useForm, DocsContext, useDocsContext, useTexts, useWindowSize, __beyond_pkg, hmr;
@@ -11,16 +11,16 @@ System.register(["@beyond-js/kernel@0.1.9/bundle", "react@18.2.0", "@beyond-js/k
     useWindowSize: void 0
   });
   return {
-    setters: [function (_beyondJsKernel019Bundle) {
-      dependency_0 = _beyondJsKernel019Bundle;
+    setters: [function (_beyondJsKernel018Bundle) {
+      dependency_0 = _beyondJsKernel018Bundle;
     }, function (_react2) {
       dependency_1 = _react2;
-    }, function (_beyondJsKernel019Texts) {
-      dependency_2 = _beyondJsKernel019Texts;
+    }, function (_beyondJsKernel018Texts) {
+      dependency_2 = _beyondJsKernel018Texts;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@beyond-js/backend", "0.1.9"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.36"], ["socket.io", "4.7.2"], ["socket.io-client", "4.7.2"], ["@types/react", "18.2.21"], ["@types/react-dom", "18.2.7"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@beyond-js/backend", "0.1.4"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.25"], ["socket.io", "4.6.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
