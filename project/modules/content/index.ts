@@ -1,32 +1,33 @@
 // IMPORTS
-import { Title, Info, Link } from "@bg/docs/components/html";
-import { Code } from "@bg/docs/code";
+import { Title, Info, Link } from '@bg/docs/components/html';
+import { Code } from '@bg/docs/code';
 
-import { default as __notFound } from "./mdx/not-found.mdx";
-import { default as __compilacionQch } from "./mdx/compilacion-qch/compilacion-qch.mdx";
-import { default as __plugins } from "./mdx/plugins/plugins.mdx";
-import { default as __howToUse } from "./mdx/how-to-use/how-to-use.mdx";
-import { default as __components } from "./mdx/components/components.mdx";
-import { default as __developmentStandards } from "./mdx/standards/development-process.mdx";
-import { default as _authInstalation } from "./mdx/auth/auth-instalation.mdx";
-import { default as _authSession } from "./mdx/auth/auth-session.mdx";
-import { default as _authUser } from "./mdx/auth/auth-user.mdx";
-import { default as __essentialUI } from "./mdx/ui-libraries/essential-ui.mdx";
-import { default as __beyondUI } from "./mdx/ui-libraries/beyond-ui.mdx";
-import { default as __standars } from "./mdx/standards/development-process.mdx";
-import { default as __mailer } from "./mdx/mailer/mailer.mdx";
-import { default as __jview } from "./mdx/jview/jview.mdx";
-import { default as __compilationBackend } from "./mdx/compilation-backend-external-packages/compilation-backend-external-packages.mdx";
-import { default as __compilationMobile } from "./mdx/mobile-compilations/flujocompilacionmobile.mdx";
-import { default as __configureGit } from "./mdx/configure-git/configure-git.mdx";
-import { default as __debugApps } from "./mdx/debug-mobile-apps/debug_aplicaciones_moviles.mdx";
-import { default as __runningBovino } from "./mdx/running-bovino/running-bovino.mdx";
-import { default as __prettierSettings } from "./mdx/prettier-settings/prettier-settings.mdx";
-import { default as __howToInstallJadmin } from "./mdx/how-to-install-jadmin/how-to-install-jadmin.mdx";
-import { default as __gmapsIntegration } from "./mdx/gmaps-integration/gmaps-integration.mdx";
-import { default as __chartComponent } from "./mdx/chart-component/chart-component.mdx";
-import { default as __reactTypes } from "./mdx/react-types/react-types.mdx";
-import { default as __deployBgDocs } from "./mdx/deploy-bg-docs/deploy-bg-docs.mdx";
+import { default as __notFound } from './mdx/not-found.mdx';
+import { default as __compilacionQch } from './mdx/compilacion-qch/compilacion-qch.mdx';
+import { default as __plugins } from './mdx/plugins/plugins.mdx';
+import { default as __howToUse } from './mdx/how-to-use/how-to-use.mdx';
+import { default as __components } from './mdx/components/components.mdx';
+import { default as __developmentStandards } from './mdx/standards/development-process.mdx';
+import { default as _authInstalation } from './mdx/auth/auth-instalation.mdx';
+import { default as _authSession } from './mdx/auth/auth-session.mdx';
+import { default as _authUser } from './mdx/auth/auth-user.mdx';
+import { default as __essentialUI } from './mdx/ui-libraries/essential-ui.mdx';
+import { default as __beyondUI } from './mdx/ui-libraries/beyond-ui.mdx';
+import { default as __standars } from './mdx/standards/development-process.mdx';
+import { default as __mailer } from './mdx/mailer/mailer.mdx';
+import { default as __jview } from './mdx/jview/jview.mdx';
+import { default as __compilationBackend } from './mdx/compilation-backend-external-packages/compilation-backend-external-packages.mdx';
+import { default as __compilationMobile } from './mdx/mobile-compilations/flujocompilacionmobile.mdx';
+import { default as __configureGit } from './mdx/configure-git/configure-git.mdx';
+import { default as __debugApps } from './mdx/debug-mobile-apps/debug_aplicaciones_moviles.mdx';
+import { default as __runningBovino } from './mdx/running-bovino/running-bovino.mdx';
+import { default as __prettierSettings } from './mdx/prettier-settings/prettier-settings.mdx';
+import { default as __howToInstallJadmin } from './mdx/how-to-install-jadmin/how-to-install-jadmin.mdx';
+import { default as __gmapsIntegration } from './mdx/gmaps-integration/gmaps-integration.mdx';
+import { default as __chartComponent } from './mdx/chart-component/chart-component.mdx';
+import { default as __reactTypes } from './mdx/react-types/react-types.mdx';
+import { default as __deployBgDocs } from './mdx/deploy-bg-docs/deploy-bg-docs.mdx';
+import { default as __ImplementUnitTest } from './mdx/implement-unit-test/implement-unit-test.mdx';
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -54,11 +55,12 @@ export /*bundle*/ const GmapsIntegration = __gmapsIntegration;
 export /*bundle*/ const ChartComponent = __chartComponent;
 export /*bundle*/ const ReactTypes = __reactTypes;
 export /*bundle*/ const DeployBgDocs = __deployBgDocs;
+export /*bundle*/ const ImplementUnitTest = __ImplementUnitTest;
 export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
-  return {
-    user: `lorem ipsum ${index + 1}`,
-    email: `lorem ipsum ${index + 1}`,
-    id: "1",
-    lastName: `lorem ipsum ${index + 1}`,
-  };
+	return {
+		user: `lorem ipsum ${index + 1}`,
+		email: `lorem ipsum ${index + 1}`,
+		id: '1',
+		lastName: `lorem ipsum ${index + 1}`,
+	};
 });
