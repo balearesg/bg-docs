@@ -11,8 +11,8 @@ import { InlineCode, Code } from '@bg/docs/code';
 
 <Code>{`npm install --save-dev babel-jest @babel/core @babel/preset-env`}</Code>
 
-2. En nuestro proyecto creado, procederemos a crear en la raiz de nuestro proyecto, un archivo **babel.config.js**. Este
-   archivo contendra la configuracion de Babel de tu version actual de Node
+2. En nuestro proyecto creado, procederemos a crear en el paquete donde haremos las pruebas, un archivo
+   **babel.config.js**. Este archivo contendra la configuracion de Babel de tu version actual de Node
 
 <Code>{`module.exports = {presets: [['@babel/preset-env',{targets: {node: 'current',},},],],};`}</Code>
 
