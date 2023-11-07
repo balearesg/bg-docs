@@ -1,49 +1,45 @@
-import { Code } from "@bg/docs/code";
-import { Title } from "@bg/docs/components/html";
-import { Info } from "@bg/docs/components/html";
-import { ELink } from '@bg/docs/components/html';
+import {Code} from '@bg/docs/code';
+import {Title} from '@bg/docs/components/html';
+import {Info} from '@bg/docs/components/html';
+import {ELink} from '@bg/docs/components/html';
 
 <Title text="Como hacer Deploy en BG Docs" />
 
-<Info>
-  Cuando querramos actualizar la pagina de bg-docs para incluir las documentaciones nuevas que hemos agregado tendremos que hacer una serie de pasos hacer el Deploy, aqui te los explico:  
-</Info>
+<Info>Pasos para tener el deploy continuo en bg-docs con un sitio alojado en Netlify</Info>
 
-### Compilacion
+### Instalacion de Netlify globalmente
 
-Cuando en nuestro repositorio local tengamos los cambios que querramos subir, tendremo que :
+1. Aseguremosno de que en nuestro equipo este instalado netlify por `npm` de manera global, aqui esta el comando que
+   podremos ejecutar en la terminal para instalarlo :
 
-1. primero correr nuestro servicio de beyond con el comando :
+<Code>npm install netlify-cli -g</Code>
 
-<Code>{`beyond run`}</Code>
+### Guardar codigo de compilacion
 
-2. Luego irnos al worskspaces de Beyond. Ahi sencillamente ubicaremos el paquete de bg-docs y procederemos a hacer la compilacion web para asegurarnos de que no hay errores.
+2. Como segundo paso, crearemos una carpeta `"compilation"` en la raiz del paquete en donde querramos alojar nuestra
+   web.
 
-Una vez hecho eso, procederemos a nuestro segundo paso.
+3. Una vez hecho, procederemos a compilar nuestro paquete.
 
-### Clonacion de bg-docs-pages
+4. Cuando este terminada la compilacion nos iremos en la siguiente ruta de nuestro proyecto:
+   **"my-project\.beyond\builds\web\code"**.
 
-En la plataforma donde alojamos la web de bg-docs es en el repositorio de `bg-docs-pages` En este repositiorio procederemos a hacer los siguientes pasos :
+En esta ruta obtendremos el resultado de nuetsro codigo compilado.
 
-<ELink href="https://github.com/balearesg/bg-docs-page">Link de bg-docs-pages</ELink>
+5. Copiaremos la carpeta **"Code"** de nuestro proyecto y la pegaremos en la carpeta compilation que creamos al
+   principio en la raiz de nuestro paquete.
 
-3. Primero nos ubicaremos en el repositiorio de bg-docs-pages y copiaremos de ahi el codigo para clonar el repositiorio.
+### Configuracion para que netlify tome el codigo compilado.
 
-<Code>{`git clone https://github.com/balearesg/bg-docs-page.git`}</Code>
+6. Luego, en la raiz de nuestro proyecto crearemos un archivo _"toml"_, con esa extension exactamente al final, puede
+   darle cualquier nombre al archivo, un ejemplo es _"netlify.toml"_. Y colocaremos lo siguiente :
+    <Code>[build] publish = "/nombre-de-mi-carpeta-que-cree-para-compilar"</Code>
 
-este codigo lo ejecutaremos en nuestra carpeta donde tendremos nuestros proyectos de bg.
+El comando que se muestra en el archivo TOML de Netlify indica la ubicación de la carpeta que se debe publicar después
+de que se complete el proceso de compilación. En este caso, la carpeta se llama
+"nombre-de-mi-carpeta-que-cree-para-compilar" y se encuentra en la raíz del proyecto. Por lo tanto, después de que
+Netlify compile el sitio web, publicará los archivos de la carpeta "nombre-de-mi-carpeta-que-cree-para-compilar" en el
+dominio correspondiente.
 
-4. Luego nos dirigimos en bg-docs y en esta ruta *project\.beyond\builds\web\code* copiaremos el codigo adentro y nos ubicamos en la raiz de nuestro repositiorio local de bg-docs-pages y pegaremos el codigo que copiamos.
-
-#### Recomendacion:
-
-Es recomendable que antes de hacer un deploy hagamos un respaldo de los archivos que remplazaremos en bg-docs-pages para asi tener un respaldo de los archivos anteriores.
-
-### Netlify
-
-La plataforma que utilizamos para alojar la web es `Netlify`, es una plataforma de alojamiento web que permite a los desarrolladores alojar sitios web estáticos y aplicaciones web de una manera fácil y rápida.
-  
-5. En Netlify nos iremos a la parte de `Sites` ahi veremos la opcion y los pasos para hacer el deploy, basicamente es llevar la carpeta de bg-docs-pages al lugar que nos indica netlify para actualizar.
-
-Y listo, ya tendremos nuesto deploy listo!.
-
+7. Una vez hecho solo tendremos _que guardar los cambios en la rama que hemos escogidos para hacer deploys y hacer git
+   push_.

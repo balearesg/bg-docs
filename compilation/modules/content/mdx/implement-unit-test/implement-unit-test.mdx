@@ -1,0 +1,36 @@
+import { ELink } from '@bg/docs/components/html';
+import { InlineCode, Code } from '@bg/docs/code';
+
+## Configuración en Beyond para implementar de Pruebas Unitarias con Jest en Tu Proyecto 🔧
+
+#### Jest es una libreria de Javascript para crear, ejecutar y estructurar pruebas, Por ello veremos su Integración con BeyondJS 🚀 :
+
+1. Primero instalaremos instalaremos la libreria de **Jest** y tambien **Babel** :
+
+<Code>{`npm install --save-dev jest`}</Code>
+
+<Code>{`npm install --save-dev babel-jest @babel/core @babel/preset-env`}</Code>
+
+Si usamos TypeScript debemos instalar tambien :
+
+<Code>{`npm install @babel/preset-typescript`}</Code>
+
+2. En nuestro proyecto creado, procederemos a crear en el paquete donde haremos las pruebas, un archivo
+   **babel.config.js**. Este archivo contendra la configuracion de Babel de tu version actual de Node
+
+<Code>{`module.exports = {presets: [['@babel/preset-env',{targets: {node: 'current',},},],],};`}</Code>
+
+3. Luego en nuestro package.json de nuestro paquete agregaremos la entrada **"Script"**, asi de esta manera :
+
+<Code>{`"scripts": {"test": "jest"},`}</Code>
+
+Y ya estaria configurado Jest en BeyondJS para proceder a implementar las Pruebas Unitarias a nuestro proyecto 🎉.
+
+[!NOTE]📌
+
+Recuerda que si quieres ejecutar tus Test debes acceder al paquete donde tengas tu archivo de tests y ejecutar en la
+terminal el comando de :
+
+<Code>{`npm run test`}</Code>
+
+<ELink href='https://jestjs.io/es-ES/docs/getting-started'>Documentacion de Jest</ELink>

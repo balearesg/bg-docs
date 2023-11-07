@@ -1,7 +1,7 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle","@beyond-js/kernel@0.1.8/core","@beyond-js/kernel@0.1.8/styles","react@18.2.0","perfect-scrollbar@1.5.5"], (_exports, _context) => {
+System.register(["@beyond-js/kernel@0.1.9/bundle","@beyond-js/kernel@0.1.9/core","@beyond-js/kernel@0.1.9/styles","react@18.2.0","perfect-scrollbar@1.5.5"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["@beyond-js/kernel","0.1.8"],["react","18.2.0"],["perfect-scrollbar","1.5.5"],["@bgroup/ui","0.0.31"]]);
+	const dependencies = new Map([["@beyond-js/kernel","0.1.9"],["react","18.2.0"],["perfect-scrollbar","1.5.5"],["@bgroup/ui","0.0.34"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('@beyond-js/kernel@0.1.8/bundle', dep), dep => dependencies.set('@beyond-js/kernel@0.1.8/core', dep), dep => dependencies.set('@beyond-js/kernel@0.1.8/styles', dep), dep => dependencies.set('react@18.2.0', dep), dep => dependencies.set('perfect-scrollbar@1.5.5', dep)],
+setters: [dep => dependencies.set('@beyond-js/kernel@0.1.9/bundle', dep), dep => dependencies.set('@beyond-js/kernel@0.1.9/core', dep), dep => dependencies.set('@beyond-js/kernel@0.1.9/styles', dep), dep => dependencies.set('react@18.2.0', dep), dep => dependencies.set('perfect-scrollbar@1.5.5', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
@@ -45,18 +45,18 @@ var __toCommonJS = mod => __copyProps(__defProp({}, "__esModule", {
   value: true
 }), mod);
 
-// .beyond/uimport/temp/@bgroup/ui/perfect-scrollbar.0.0.31.js
-var perfect_scrollbar_0_0_31_exports = {};
-__export(perfect_scrollbar_0_0_31_exports, {
+// .beyond/uimport/@bgroup/ui/perfect-scrollbar.0.0.34.js
+var perfect_scrollbar_0_0_34_exports = {};
+__export(perfect_scrollbar_0_0_34_exports, {
   BeyondScrollContainer: () => BeyondScrollContainer,
   __beyond_pkg: () => __beyond_pkg,
   hmr: () => hmr
 });
-module.exports = __toCommonJS(perfect_scrollbar_0_0_31_exports);
+module.exports = __toCommonJS(perfect_scrollbar_0_0_34_exports);
 
 // node_modules/@bgroup/ui/perfect-scrollbar/perfect-scrollbar.browser.mjs
-var dependency_0 = __toESM(require("@beyond-js/kernel@0.1.8/bundle"), 0);
-var dependency_1 = __toESM(require("@beyond-js/kernel@0.1.8/styles"), 0);
+var dependency_0 = __toESM(require("@beyond-js/kernel@0.1.9/bundle"), 0);
+var dependency_1 = __toESM(require("@beyond-js/kernel@0.1.9/styles"), 0);
 var dependency_2 = __toESM(require("react@18.2.0"), 0);
 var dependency_3 = __toESM(require("perfect-scrollbar@1.5.5"), 0);
 var import_meta = {};
@@ -65,14 +65,14 @@ var {
 } = dependency_0;
 var __pkg = new __Bundle({
   "module": {
-    "vspecifier": "@bgroup/ui@0.0.31/perfect-scrollbar"
+    "vspecifier": "@bgroup/ui@0.0.34/perfect-scrollbar"
   },
   "type": "code",
   "name": "perfect-scrollbar"
 }, _context.meta.url).package();
 ;
 __pkg.dependencies.update([["@beyond-js/kernel/styles", dependency_1], ["react", dependency_2], ["perfect-scrollbar", dependency_3]]);
-brequire("@beyond-js/kernel/styles").styles.register("@bgroup/ui@0.0.31/perfect-scrollbar");
+brequire("@beyond-js/kernel/styles").styles.register("@bgroup/ui@0.0.34/perfect-scrollbar");
 var ims = /* @__PURE__ */new Map();
 ims.set("./container", {
   hash: 347674479,
@@ -146,4 +146,4 @@ code(module, require);
 _exports(module.exports);
 }}});
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy5iZXlvbmQvdWltcG9ydC90ZW1wL0BiZ3JvdXAvdWkvcGVyZmVjdC1zY3JvbGxiYXIuMC4wLjMxLmpzIiwiLi4vbm9kZV9tb2R1bGVzL0BiZ3JvdXAvdWkvcGVyZmVjdC1zY3JvbGxiYXIvX19zb3VyY2VzL3BlcmZlY3Qtc2Nyb2xsYmFyL2NvZGUvdHMvY29udGFpbmVyLnRzeCJdLCJuYW1lcyI6WyJwZXJmZWN0X3Njcm9sbGJhcl8wXzBfMzFfZXhwb3J0cyIsIl9fZXhwb3J0IiwiQmV5b25kU2Nyb2xsQ29udGFpbmVyIiwiX19iZXlvbmRfcGtnIiwiaG1yIiwibW9kdWxlIiwiZXhwb3J0cyIsIl9fdG9Db21tb25KUyIsIl9yZWFjdCIsInJlcXVpcmUyIiwiX3BlcmZlY3RTY3JvbGxiYXIiLCJCZXlvbmRTY3JvbGxDb250YWluZXIyIiwicHJvcHMiLCJyZWYiLCJ1c2VSZWYiLCJ1c2VFZmZlY3QiLCJjb250cm9sIiwiY3VycmVudCIsInNjcm9sbGJhciIsImRlZmF1bHQiLCJ3aGVlbFNwZWVkIiwid2hlZWxQcm9wYWdhdGlvbiIsIm1pblNjcm9sbGJhckxlbmd0aCIsImhhbmRsZU9uU2Nyb2xsWSIsImV2ZW50Iiwib25TY3JvbGxZIiwiaGFuZGxlT25TY3JvbGxYIiwib25TY3JvbGxYIiwiYWRkRXZlbnRMaXN0ZW5lciIsImRlc3Ryb3kiLCJyZW1vdmVFdmVudExpc3RlbmVyIiwiY2xzIiwiY2xhc3NOYW1lIiwiY3JlYXRlRWxlbWVudCIsImNoaWxkcmVuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBQSxnQ0FBQTtBQUFBQyxRQUFBLENBQUFELGdDQUFBO0VBQUFFLHFCQUFBLEVBQUFBLENBQUEsS0FBQUEscUJBQUE7RUFBQUMsWUFBQSxFQUFBQSxDQUFBLEtBQUFBLFlBQUE7RUFBQUMsR0FBQSxFQUFBQSxDQUFBLEtBQUFBO0FBQUE7QUFBQUMsTUFBQSxDQUFBQyxPQUFBLEdBQUFDLFlBQUEsQ0FBQVAsZ0NBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQSxJQUFBUSxNQUFBLEdBQUFDLFFBQUE7SUFDQSxJQUFBQyxpQkFBQSxHQUFBRCxRQUFBO0lBZWlCLFNBQ05FLHVCQUFzQkMsS0FBQSxFQUFZO01BQzNDLE1BQU1DLEdBQUEsSUFBd0MsR0FBQUwsTUFBQSxDQUFBTSxNQUFBLEVBQU8sSUFBSTtNQUV6RCxJQUFBTixNQUFBLENBQUFPLFNBQUEsRUFBVSxNQUFtQjtRQUMzQixNQUFNQyxPQUFBLEdBQTBCSCxHQUFBLENBQUlJLE9BQUE7UUFFcEMsTUFBTUMsU0FBQSxHQUE4QixJQUFJUixpQkFBQSxDQUFBUyxPQUFBLENBQWlCSCxPQUFBLEVBQVM7VUFDaEVJLFVBQUEsRUFBWTtVQUNaQyxnQkFBQSxFQUFrQjtVQUNsQkMsa0JBQUEsRUFBb0I7U0FDckI7UUFDRCxNQUFNQyxlQUFBLEdBQW1CQyxLQUFBLElBQWU7VUFDdENaLEtBQUEsQ0FBTWEsU0FBQSxDQUFVRCxLQUFBLEVBQU9SLE9BQUEsRUFBU0UsU0FBUztRQUMzQztRQUVBLE1BQU1RLGVBQUEsR0FBbUJGLEtBQUEsSUFBZTtVQUN0Q1osS0FBQSxDQUFNYSxTQUFBLENBQVVELEtBQUEsRUFBT1IsT0FBQSxFQUFTRSxTQUFTO1FBQzNDO1FBQ0EsTUFBTTtVQUFFTyxTQUFBO1VBQVdFO1FBQVMsSUFBS2YsS0FBQTtRQUNqQyxJQUFJYSxTQUFBLEVBQVdULE9BQUEsQ0FBUVksZ0JBQUEsQ0FBaUIsZUFBZUwsZUFBZTtRQUN0RSxJQUFJSSxTQUFBLEVBQVdYLE9BQUEsQ0FBUVksZ0JBQUEsQ0FBaUIsZUFBZUYsZUFBZTtRQUN0RSxPQUFPLE1BQUs7VUFDVlIsU0FBQSxDQUFVVyxPQUFBLEVBQU87VUFFakIsSUFBSUosU0FBQSxFQUFXWixHQUFBLENBQUlJLE9BQUEsQ0FBUWEsbUJBQUEsQ0FBb0IsZUFBZUwsU0FBUztVQUN2RSxJQUFJRSxTQUFBLEVBQ0ZkLEdBQUEsQ0FBSUksT0FBQSxDQUFRYSxtQkFBQSxDQUFvQixlQUFlSixlQUFlO1FBQ2xFO01BQ0YsR0FBRyxFQUFFO01BRUwsSUFBSUssR0FBQSxHQUFjbkIsS0FBQSxDQUFNb0IsU0FBQSxHQUNwQiw0QkFBNEJwQixLQUFBLENBQU1vQixTQUFBLEtBQ2xDO01BQ0osT0FDRXhCLE1BQUEsQ0FBQVcsT0FBQSxDQUFBYyxhQUFBO1FBQUtwQixHQUFBO1FBQVVtQixTQUFBLEVBQVdEO01BQUcsR0FDMUJuQixLQUFBLENBQU1zQixRQUFRO0lBR3JCO0lBQUMiLCJmaWxlIjoiIiwic291cmNlUm9vdCI6Ii9wcm9qZWN0L291dCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy5iZXlvbmQvdWltcG9ydC9AYmdyb3VwL3VpL3BlcmZlY3Qtc2Nyb2xsYmFyLjAuMC4zNC5qcyIsIi4uL25vZGVfbW9kdWxlcy9AYmdyb3VwL3VpL3BlcmZlY3Qtc2Nyb2xsYmFyL19fc291cmNlcy9wZXJmZWN0LXNjcm9sbGJhci9jb2RlL3RzL2NvbnRhaW5lci50c3giXSwibmFtZXMiOlsicGVyZmVjdF9zY3JvbGxiYXJfMF8wXzM0X2V4cG9ydHMiLCJfX2V4cG9ydCIsIkJleW9uZFNjcm9sbENvbnRhaW5lciIsIl9fYmV5b25kX3BrZyIsImhtciIsIm1vZHVsZSIsImV4cG9ydHMiLCJfX3RvQ29tbW9uSlMiLCJfcmVhY3QiLCJyZXF1aXJlMiIsIl9wZXJmZWN0U2Nyb2xsYmFyIiwiQmV5b25kU2Nyb2xsQ29udGFpbmVyMiIsInByb3BzIiwicmVmIiwidXNlUmVmIiwidXNlRWZmZWN0IiwiY29udHJvbCIsImN1cnJlbnQiLCJzY3JvbGxiYXIiLCJkZWZhdWx0Iiwid2hlZWxTcGVlZCIsIndoZWVsUHJvcGFnYXRpb24iLCJtaW5TY3JvbGxiYXJMZW5ndGgiLCJoYW5kbGVPblNjcm9sbFkiLCJldmVudCIsIm9uU2Nyb2xsWSIsImhhbmRsZU9uU2Nyb2xsWCIsIm9uU2Nyb2xsWCIsImFkZEV2ZW50TGlzdGVuZXIiLCJkZXN0cm95IiwicmVtb3ZlRXZlbnRMaXN0ZW5lciIsImNscyIsImNsYXNzTmFtZSIsImNyZWF0ZUVsZW1lbnQiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsSUFBQUEsZ0NBQUE7QUFBQUMsUUFBQSxDQUFBRCxnQ0FBQTtFQUFBRSxxQkFBQSxFQUFBQSxDQUFBLEtBQUFBLHFCQUFBO0VBQUFDLFlBQUEsRUFBQUEsQ0FBQSxLQUFBQSxZQUFBO0VBQUFDLEdBQUEsRUFBQUEsQ0FBQSxLQUFBQTtBQUFBO0FBQUFDLE1BQUEsQ0FBQUMsT0FBQSxHQUFBQyxZQUFBLENBQUFQLGdDQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDQUEsSUFBQVEsTUFBQSxHQUFBQyxRQUFBO0lBQ0EsSUFBQUMsaUJBQUEsR0FBQUQsUUFBQTtJQWVpQixTQUNORSx1QkFBc0JDLEtBQUEsRUFBWTtNQUMzQyxNQUFNQyxHQUFBLElBQXdDLEdBQUFMLE1BQUEsQ0FBQU0sTUFBQSxFQUFPLElBQUk7TUFFekQsSUFBQU4sTUFBQSxDQUFBTyxTQUFBLEVBQVUsTUFBbUI7UUFDM0IsTUFBTUMsT0FBQSxHQUEwQkgsR0FBQSxDQUFJSSxPQUFBO1FBRXBDLE1BQU1DLFNBQUEsR0FBOEIsSUFBSVIsaUJBQUEsQ0FBQVMsT0FBQSxDQUFpQkgsT0FBQSxFQUFTO1VBQ2hFSSxVQUFBLEVBQVk7VUFDWkMsZ0JBQUEsRUFBa0I7VUFDbEJDLGtCQUFBLEVBQW9CO1NBQ3JCO1FBQ0QsTUFBTUMsZUFBQSxHQUFtQkMsS0FBQSxJQUFlO1VBQ3RDWixLQUFBLENBQU1hLFNBQUEsQ0FBVUQsS0FBQSxFQUFPUixPQUFBLEVBQVNFLFNBQVM7UUFDM0M7UUFFQSxNQUFNUSxlQUFBLEdBQW1CRixLQUFBLElBQWU7VUFDdENaLEtBQUEsQ0FBTWEsU0FBQSxDQUFVRCxLQUFBLEVBQU9SLE9BQUEsRUFBU0UsU0FBUztRQUMzQztRQUNBLE1BQU07VUFBRU8sU0FBQTtVQUFXRTtRQUFTLElBQUtmLEtBQUE7UUFDakMsSUFBSWEsU0FBQSxFQUFXVCxPQUFBLENBQVFZLGdCQUFBLENBQWlCLGVBQWVMLGVBQWU7UUFDdEUsSUFBSUksU0FBQSxFQUFXWCxPQUFBLENBQVFZLGdCQUFBLENBQWlCLGVBQWVGLGVBQWU7UUFDdEUsT0FBTyxNQUFLO1VBQ1ZSLFNBQUEsQ0FBVVcsT0FBQSxDQUFPO1VBRWpCLElBQUlKLFNBQUEsRUFBV1osR0FBQSxDQUFJSSxPQUFBLENBQVFhLG1CQUFBLENBQW9CLGVBQWVMLFNBQVM7VUFDdkUsSUFBSUUsU0FBQSxFQUNGZCxHQUFBLENBQUlJLE9BQUEsQ0FBUWEsbUJBQUEsQ0FBb0IsZUFBZUosZUFBZTtRQUNsRTtNQUNGLEdBQUcsRUFBRTtNQUVMLElBQUlLLEdBQUEsR0FBY25CLEtBQUEsQ0FBTW9CLFNBQUEsR0FDcEIsNEJBQTRCcEIsS0FBQSxDQUFNb0IsU0FBQSxLQUNsQztNQUNKLE9BQ0V4QixNQUFBLENBQUFXLE9BQUEsQ0FBQWMsYUFBQTtRQUFLcEIsR0FBQTtRQUFVbUIsU0FBQSxFQUFXRDtNQUFHLEdBQzFCbkIsS0FBQSxDQUFNc0IsUUFBUTtJQUdyQjtJQUFDIiwiZmlsZSI6IiIsInNvdXJjZVJvb3QiOiIvcHJvamVjdC9vdXQifQ==

@@ -1,4 +1,4 @@
-System.register(["@beyond-js/widgets@0.1.3/render", "@beyond-js/kernel@0.1.8/bundle", "@beyond-js/react-widgets@18.20.4/page", "@bg/docs@1.0.0/reactive-model", "@bg/auth-api@1.0.0/wrapper.ts", "@bg/docs@1.0.0/config", "react@18.2.0", "@beyond-js/kernel@0.1.8/routing", "@jadmin/ui@1.0.0/hooks", "@bg/docs@1.0.0/loading-page", "@bg/docs@1.0.0/input", "@bgroup/ui@0.0.31/image", "@bgroup/ui@0.0.31/form", "@beyond-js/kernel@0.1.8/styles"], function (_export, _context) {
+System.register(["@beyond-js/widgets@0.1.5/render", "@beyond-js/kernel@0.1.9/bundle", "@beyond-js/react-widgets@18.20.4/page", "@bg/docs@1.0.0/reactive-model", "@bg/auth-api@1.0.0/wrapper.ts", "@bg/docs@1.0.0/config", "react@18.2.0", "@beyond-js/kernel@0.1.9/routing", "@jadmin/ui@1.0.0/hooks", "@bg/docs@1.0.0/loading-page", "@bg/docs@1.0.0/input", "@bgroup/ui@0.0.34/image", "@bgroup/ui@0.0.34/form", "@beyond-js/kernel@0.1.9/styles"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, dependency_7, dependency_8, dependency_9, dependency_10, dependency_11, dependency_12, dependency_13, bimport, __Bundle, __pkg, ims, Controller, Page, __beyond_pkg, hmr;
@@ -7,10 +7,10 @@ System.register(["@beyond-js/widgets@0.1.3/render", "@beyond-js/kernel@0.1.8/bun
     Page: void 0
   });
   return {
-    setters: [function (_beyondJsWidgets013Render) {
-      dependency_0 = _beyondJsWidgets013Render;
-    }, function (_beyondJsKernel018Bundle) {
-      dependency_1 = _beyondJsKernel018Bundle;
+    setters: [function (_beyondJsWidgets015Render) {
+      dependency_0 = _beyondJsWidgets015Render;
+    }, function (_beyondJsKernel019Bundle) {
+      dependency_1 = _beyondJsKernel019Bundle;
     }, function (_beyondJsReactWidgets18204Page) {
       dependency_2 = _beyondJsReactWidgets18204Page;
     }, function (_bgDocs100ReactiveModel) {
@@ -21,24 +21,24 @@ System.register(["@beyond-js/widgets@0.1.3/render", "@beyond-js/kernel@0.1.8/bun
       dependency_5 = _bgDocs100Config;
     }, function (_react2) {
       dependency_6 = _react2;
-    }, function (_beyondJsKernel018Routing) {
-      dependency_7 = _beyondJsKernel018Routing;
+    }, function (_beyondJsKernel019Routing) {
+      dependency_7 = _beyondJsKernel019Routing;
     }, function (_jadminUi100Hooks) {
       dependency_8 = _jadminUi100Hooks;
     }, function (_bgDocs100LoadingPage) {
       dependency_9 = _bgDocs100LoadingPage;
     }, function (_bgDocs100Input) {
       dependency_10 = _bgDocs100Input;
-    }, function (_bgroupUi0031Image) {
-      dependency_11 = _bgroupUi0031Image;
-    }, function (_bgroupUi0031Form) {
-      dependency_12 = _bgroupUi0031Form;
-    }, function (_beyondJsKernel018Styles) {
-      dependency_13 = _beyondJsKernel018Styles;
+    }, function (_bgroupUi0034Image) {
+      dependency_11 = _bgroupUi0034Image;
+    }, function (_bgroupUi0034Form) {
+      dependency_12 = _bgroupUi0034Form;
+    }, function (_beyondJsKernel019Styles) {
+      dependency_13 = _beyondJsKernel019Styles;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.31"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.6.0"], ["@beyond-js/kernel", "0.1.8"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.4"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.34"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.7.2"], ["@beyond-js/kernel", "0.1.9"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.9"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({

@@ -8,25 +8,6 @@
 .beyond-button:active, .beyond-button:hover, .beyond-button:focus {
   outline: 0;
 }
-.beyond-button.secondary {
-  background: var(--secondary);
-  color: var(--text-on-secondary);
-  transition: all 300ms ease-in-out;
-}
-.beyond-button.secondary:hover {
-  background: var(--secondary-dark);
-  transition: all 300ms ease-in;
-}
-.beyond-button.primary {
-  background: var(--primary);
-  color: var(--text-on-primary);
-  border: 1px solid var(--primary-dark);
-  transition: all 300ms ease-in-out;
-}
-.beyond-button.primary:hover {
-  background: var(--primary-dark);
-  transition: all 300ms ease-in;
-}
 .beyond-button span {
   position: absolute;
   background-color: rgba(151, 151, 151, 0.7098039216);
@@ -85,21 +66,21 @@
 }
 .beyond-button.btn.btn-primary {
   background-color: var(--primary);
-  color: var(--text);
+  color: var(--text-on-primary);
 }
 .beyond-button.btn.btn-primary:hover:not(:disabled) {
   background-color: var(--primary-dark);
 }
 .beyond-button.btn.btn-primary-dark {
   background-color: var(--primary-dark);
-  color: var(--text);
+  color: var(--text-on-primary);
 }
 .beyond-button.btn.btn-primary-dark:hover:not(:disabled) {
   background-color: var(--primary);
 }
 .beyond-button.btn.btn-secondary {
   background-color: var(--secondary);
-  color: var(--text);
+  color: var(--text-on-secondary);
 }
 .beyond-button.btn.btn-secondary:hover:not(:disabled) {
   background-color: var(--secondary-dark);
@@ -242,13 +223,6 @@
   transition: all 0.4s ease-in-out;
   padding: 0 8px;
 }
-.beyond-element-input .beyond-input__required-label,
-.beyond-element-textarea .beyond-input__required-label {
-  position: absolute;
-  right: 1rem;
-  bottom: 0.7rem;
-  color: var(--error);
-}
 .beyond-element-input input,
 .beyond-element-input textarea,
 .beyond-element-textarea input,
@@ -271,14 +245,24 @@
 .beyond-element-textarea input:-webkit-autofill:focus,
 .beyond-element-textarea textarea:-webkit-autofill,
 .beyond-element-textarea textarea:-webkit-autofill:focus {
-  -webkit-transition: background-color infinite 0s, color infinite 0s;
-  transition: background-color infinite 0s, color infinite 0s;
+  -webkit-transition: background-color 9000000000s 0s, color 9000000000s 0s;
+  transition: background-color 9000000000s 0s, color 9000000000s 0s;
 }
 .beyond-element-input input:focus,
 .beyond-element-input textarea:focus,
 .beyond-element-textarea input:focus,
 .beyond-element-textarea textarea:focus {
   color: var(--gray-dark);
+}
+.beyond-element-input input[type=password]::-ms-reveal,
+.beyond-element-input input[type=password]::-ms-clear,
+.beyond-element-input input[type=password]::-webkit-contacts-auto-fill-button,
+.beyond-element-input input[type=password]::-webkit-credentials-auto-fill-button,
+.beyond-element-textarea input[type=password]::-ms-reveal,
+.beyond-element-textarea input[type=password]::-ms-clear,
+.beyond-element-textarea input[type=password]::-webkit-contacts-auto-fill-button,
+.beyond-element-textarea input[type=password]::-webkit-credentials-auto-fill-button {
+  display: none !important;
 }
 .beyond-element-input input[data-autocompleted],
 .beyond-element-textarea input[data-autocompleted] {

@@ -1,15 +1,15 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.9/bundle"], function (_export, _context) {
   "use strict";
 
   var dependency_0, bimport, __Bundle, __pkg, ims, getCurrentDate, __beyond_pkg, hmr;
   _export("getCurrentDate", void 0);
   return {
-    setters: [function (_beyondJsKernel018Bundle) {
-      dependency_0 = _beyondJsKernel018Bundle;
+    setters: [function (_beyondJsKernel019Bundle) {
+      dependency_0 = _beyondJsKernel019Bundle;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@beyond-js/backend", "0.1.4"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.25"], ["socket.io", "4.6.0"], ["socket.io-client", "4.6.0"], ["@types/react", "18.0.27"], ["@types/react-dom", "18.0.10"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@beyond-js/backend", "0.1.9"], ["@beyond-js/react-widgets", "18.21.1"], ["@bgroup/ui", "0.0.36"], ["socket.io", "4.7.2"], ["socket.io-client", "4.7.2"], ["@types/react", "18.2.21"], ["@types/react-dom", "18.2.7"], ["@jadmin/ui", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({

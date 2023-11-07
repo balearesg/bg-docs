@@ -1,7 +1,7 @@
-System.register(["@beyond-js/kernel@0.1.8/bundle", "react@18.2.0/jsx-runtime", "@bg/docs@1.0.0/components/html", "@bg/docs@1.0.0/code"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.9/bundle", "react@18.2.0/jsx-runtime", "@bg/docs@1.0.0/components/html", "@bg/docs@1.0.0/code"], function (_export, _context) {
   "use strict";
 
-  var dependency_0, dependency_1, dependency_2, dependency_3, bimport, __Bundle, __pkg, ims, NotFound, CompilacionQch, Plugins, HowToUse, Components, DevelopmentStandards, AuthInstalation, AuthSession, AuthUser, EssentialUi, BeyondUi, Standars, Mailer, Jview, CompilationBackend, CompilationMobile, ConfigureGit, DebugMobileApps, RunningBovino, PrettierSettings, HowToInstallJadmin, GmapsIntegration, ChartComponent, ReactTypes, DeployBgDocs, data, __beyond_pkg, hmr;
+  var dependency_0, dependency_1, dependency_2, dependency_3, bimport, __Bundle, __pkg, ims, NotFound, CompilacionQch, Plugins, HowToUse, Components, DevelopmentStandards, AuthInstalation, AuthSession, AuthUser, EssentialUi, BeyondUi, Standars, Mailer, Jview, CompilationBackend, CompilationMobile, ConfigureGit, DebugMobileApps, RunningBovino, PrettierSettings, HowToInstallJadmin, GmapsIntegration, ChartComponent, ReactTypes, DeployBgDocs, ImplementUnitTest, data, __beyond_pkg, hmr;
   _export({
     NotFound: void 0,
     CompilacionQch: void 0,
@@ -28,11 +28,12 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "react@18.2.0/jsx-runtime", "
     ChartComponent: void 0,
     ReactTypes: void 0,
     DeployBgDocs: void 0,
+    ImplementUnitTest: void 0,
     data: void 0
   });
   return {
-    setters: [function (_beyondJsKernel018Bundle) {
-      dependency_0 = _beyondJsKernel018Bundle;
+    setters: [function (_beyondJsKernel019Bundle) {
+      dependency_0 = _beyondJsKernel019Bundle;
     }, function (_react1820JsxRuntime) {
       dependency_1 = _react1820JsxRuntime;
     }, function (_bgDocs100ComponentsHtml) {
@@ -42,7 +43,7 @@ System.register(["@beyond-js/kernel@0.1.8/bundle", "react@18.2.0/jsx-runtime", "
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.31"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.6.0"], ["@beyond-js/kernel", "0.1.8"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.4"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
+        const dependencies = new Map([["@bg/auth-api", "1.0.0"], ["@bg/auth-models", "1.0.0"], ["@bg/mailer", "1.0.0"], ["@jadmin/ui", "1.0.0"], ["@beyond-js/react-widgets", "18.20.4"], ["@bgroup/ui", "0.0.34"], ["@mdx-js/mdx", "2.3.0"], ["@mdx-js/react", "2.3.0"], ["prismjs", "1.29.0"], ["socket.io-client", "4.7.2"], ["@beyond-js/kernel", "0.1.9"], ["@beyond-js/local", "0.1.3"], ["@beyond-js/backend", "0.1.9"], ["@bg/docs", "1.0.0"], ["@bg/docs", "1.0.0"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
@@ -1075,7 +1076,7 @@ return (
       *******************************************************/
 
       ims.set('./mdx/deploy-bg-docs/deploy-bg-docs.mdx', {
-        hash: 3167653103,
+        hash: 390167005,
         creator: function (require, exports) {
           "use strict";
 
@@ -1090,82 +1091,81 @@ return (
 
           function _createMdxContent(props) {
             const _components = Object.assign({
-              p: "p",
               h3: "h3",
               ol: "ol",
               li: "li",
               code: "code",
-              em: "em",
-              h4: "h4"
+              p: "p",
+              strong: "strong",
+              em: "em"
             }, props.components);
             return (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
               children: [(0, _jsxRuntime.jsx)(_html.Title, {
                 text: "Como hacer Deploy en BG Docs"
               }), "\n", (0, _jsxRuntime.jsx)(_html.Info, {
-                children: (0, _jsxRuntime.jsx)(_components.p, {
-                  children: "Cuando querramos actualizar la pagina de bg-docs para incluir las documentaciones nuevas que hemos agregado tendremos que hacer una serie de pasos hacer el Deploy, aqui te los explico:"
-                })
+                children: "Pasos para tener el deploy continuo en bg-docs con un sitio alojado en Netlify"
               }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: "Compilacion"
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Cuando en nuestro repositorio local tengamos los cambios que querramos subir, tendremo que :"
+                children: "Instalacion de Netlify globalmente"
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
-                children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
-                  children: "primero correr nuestro servicio de beyond con el comando :"
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["Aseguremosno de que en nuestro equipo este instalado netlify por ", (0, _jsxRuntime.jsx)(_components.code, {
+                    children: "npm"
+                  }), " de manera global, aqui esta el comando que\r\npodremos ejecutar en la terminal para instalarlo :"]
                 }), "\n"]
               }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
-                children: `beyond run`
+                children: "npm install netlify-cli -g"
+              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
+                children: "Guardar codigo de compilacion"
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
                 start: "2",
-                children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
-                  children: "Luego irnos al worskspaces de Beyond. Ahi sencillamente ubicaremos el paquete de bg-docs y procederemos a hacer la compilacion web para asegurarnos de que no hay errores."
-                }), "\n"]
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Una vez hecho eso, procederemos a nuestro segundo paso."
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: "Clonacion de bg-docs-pages"
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                children: ["En la plataforma donde alojamos la web de bg-docs es en el repositorio de ", (0, _jsxRuntime.jsx)(_components.code, {
-                  children: "bg-docs-pages"
-                }), " En este repositiorio procederemos a hacer los siguientes pasos :"]
-              }), "\n", (0, _jsxRuntime.jsx)(_html.ELink, {
-                href: "https://github.com/balearesg/bg-docs-page",
-                children: "Link de bg-docs-pages"
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
-                start: "3",
-                children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
-                  children: "Primero nos ubicaremos en el repositiorio de bg-docs-pages y copiaremos de ahi el codigo para clonar el repositiorio."
-                }), "\n"]
-              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
-                children: `git clone https://github.com/balearesg/bg-docs-page.git`
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "este codigo lo ejecutaremos en nuestra carpeta donde tendremos nuestros proyectos de bg."
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
-                start: "4",
                 children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["Luego nos dirigimos en bg-docs y en esta ruta ", (0, _jsxRuntime.jsx)(_components.em, {
-                    children: "project.beyond\\builds\\web\\code"
-                  }), " copiaremos el codigo adentro y nos ubicamos en la raiz de nuestro repositiorio local de bg-docs-pages y pegaremos el codigo que copiamos."]
+                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                    children: ["Como segundo paso, crearemos una carpeta ", (0, _jsxRuntime.jsx)(_components.code, {
+                      children: "\"compilation\""
+                    }), " en la raiz del paquete en donde querramos alojar nuestra\r\nweb."]
+                  }), "\n"]
+                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsx)(_components.p, {
+                    children: "Una vez hecho, procederemos a compilar nuestro paquete."
+                  }), "\n"]
+                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                    children: ["Cuando este terminada la compilacion nos iremos en la siguiente ruta de nuestro proyecto:\r\n", (0, _jsxRuntime.jsx)(_components.strong, {
+                      children: "\"my-project.beyond\\builds\\web\\code\""
+                    }), "."]
+                  }), "\n"]
                 }), "\n"]
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h4, {
-                children: "Recomendacion:"
               }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Es recomendable que antes de hacer un deploy hagamos un respaldo de los archivos que remplazaremos en bg-docs-pages para asi tener un respaldo de los archivos anteriores."
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: "Netlify"
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                children: ["La plataforma que utilizamos para alojar la web es ", (0, _jsxRuntime.jsx)(_components.code, {
-                  children: "Netlify"
-                }), ", es una plataforma de alojamiento web que permite a los desarrolladores alojar sitios web estáticos y aplicaciones web de una manera fácil y rápida."]
+                children: "En esta ruta obtendremos el resultado de nuetsro codigo compilado."
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
                 start: "5",
                 children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["En Netlify nos iremos a la parte de ", (0, _jsxRuntime.jsx)(_components.code, {
-                    children: "Sites"
-                  }), " ahi veremos la opcion y los pasos para hacer el deploy, basicamente es llevar la carpeta de bg-docs-pages al lugar que nos indica netlify para actualizar."]
+                  children: ["Copiaremos la carpeta ", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "\"Code\""
+                  }), " de nuestro proyecto y la pegaremos en la carpeta compilation que creamos al\r\nprincipio en la raiz de nuestro paquete."]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
+                children: "Configuracion para que netlify tome el codigo compilado."
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "6",
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["Luego, en la raiz de nuestro proyecto crearemos un archivo ", (0, _jsxRuntime.jsx)(_components.em, {
+                    children: "\"toml\""
+                  }), ", con esa extension exactamente al final, puede\r\ndarle cualquier nombre al archivo, un ejemplo es ", (0, _jsxRuntime.jsx)(_components.em, {
+                    children: "\"netlify.toml\""
+                  }), ". Y colocaremos lo siguiente :\r\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                    children: "[build] publish = \"/nombre-de-mi-carpeta-que-cree-para-compilar\""
+                  })]
                 }), "\n"]
               }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Y listo, ya tendremos nuesto deploy listo!."
+                children: "El comando que se muestra en el archivo TOML de Netlify indica la ubicación de la carpeta que se debe publicar después\r\nde que se complete el proceso de compilación. En este caso, la carpeta se llama\r\n\"nombre-de-mi-carpeta-que-cree-para-compilar\" y se encuentra en la raíz del proyecto. Por lo tanto, después de que\r\nNetlify compile el sitio web, publicará los archivos de la carpeta \"nombre-de-mi-carpeta-que-cree-para-compilar\" en el\r\ndominio correspondiente."
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "7",
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["Una vez hecho solo tendremos ", (0, _jsxRuntime.jsx)(_components.em, {
+                    children: "que guardar los cambios en la rama que hemos escogidos para hacer deploys y hacer git\r\npush"
+                  }), "."]
+                }), "\n"]
               })]
             });
           }
@@ -1399,7 +1399,7 @@ return (
       ***********************************************/
 
       ims.set('./mdx/how-to-use/how-to-use.mdx', {
-        hash: 3772338031,
+        hash: 11665590,
         creator: function (require, exports) {
           "use strict";
 
@@ -1616,17 +1616,15 @@ return (
                 children: "👏 Ya casi estamos! Solo quedaria disponibilizar nuestro contenido en el menu para que pueda ser accedido por otros"
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
                 children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["Nos dirigimos al archivo ", (0, _jsxRuntime.jsx)(_components.code, {
-                    children: "project\\project.json"
+                  children: ["Nos dirigimos a la siguiente ruta ", (0, _jsxRuntime.jsx)(_components.code, {
+                    children: "project\\modules\\layouts\\main\\ts\\menu\\index.ts"
                   })]
                 }), "\n", (0, _jsxRuntime.jsx)(_components.li, {
                   children: "Lo abrimos"
                 }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["Nos vamos a la linea ", (0, _jsxRuntime.jsx)(_components.code, {
-                    children: "16"
-                  }), "como podemos ver nos encontraremos una propiedad ", (0, _jsxRuntime.jsx)(_components.code, {
+                  children: ["Nos encontraremos con una constante ", (0, _jsxRuntime.jsx)(_components.code, {
                     children: "sidebarItems"
-                  }), " que es un array que contiene los items que aparecen en el menu"]
+                  }), " que es un arreglo de arreglos."]
                 }), "\n", (0, _jsxRuntime.jsx)(_components.li, {
                   children: "Nos vamos a ir al final de la lista de items y crearemos el nuestro siguiendo un patron:"
                 }), "\n"]
@@ -1643,31 +1641,126 @@ return (
               }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
                 children: "En este caso el template que debemos usar es el siguiente:"
               }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
-                children: `
-    {"label": "Nombre del menu que querramos agregar", "path": "/getting-started"}
-`
+                children: `["Nombre del menu que querramos agregar", "/url-de-nuestra-pagina", []]`
               }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
                 children: "Se quiere agregar una pagina con submenues (con sub contenidos)"
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                children: ["Estructura de los items de ", (0, _jsxRuntime.jsx)(_components.code, {
+                  children: "sidebarItems"
+                }), ":"]
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ul, {
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["La primera posicion de estos subarreglos es el label que querramos que se vea en el menu.", "\n", (0, _jsxRuntime.jsxs)(_components.ul, {
+                    children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                      children: ["La segunda posicion sera la ruta url de nuestra pagina.", "\n", (0, _jsxRuntime.jsxs)(_components.ul, {
+                        children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
+                          children: "La tercera posicion del arreglo es otro arreglo que seran las paginas con submenus o subcontenidos a dentros de estas."
+                        }), "\n"]
+                      }), "\n"]
+                    }), "\n"]
+                  }), "\n"]
+                }), "\n"]
               }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
-                children: `
-{
-    "label": "Nombre del menu que querramos agregar",
-    "path": "path de la pagina que queremso que aparezca cuando cliqueemos la opcion, puede ser otra pagina o una pagina introductoria",
-    "children": [
-        {
-            label: 'Nombre de Sub pagina',
-            path: "/primera-parte-del-nombre-del-export",
-            "subPath": "/  segunda-parte-del-nombre-del-export"
-        }
-    ]
-}
-`
+                children: `["Nombre del menu que querramos agregar", "/url-de-nuestra-pagina", [["Nombre del submenu", "/url-de-nuestra-subpagina", []]]]`
               }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
                 children: ["el submenu lo podemos repetir cuantas veces como sea necesario cuidando que este dentro de ", (0, _jsxRuntime.jsx)(_components.code, {
                   children: "children"
                 }), "."]
               }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
                 children: "🏅Listo! Ya tendriamos nuestro contenido en bg-docs!"
+              })]
+            });
+          }
+          function MDXContent(props = {}) {
+            const {
+              wrapper: MDXLayout
+            } = props.components || {};
+            return MDXLayout ? (0, _jsxRuntime.jsx)(MDXLayout, Object.assign({}, props, {
+              children: (0, _jsxRuntime.jsx)(_createMdxContent, props)
+            })) : _createMdxContent(props);
+          }
+          var _default = MDXContent;
+          exports.default = _default;
+        }
+      });
+
+      /*****************************************************************
+      INTERNAL MODULE: ./mdx/implement-unit-test/implement-unit-test.mdx
+      *****************************************************************/
+
+      ims.set('./mdx/implement-unit-test/implement-unit-test.mdx', {
+        hash: 2979992478,
+        creator: function (require, exports) {
+          "use strict";
+
+          Object.defineProperty(exports, "__esModule", {
+            value: true
+          });
+          exports.default = void 0;
+          var _jsxRuntime = require("react/jsx-runtime");
+          var _html = require("@bg/docs/components/html");
+          var _code = require("@bg/docs/code");
+          /*@jsxRuntime automatic @jsxImportSource react*/
+
+          function _createMdxContent(props) {
+            const _components = Object.assign({
+              h2: "h2",
+              h4: "h4",
+              ol: "ol",
+              li: "li",
+              strong: "strong",
+              p: "p"
+            }, props.components);
+            return (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
+              children: [(0, _jsxRuntime.jsx)(_components.h2, {
+                children: "Configuración en Beyond para implementar de Pruebas Unitarias con Jest en Tu Proyecto 🔧"
+              }), "\n", (0, _jsxRuntime.jsx)(_components.h4, {
+                children: "Jest es una libreria de Javascript para crear, ejecutar y estructurar pruebas, Por ello veremos su Integración con BeyondJS 🚀 :"
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["Primero instalaremos instalaremos la libreria de ", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "Jest"
+                  }), " y tambien ", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "Babel"
+                  }), " :"]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `npm install --save-dev jest`
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `npm install --save-dev babel-jest @babel/core @babel/preset-env`
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "Si usamos TypeScript debemos instalar tambien :"
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `npm install @babel/preset-typescript`
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "2",
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["En nuestro proyecto creado, procederemos a crear en el paquete donde haremos las pruebas, un archivo\r\n", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "babel.config.js"
+                  }), ". Este archivo contendra la configuracion de Babel de tu version actual de Node"]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `module.exports = {presets: [['@babel/preset-env',{targets: {node: 'current',},},],],};`
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "3",
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["Luego en nuestro package.json de nuestro paquete agregaremos la entrada ", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "\"Script\""
+                  }), ", asi de esta manera :"]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `"scripts": {"test": "jest"},`
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "Y ya estaria configurado Jest en BeyondJS para proceder a implementar las Pruebas Unitarias a nuestro proyecto 🎉."
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "[!NOTE]📌"
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "Recuerda que si quieres ejecutar tus Test debes acceder al paquete donde tengas tu archivo de tests y ejecutar en la\r\nterminal el comando de :"
+              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
+                children: `npm run test`
+              }), "\n", (0, _jsxRuntime.jsx)(_html.ELink, {
+                href: "https://jestjs.io/es-ES/docs/getting-started",
+                children: "Documentacion de Jest"
               })]
             });
           }
@@ -2473,7 +2566,7 @@ return (
       *************************************************************/
 
       ims.set('./mdx/prettier-settings/prettier-settings.mdx', {
-        hash: 684324124,
+        hash: 172084607,
         creator: function (require, exports) {
           "use strict";
 
@@ -2488,36 +2581,66 @@ return (
           function _createMdxContent(props) {
             const _components = Object.assign({
               h1: "h1",
-              h2: "h2",
-              code: "code",
               h3: "h3",
-              strong: "strong",
+              code: "code",
               ol: "ol",
               li: "li",
+              strong: "strong",
               p: "p"
             }, props.components);
             return (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
               children: [(0, _jsxRuntime.jsx)(_components.h1, {
                 children: "Configuración de prettier🔧"
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.h2, {
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.h3, {
                 children: ["📌El archivo ", (0, _jsxRuntime.jsx)(_components.code, {
                   children: "prettier.json"
                 }), " se utiliza para definir las preferencias de formato y estilo en el formateador de código Prettier. Aquí tienes un ejemplo de cómo puedes configurar el archivo ", (0, _jsxRuntime.jsx)(_components.code, {
                   children: "prettier.json"
                 }), " con tus preferencias específicas:"]
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: (0, _jsxRuntime.jsx)(_components.strong, {
-                  children: "🐾Pasos para configurar prettier.json:"
-                })
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
                 children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["Abre un editor de texto y crea un nuevo archivo llamado ", (0, _jsxRuntime.jsx)(_components.code, {
-                    children: "prettier.json"
-                  }), "."]
+                  children: [(0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "Integración de editor:"
+                  }), " Si has instalado la extensión de Prettier en tu editor de código, puedes formatear\r\nautomáticamente el código utilizando el atajo de teclado correspondiente o la opción en el menú del editor."]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "Link de la extension: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
+                children: (0, _jsxRuntime.jsx)(_components.strong, {
+                  children: "💻Configuración del formateo al guardar:"
+                })
+              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
+                children: "Para configurar Prettier para que se ejecute automáticamente cada vez que guardas un archivo, puedes seguir estos pasos:\r\nAsegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está disponible\r\npara varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que tienes la\r\nextensión de Prettier instalada en tu editor."
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "2",
+                children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsx)(_components.p, {
+                    children: "Asegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está\r\ndisponible para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que\r\ntienes la extensión de Prettier instalada en tu editor."
+                  }), "\n"]
                 }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["Copia y pega el siguiente código en el archivo ", (0, _jsxRuntime.jsx)(_components.code, {
-                    children: "prettier.json"
-                  }), ":"]
+                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                    children: ["Abre la configuración de tu editor. Esto generalmente se hace a través del menú ", (0, _jsxRuntime.jsx)(_components.strong, {
+                      children: "\"Preferences\""
+                    }), " (Preferencias) o\r\n\"Settings\" (Configuración) en el editor."]
+                  }), "\n"]
+                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                    children: ["Busca la configuración de Prettier. Puede aparecer como ", (0, _jsxRuntime.jsx)(_components.strong, {
+                      children: "\"Prettier\""
+                    }), " o ", (0, _jsxRuntime.jsx)(_components.strong, {
+                      children: "\"Format\""
+                    }), " en la configuración del editor.\r\nSelecciona la configuración correspondiente para Prettier."]
+                  }), "\n"]
+                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                    children: ["Dentro de la configuración de Prettier, busca la opción ", (0, _jsxRuntime.jsx)(_components.strong, {
+                      children: "\"Format On Save\""
+                    }), " (Formatear al Guardar) y actívala. Esta\r\nopción indica al editor que ejecute automáticamente Prettier cada vez que guardes un archivo."]
+                  }), "\n"]
+                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
+                  children: ["\n", (0, _jsxRuntime.jsx)(_components.p, {
+                    children: "Luego nos aseguraremos de establecer los valores que necesita nuestro editor de texto segun estos valores :"
+                  }), "\n"]
                 }), "\n"]
               }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
                 children: `
@@ -2528,76 +2651,29 @@ return (
   "useTabs": true,
   "singleQuote": true,
   "bracketSpacing": false,
-  "configPath": "${`workspaceFolder`}/.prettierrc"
+  "configPath": ""
 `
               }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
-                start: "3",
-                children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
-                  children: "Guarda el archivo prettier.json en la raíz de tu proyecto."
-                }), "\n", (0, _jsxRuntime.jsx)(_components.li, {
-                  children: "Establece el prettier.json como archivo de configuración de prettier, esto se hace por medio de una opción del vscode llamada Config path, ahí establecemos su valor en prettier.json de la siguiente manera:"
-                }), "\n"]
-              }), "\n", (0, _jsxRuntime.jsxs)(_code.Code, {
-                children: [" ", (0, _jsxRuntime.jsx)("img", {
-                  src: "./prettier-configure.jpg",
-                  alt: "image configuration"
-                })]
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: (0, _jsxRuntime.jsx)(_components.strong, {
-                  children: "🚀Como ejecutar prettier:"
-                })
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Para ejecutar Prettier y formatear tu código según la configuración establecida en prettier.json, puedes utilizar los siguientes métodos:"
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Línea de comandos: Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando:"
-              }), "\n", (0, _jsxRuntime.jsx)(_code.Code, {
-                children: "npx prettier --write"
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Esto formatea todos los archivos dentro de la carpeta actual y sus subcarpetas."
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                children: [(0, _jsxRuntime.jsx)(_components.strong, {
-                  children: "Integración de editor:"
-                }), " Si has instalado la extensión de Prettier en tu editor de código, puedes formatear automáticamente el código utilizando el atajo de teclado correspondiente o la opción en el menú del editor."]
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Link de la extension: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-              }), "\n", (0, _jsxRuntime.jsx)(_components.h3, {
-                children: (0, _jsxRuntime.jsx)(_components.strong, {
-                  children: "💻Configuración del formateo al guardar:"
-                })
-              }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "Para configurar Prettier para que se ejecute automáticamente cada vez que guardas un archivo, puedes seguir estos pasos:\r\nAsegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está disponible para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que tienes la extensión de Prettier instalada en tu editor."
-              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "7",
                 children: ["\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["\n", (0, _jsxRuntime.jsx)(_components.p, {
-                    children: "Asegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está disponible para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que tienes la extensión de Prettier instalada en tu editor."
-                  }), "\n"]
-                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                    children: ["Abre la configuración de tu editor. Esto generalmente se hace a través del menú ", (0, _jsxRuntime.jsx)(_components.strong, {
-                      children: "\"Preferences\""
-                    }), " (Preferencias) o \"Settings\" (Configuración) en el editor."]
-                  }), "\n"]
-                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                    children: ["Busca la configuración de Prettier. Puede aparecer como ", (0, _jsxRuntime.jsx)(_components.strong, {
-                      children: "\"Prettier\""
-                    }), " o ", (0, _jsxRuntime.jsx)(_components.strong, {
-                      children: "\"Format\""
-                    }), " en la configuración del editor. Selecciona la configuración correspondiente para Prettier."]
-                  }), "\n"]
-                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["\n", (0, _jsxRuntime.jsxs)(_components.p, {
-                    children: ["Dentro de la configuración de Prettier, busca la opción ", (0, _jsxRuntime.jsx)(_components.strong, {
-                      children: "\"Format On Save\""
-                    }), " (Formatear al Guardar) y actívala. Esta opción indica al editor que ejecute automáticamente Prettier cada vez que guardes un archivo."]
-                  }), "\n"]
-                }), "\n", (0, _jsxRuntime.jsxs)(_components.li, {
-                  children: ["\n", (0, _jsxRuntime.jsx)(_components.p, {
-                    children: "Guarda los cambios en la configuración y cierra la ventana de configuración."
-                  }), "\n"]
+                  children: ["Para ello en el buscador de la configuracion del editor buscaremos las propiedades de la estructura de arriba ej :\r\nbuscaremos primero ", (0, _jsxRuntime.jsx)(_components.strong, {
+                    children: "tabWidth"
+                  }), " y estableceremos su valor como esta arriba en \"4\" y asi seguiremos con las otras\r\npropiedades que buscaremos."]
+                }), "\n"]
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.p, {
+                children: ["ejemplo en ", (0, _jsxRuntime.jsx)(_components.strong, {
+                  children: "Visual Studio Code"
+                }), "👇 :"]
+              }), "\n", (0, _jsxRuntime.jsx)("img", {
+                src: "./assets/config-prettier.png",
+                alt: "image configuration"
+              }), "\n", (0, _jsxRuntime.jsxs)(_components.ol, {
+                start: "8",
+                children: ["\n", (0, _jsxRuntime.jsx)(_components.li, {
+                  children: "Despues de haber ajustados los valores en su editor guarda los cambios en la configuración y cierra la ventana de\r\nconfiguración."
                 }), "\n"]
               }), "\n", (0, _jsxRuntime.jsx)(_components.p, {
-                children: "A partir de ahora, cuando guardes un archivo en tu editor de código, Prettier se ejecutará automáticamente y formateará el código según las reglas y configuraciones establecidas en tu archivo prettier.json."
+                children: "A partir de ahora, cuando guardes un archivo en tu editor de código, Prettier se ejecutará automáticamente y formateará\r\nel código según las reglas y configuraciones establecidas en tu archivo prettier.json."
               })]
             });
           }
@@ -3165,14 +3241,14 @@ return (
       ***********************/
 
       ims.set('./index', {
-        hash: 1044626147,
+        hash: 105983400,
         creator: function (require, exports) {
           "use strict";
 
           Object.defineProperty(exports, "__esModule", {
             value: true
           });
-          exports.data = exports.Standars = exports.RunningBovino = exports.ReactTypes = exports.PrettierSettings = exports.Plugins = exports.NotFound = exports.Mailer = exports.Jview = exports.HowToUse = exports.HowToInstallJadmin = exports.GmapsIntegration = exports.EssentialUi = exports.DevelopmentStandards = exports.DeployBgDocs = exports.DebugMobileApps = exports.ConfigureGit = exports.Components = exports.CompilationMobile = exports.CompilationBackend = exports.CompilacionQch = exports.ChartComponent = exports.BeyondUi = exports.AuthUser = exports.AuthSession = exports.AuthInstalation = void 0;
+          exports.data = exports.Standars = exports.RunningBovino = exports.ReactTypes = exports.PrettierSettings = exports.Plugins = exports.NotFound = exports.Mailer = exports.Jview = exports.ImplementUnitTest = exports.HowToUse = exports.HowToInstallJadmin = exports.GmapsIntegration = exports.EssentialUi = exports.DevelopmentStandards = exports.DeployBgDocs = exports.DebugMobileApps = exports.ConfigureGit = exports.Components = exports.CompilationMobile = exports.CompilationBackend = exports.CompilacionQch = exports.ChartComponent = exports.BeyondUi = exports.AuthUser = exports.AuthSession = exports.AuthInstalation = void 0;
           var _notFound = require("./mdx/not-found.mdx");
           var _compilacionQch = require("./mdx/compilacion-qch/compilacion-qch.mdx");
           var _plugins = require("./mdx/plugins/plugins.mdx");
@@ -3197,6 +3273,7 @@ return (
           var _chartComponent = require("./mdx/chart-component/chart-component.mdx");
           var _reactTypes = require("./mdx/react-types/react-types.mdx");
           var _deployBgDocs = require("./mdx/deploy-bg-docs/deploy-bg-docs.mdx");
+          var _implementUnitTest = require("./mdx/implement-unit-test/implement-unit-test.mdx");
           /*bundle*/ // EXPORTS
           const NotFound = _notFound.default;
           exports.NotFound = NotFound;
@@ -3273,11 +3350,14 @@ return (
           const DeployBgDocs = _deployBgDocs.default;
           exports.DeployBgDocs = DeployBgDocs;
           /*bundle*/
+          const ImplementUnitTest = _implementUnitTest.default;
+          exports.ImplementUnitTest = ImplementUnitTest;
+          /*bundle*/
           const data = Array.from(Array(100)).map((_, index) => {
             return {
               user: `lorem ipsum ${index + 1}`,
               email: `lorem ipsum ${index + 1}`,
-              id: "1",
+              id: '1',
               lastName: `lorem ipsum ${index + 1}`
             };
           });
@@ -3411,6 +3491,10 @@ return (
         "name": "DeployBgDocs"
       }, {
         "im": "./index",
+        "from": "ImplementUnitTest",
+        "name": "ImplementUnitTest"
+      }, {
+        "im": "./index",
         "from": "data",
         "name": "data"
       }];
@@ -3445,6 +3529,7 @@ return (
         (require || prop === 'ChartComponent') && _export("ChartComponent", ChartComponent = require ? require('./index').ChartComponent : value);
         (require || prop === 'ReactTypes') && _export("ReactTypes", ReactTypes = require ? require('./index').ReactTypes : value);
         (require || prop === 'DeployBgDocs') && _export("DeployBgDocs", DeployBgDocs = require ? require('./index').DeployBgDocs : value);
+        (require || prop === 'ImplementUnitTest') && _export("ImplementUnitTest", ImplementUnitTest = require ? require('./index').ImplementUnitTest : value);
         (require || prop === 'data') && _export("data", data = require ? require('./index').data : value);
       };
       _export("__beyond_pkg", __beyond_pkg = __pkg);
@@ -3456,4 +3541,4 @@ return (
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfanN4UnVudGltZSIsImpzeCIsIl9jb21wb25lbnRzIiwiY29kZSIsIl9odG1sIiwiRUxpbmsiLCJfY29kZSIsIklubGluZUNvZGUiLCJzdHJvbmciLCJlbSIsImpzeHMiLCJvbCIsInAiLCJ1bCIsImEiLCJPYmplY3QiLCJkZWZpbmVQcm9wZXJ0eSIsImV4cG9ydHMiLCJ2YWx1ZSIsImRlZmF1bHQiLCJyZXF1aXJlIiwiX2NyZWF0ZU1keENvbnRlbnQiLCJwcm9wcyIsIkZyYWdtZW50IiwiTURYQ29udGVudCIsIndyYXBwZXIiLCJNRFhMYXlvdXQiLCJjb21wb25lbnRzIiwiYXNzaWduIiwiY2hpbGRyZW4iLCJfZGVmYXVsdCIsIl9ub3RGb3VuZCIsIl9jb21waWxhY2lvblFjaCIsIl9wbHVnaW5zIiwiX2hvd1RvVXNlIiwiX2RldmVsb3BtZW50UHJvY2VzcyIsIl9hdXRoSW5zdGFsYXRpb24yIiwiX2F1dGhTZXNzaW9uMiIsIl9hdXRoVXNlcjIiLCJfZXNzZW50aWFsVWkiLCJfYmV5b25kVWkiLCJfbWFpbGVyIiwiX2p2aWV3IiwiX2NvbXBpbGF0aW9uQmFja2VuZEV4dGVybmFsUGFja2FnZXMiLCJfZmx1am9jb21waWxhY2lvbm1vYmlsZSIsIl9jb25maWd1cmVHaXQiLCJfZGVidWdfYXBsaWNhY2lvbmVzX21vdmlsZXMiLCJfcnVubmluZ0JvdmlubyIsIl9wcmV0dGllclNldHRpbmdzIiwiX2hvd1RvSW5zdGFsbEphZG1pbiIsIl9nbWFwc0ludGVncmF0aW9uIiwiX2NoYXJ0Q29tcG9uZW50IiwiX3JlYWN0VHlwZXMiLCJfZGVwbG95QmdEb2NzIiwiTm90Rm91bmQiLCJDb21waWxhY2lvblFjaCIsIlBsdWdpbnMiLCJIb3dUb1VzZSIsIkNvbXBvbmVudHMiLCJEZXZlbG9wbWVudFN0YW5kYXJkcyIsIkF1dGhJbnN0YWxhdGlvbiIsIkF1dGhTZXNzaW9uIiwiQXV0aFVzZXIiLCJFc3NlbnRpYWxVaSIsIkJleW9uZFVpIiwiU3RhbmRhcnMiLCJNYWlsZXIiLCJKdmlldyIsIkNvbXBpbGF0aW9uQmFja2VuZCIsIkNvbXBpbGF0aW9uTW9iaWxlIiwiQ29uZmlndXJlR2l0IiwiRGVidWdNb2JpbGVBcHBzIiwiUnVubmluZ0JvdmlubyIsIlByZXR0aWVyU2V0dGluZ3MiLCJIb3dUb0luc3RhbGxKYWRtaW4iLCJHbWFwc0ludGVncmF0aW9uIiwiQ2hhcnRDb21wb25lbnQiLCJSZWFjdFR5cGVzIiwiRGVwbG95QmdEb2NzIiwiZGF0YSIsIkFycmF5IiwiZnJvbSIsIm1hcCIsIl8iLCJpbmRleCIsInVzZXIiLCJlbWFpbCIsImlkIiwibGFzdE5hbWUiXSwic291cmNlcyI6WyIvbWR4L2F1dGgvbWR4XFxhdXRoXFxhdXRoLWluc3RhbGF0aW9uLm1keCIsIi9tZHgvYXV0aC9tZHhcXGF1dGhcXGF1dGgtc2Vzc2lvbi5tZHgiLCIvbWR4L2F1dGgvbWR4XFxhdXRoXFxhdXRoLXVzZXIubWR4IiwiL21keC9jaGFydC1jb21wb25lbnQvbWR4XFxjaGFydC1jb21wb25lbnRcXGNoYXJ0LWNvbXBvbmVudC5tZHgiLCIvbWR4L2NvbXBpbGFjaW9uLXFjaC9tZHhcXGNvbXBpbGFjaW9uLXFjaFxcY29tcGlsYWNpb24tcWNoLm1keCIsIi9tZHgvY29tcGlsYXRpb24tYmFja2VuZC1leHRlcm5hbC1wYWNrYWdlcy9tZHhcXGNvbXBpbGF0aW9uLWJhY2tlbmQtZXh0ZXJuYWwtcGFja2FnZXNcXGNvbXBpbGF0aW9uLWJhY2tlbmQtZXh0ZXJuYWwtcGFja2FnZXMubWR4IiwiL21keC9jb21wb25lbnRzL21keFxcY29tcG9uZW50c1xcY29tcG9uZW50cy5tZHgiLCIvbWR4L2NvbmZpZ3VyZS1naXQvbWR4XFxjb25maWd1cmUtZ2l0XFxjb25maWd1cmUtZ2l0Lm1keCIsIi9tZHgvZGVidWctbW9iaWxlLWFwcHMvbWR4XFxkZWJ1Zy1tb2JpbGUtYXBwc1xcZGVidWdfYXBsaWNhY2lvbmVzX21vdmlsZXMubWR4IiwiL21keC9kZXBsb3ktYmctZG9jcy9tZHhcXGRlcGxveS1iZy1kb2NzXFxkZXBsb3ktYmctZG9jcy5tZHgiLCIvbWR4L2dtYXBzLWludGVncmF0aW9uL21keFxcZ21hcHMtaW50ZWdyYXRpb25cXGdtYXBzLWludGVncmF0aW9uLm1keCIsIi9tZHgvaG93LXRvLWluc3RhbGwtamFkbWluL21keFxcaG93LXRvLWluc3RhbGwtamFkbWluXFxob3ctdG8taW5zdGFsbC1qYWRtaW4ubWR4IiwiL21keC9ob3ctdG8tdXNlL21keFxcaG93LXRvLXVzZVxcaG93LXRvLXVzZS5tZHgiLCIvbWR4L2p2aWV3L21keFxcanZpZXdcXGp2aWV3Lm1keCIsIi9tZHgvbWFpbGVyL21keFxcbWFpbGVyXFxtYWlsZXIubWR4IiwiL21keC9tb2JpbGUtY29tcGlsYXRpb25zL21keFxcbW9iaWxlLWNvbXBpbGF0aW9uc1xcZmx1am9jb21waWxhY2lvbm1vYmlsZS5tZHgiLCIvbWR4L21keFxcbm90LWZvdW5kLm1keCIsIi9tZHgvcGx1Z2lucy9tZHhcXHBsdWdpbnNcXHBsdWdpbnMubWR4IiwiL21keC9wcmV0dGllci1zZXR0aW5ncy9tZHhcXHByZXR0aWVyLXNldHRpbmdzXFxwcmV0dGllci1zZXR0aW5ncy5tZHgiLCIvbWR4L3JlYWN0LXR5cGVzL21keFxccmVhY3QtdHlwZXNcXHJlYWN0LXR5cGVzLm1keCIsIi9tZHgvcnVubmluZy1ib3Zpbm8vbWR4XFxydW5uaW5nLWJvdmlub1xccnVubmluZy1ib3Zpbm8ubWR4IiwiL21keC9zdGFuZGFyZHMvbWR4XFxzdGFuZGFyZHNcXGRldmVsb3BtZW50LXByb2Nlc3MubWR4IiwiL21keC90cmFpbmluZy9pbmRleC5tZHgiLCIvbWR4L3VpLWxpYnJhcmllcy9tZHhcXHVpLWxpYnJhcmllc1xcYmV5b25kLXVpLm1keCIsIi9tZHgvdWktbGlicmFyaWVzL21keFxcdWktbGlicmFyaWVzXFxlc3NlbnRpYWwtdWkubWR4IiwiL2luZGV4LnRzIiwiL21keC9qdmlldy9kYXRhLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzswQkFHRTs7MEJBRUY7Ozs7K0JBRUksaUpBQUFBLFdBQUEsQ0FBQUMsR0FBQSxFQUFBQyxXQUFBLENBQUFDLElBQUE7Z0NBQXlJO3dCQUFlLGFBQUFILFdBQUEsQ0FBQUMsR0FBQSxFQUFBQyxXQUFBLENBQUFDLElBQUE7Z0NBQUs7d0JBQVMsa0JBQUFILFdBQUEsQ0FBQUMsR0FBQSxFQUFBQyxXQUFBLENBQUFDLElBQUE7Z0NBQVU7d0JBQW1ELGFBQUFILFdBQUEsQ0FBQUMsR0FBQSxFQUFBQyxXQUFBLENBQUFDLElBQUE7Z0NBQUs7Ozs7OzhCQUV4Tzs7OzswQkFFRDs7MkJBRUgsdUlBQUFILFdBQUEsQ0FBQUMsR0FBQSxFQUFBRyxLQUFBLENBQUFDLEtBQUE7OzRCQUE0SztvQkFBaUI7OzBCQUUxTDs7MEJBRUg7Ozs7OEJBRUk7Ozs7K0JBRUEscUVBQUFMLFdBQUEsQ0FBQUMsR0FBQSxFQUFBSyxLQUFBLENBQUFDLFVBQUE7Z0NBQXlFO3dCQUFtQixrRUFBQVAsV0FBQSxDQUFBQyxHQUFBLEVBQUFLLEtBQUEsQ0FBQUMsVUFBQTtnQ0FBc0U7d0JBQTBCLG1CQUFBUCxXQUFBLENBQUFDLEdBQUEsRUFBQUssS0FBQSxDQUFBQyxVQUFBO2dDQUF1Qjt3QkFBNkMsWUFBQVAsV0FBQSxDQUFBQyxHQUFBLEVBQUFLLEtBQUEsQ0FBQUMsVUFBQTtnQ0FBZ0I7d0JBQXdCLFVBQUFQLFdBQUEsQ0FBQUMsR0FBQSxFQUFBSyxLQUFBLENBQUFDLFVBQUE7Z0NBQWM7d0JBQXFCLFdBQUFQLFdBQUEsQ0FBQUMsR0FBQSxFQUFBSyxLQUFBLENB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
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfanN4UnVudGltZSIsImpzeCIsIl9jb21wb25lbnRzIiwiY29kZSIsIl9odG1sIiwiRUxpbmsiLCJfY29kZSIsIklubGluZUNvZGUiLCJzdHJvbmciLCJlbSIsIkNvZGUiLCJqc3hzIiwib2wiLCJwIiwidWwiLCJhIiwiT2JqZWN0IiwiZGVmaW5lUHJvcGVydHkiLCJleHBvcnRzIiwidmFsdWUiLCJkZWZhdWx0IiwicmVxdWlyZSIsIl9jcmVhdGVNZHhDb250ZW50IiwicHJvcHMiLCJGcmFnbWVudCIsIk1EWENvbnRlbnQiLCJ3cmFwcGVyIiwiTURYTGF5b3V0IiwiY29tcG9uZW50cyIsImFzc2lnbiIsImNoaWxkcmVuIiwiX2RlZmF1bHQiLCJfbm90Rm91bmQiLCJfY29tcGlsYWNpb25RY2giLCJfcGx1Z2lucyIsIl9ob3dUb1VzZSIsIl9kZXZlbG9wbWVudFByb2Nlc3MiLCJfYXV0aEluc3RhbGF0aW9uMiIsIl9hdXRoU2Vzc2lvbjIiLCJfYXV0aFVzZXIyIiwiX2Vzc2VudGlhbFVpIiwiX2JleW9uZFVpIiwiX21haWxlciIsIl9qdmlldyIsIl9jb21waWxhdGlvbkJhY2tlbmRFeHRlcm5hbFBhY2thZ2VzIiwiX2ZsdWpvY29tcGlsYWNpb25tb2JpbGUiLCJfY29uZmlndXJlR2l0IiwiX2RlYnVnX2FwbGljYWNpb25lc19tb3ZpbGVzIiwiX3J1bm5pbmdCb3Zpbm8iLCJfcHJldHRpZXJTZXR0aW5ncyIsIl9ob3dUb0luc3RhbGxKYWRtaW4iLCJfZ21hcHNJbnRlZ3JhdGlvbiIsIl9jaGFydENvbXBvbmVudCIsIl9yZWFjdFR5cGVzIiwiX2RlcGxveUJnRG9jcyIsIl9pbXBsZW1lbnRVbml0VGVzdCIsIk5vdEZvdW5kIiwiQ29tcGlsYWNpb25RY2giLCJQbHVnaW5zIiwiSG93VG9Vc2UiLCJDb21wb25lbnRzIiwiRGV2ZWxvcG1lbnRTdGFuZGFyZHMiLCJBdXRoSW5zdGFsYXRpb24iLCJBdXRoU2Vzc2lvbiIsIkF1dGhVc2VyIiwiRXNzZW50aWFsVWkiLCJCZXlvbmRVaSIsIlN0YW5kYXJzIiwiTWFpbGVyIiwiSnZpZXciLCJDb21waWxhdGlvbkJhY2tlbmQiLCJDb21waWxhdGlvbk1vYmlsZSIsIkNvbmZpZ3VyZUdpdCIsIkRlYnVnTW9iaWxlQXBwcyIsIlJ1bm5pbmdCb3Zpbm8iLCJQcmV0dGllclNldHRpbmdzIiwiSG93VG9JbnN0YWxsSmFkbWluIiwiR21hcHNJbnRlZ3JhdGlvbiIsIkNoYXJ0Q29tcG9uZW50IiwiUmVhY3RUeXBlcyIsIkRlcGxveUJnRG9jcyIsIkltcGxlbWVudFVuaXRUZXN0IiwiZGF0YSIsIkFycmF5IiwiZnJvbSIsIm1hcCIsIl8iLCJpbmRleCIsInVzZXIiLCJlbWFpbCIsImlkIiwibGFzdE5hbWUiXSwic291cmNlcyI6WyIvbWR4L2F1dGgvbWR4XFxhdXRoXFxhdXRoLWluc3RhbGF0aW9uLm1keCIsIi9tZHgvYXV0aC9tZHhcXGF1dGhcXGF1dGgtc2Vzc2lvbi5tZHgiLCIvbWR4L2F1dGgvbWR4XFxhdXRoXFxhdXRoLXVzZXIubWR4IiwiL21keC9jaGFydC1jb21wb25lbnQvbWR4XFxjaGFydC1jb21wb25lbnRcXGNoYXJ0LWNvbXBvbmVudC5tZHgiLCIvbWR4L2NvbXBpbGFjaW9uLXFjaC9tZHhcXGNvbXBpbGFjaW9uLXFjaFxcY29tcGlsYWNpb24tcWNoLm1keCIsIi9tZHgvY29tcGlsYXRpb24tYmFja2VuZC1leHRlcm5hbC1wYWNrYWdlcy9tZHhcXGNvbXBpbGF0aW9uLWJhY2tlbmQtZXh0ZXJuYWwtcGFja2FnZXNcXGNvbXBpbGF0aW9uLWJhY2tlbmQtZXh0ZXJuYWwtcGFja2FnZXMubWR4IiwiL21keC9jb21wb25lbnRzL21keFxcY29tcG9uZW50c1xcY29tcG9uZW50cy5tZHgiLCIvbWR4L2NvbmZpZ3VyZS1naXQvbWR4XFxjb25maWd1cmUtZ2l0XFxjb25maWd1cmUtZ2l0Lm1keCIsIi9tZHgvZGVidWctbW9iaWxlLWFwcHMvbWR4XFxkZWJ1Zy1tb2JpbGUtYXBwc1xcZGVidWdfYXBsaWNhY2lvbmVzX21vdmlsZXMubWR4IiwiL21keC9kZXBsb3ktYmctZG9jcy9tZHhcXGRlcGxveS1iZy1kb2NzXFxkZXBsb3ktYmctZG9jcy5tZHgiLCIvbWR4L2dtYXBzLWludGVncmF0aW9uL21keFxcZ21hcHMtaW50ZWdyYXRpb25cXGdtYXBzLWludGVncmF0aW9uLm1keCIsIi9tZHgvaG93LXRvLWluc3RhbGwtamFkbWluL21keFxcaG93LXRvLWluc3RhbGwtamFkbWluXFxob3ctdG8taW5zdGFsbC1qYWRtaW4ubWR4IiwiL21keC9ob3ctdG8tdXNlL21keFxcaG93LXRvLXVzZVxcaG93LXRvLXVzZS5tZHgiLCIvbWR4L2ltcGxlbWVudC11bml0LXRlc3QvbWR4XFxpbXBsZW1lbnQtdW5pdC10ZXN0XFxpbXBsZW1lbnQtdW5pdC10ZXN0Lm1keCIsIi9tZHgvanZpZXcvbWR4XFxqdmlld1xcanZpZXcubWR4IiwiL21keC9tYWlsZXIvbWR4XFxtYWlsZXJcXG1haWxlci5tZHgiLCIvbWR4L21vYmlsZS1jb21waWxhdGlvbnMvbWR4XFxtb2JpbGUtY29tcGlsYXRpb25zXFxmbHVqb2NvbXBpbGFjaW9ubW9iaWxlLm1keCIsIi9tZHgvbWR4XFxub3QtZm91bmQubWR4IiwiL21keC9wbHVnaW5zL21keFxccGx1Z2luc1xccGx1Z2lucy5tZHgiLCIvbWR4L3ByZXR0aWVyLXNldHRpbmdzL21keFxccHJldHRpZXItc2V0dGluZ3NcXHByZXR0aWVyLXNldHRpbmdzLm1keCIsIi9tZHgvcmVhY3QtdHlwZXMvbWR4XFxyZWFjdC10eXBlc1xccmVhY3QtdHlwZXMubWR4IiwiL21keC9ydW5uaW5nLWJvdmluby9tZHhcXHJ1bm5pbmctYm92aW5vXFxydW5uaW5nLWJvdmluby5tZHgiLCIvbWR4L3N0YW5kYXJkcy9tZHhcXHN0YW5kYXJkc1xcZGV2ZWxvcG1lbnQtcHJvY2Vzcy5tZHgiLCIvbWR4L3RyYWluaW5nL2luZGV4Lm1keCIsIi9tZHgvdWktbGlicmFyaWVzL21keFxcdWktbGlicmFyaWVzXFxiZXlvbmQtdWkubWR4IiwiL21keC91aS1saWJyYXJpZXMvbWR4XFx1aS1saWJyYXJpZXNcXGVzc2VudGlhbC11aS5tZHgiLCIvaW5kZXgudHMiLCIvbWR4L2p2aWV3L2RhdGEudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzBCQUdFOzswQkFFRjs7OzsrQkFFSSxpSkFBQUEsV0FBQSxDQUFBQyxHQUFBLEVBQUFDLFdBQUEsQ0FBQUMsSUFBQTtnQ0FBeUk7d0JBQWUsYUFBQUgsV0FBQSxDQUFBQyxHQUFBLEVBQUFDLFdBQUEsQ0FBQUMsSUFBQTtnQ0FBSzt3QkFBUyxrQkFBQUgsV0FBQSxDQUFBQyxHQUFBLEVBQUFDLFdBQUEsQ0FBQUMsSUFBQTtnQ0FBVTt3QkFBbUQsYUFBQUgsV0FBQSxDQUFBQyxHQUFBLEVBQUFDLFdBQUEsQ0FBQUMsSUFBQTtnQ0FBSzs7Ozs7OEJBRXhPOzs7OzBCQUVEOzsyQkFFSCx1SUFBQUgsV0FBQSxDQUFBQyxHQUFBLEVBQUFHLEtBQUEsQ0FBQUMsS0FBQTs7NEJBQTRLO29CQUFpQjs7MEJBRTFMOzswQkFFSDs7Ozs4QkFFSTs7OzsrQkFFQSxxRUFBQUwsV0FBQSxDQUFBQyxHQUFBLEVBQUFLLEtBQUEsQ0FBQUMsVUFBQTtnQ0FBeUU7d0JBQW1CLGtFQUFBUCxXQUFBLENBQUFDLEdBQUEsRUFBQUssS0FBQSxDQUFBQyxVQUFBO2dDQUFzRTt3QkFBMEIsbUJBQUFQLFdBQUEsQ0FBQUMsR0FBQSxFQUFBSyxLQUFBLENBQUFDLFVBQUE7Z0NBQXVCO3dCQUE2QyxZQUFBUCxXQUFBLENBQUFDLEdB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
