@@ -45,7 +45,7 @@ export function Clipboard({ text, message }) {
 	return (
 		<div>
 			<div className='clipboard__container' data-text={text} ref={ref} onClick={onClick}>
-				<IconButton icon='copy' />
+				<IconButton icon='copy' title='copy' />
 				<span className='action-copied'>Copied</span>
 			</div>
 		</div>

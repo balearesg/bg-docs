@@ -32,6 +32,10 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 		routing.pushState('/');
 	};
 
+	const navigate = (): void => {
+		routing.pushState('/auth/forget/password');
+	};
+
 	return (
 		<div className='auth-page__container'>
 			<div className='content-auth'>
@@ -44,6 +48,7 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 							type='email'
 							loading={fetching}
 							hasError={!!error.error}
+							placeholder='insert email...'
 							errorMessage={error?.error}
 							{...getInput('email', texts.email, 'email', fetching)}
 						/>
@@ -52,14 +57,19 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 							type='password'
 							password={true}
 							loading={fetching}
+							placeholder='insert password...'
 							hasError={!!error.error}
 							errorMessage={error?.error}
 							{...getInput('password', texts.password, 'password', fetching)}
 						/>
 					</div>
-
+					<div className='content-forget-remember'>
+						<a onClick={navigate} className='btn-link forget-password'>
+							Have you forgotten your password?
+						</a>
+					</div>
 					<div className='form__actions'>
-						<Button type='submit' className='btn btn-primary' loading={fetching} {...formDisabled}>
+						<Button type='submit' variant='primary' loading={fetching} {...formDisabled}>
 							{texts.init}
 						</Button>
 					</div>

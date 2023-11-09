@@ -8,6 +8,7 @@ import { IForm, init, texts } from '../types';
 import { module } from 'beyond_context';
 import { Image } from 'pragmate-ui/image';
 import { routing } from '@beyond-js/kernel/routing';
+import { BaseToolbar } from '@bg/docs/toolbar';
 import { Button } from 'pragmate-ui/components';
 import { StoreManager } from '../store';
 const init: init = { email: '' };
@@ -46,10 +47,14 @@ function View({ store }: { store: StoreManager }): JSX.Element {
 	const handleSubmit = async (): Promise<void> => await store.send(params, hide);
 	const mode: string = error?.error ? 'error' : 'success';
 
+	const navigate = () => {
+		routing.pushState('/auth/login');
+	};
 	return (
 		<div className='page__container'>
+			<BaseToolbar back={true} title='Login' onClick={navigate} />
 			<div className='content-auth'>
-				<Image src={`${globalThis.baseDir}assets/candado.png`} alt='logo' className='logo-header' />
+				<Image src={`${globalThis.baseDir}assets/logo.png`} alt='logo' className='logo-header' />
 				<Form onSubmit={handleSubmit}>
 					<h1 className='title-login title-form'>forgotten password</h1>
 					<span className='texts-subtitle'>
@@ -58,6 +63,7 @@ function View({ store }: { store: StoreManager }): JSX.Element {
 					<div className='content-inputs'>
 						<Input
 							type='email'
+							placeholder='insert email...'
 							hasError={!!error.message}
 							errorMessage={error?.message}
 							{...getInput('email', 'Email', 'email', loading)}
@@ -65,7 +71,7 @@ function View({ store }: { store: StoreManager }): JSX.Element {
 					</div>
 
 					<div className='form__actions'>
-						<Button type='submit' variant='secondary' loading={loading} {...formDisabled}>
+						<Button type='submit' variant='primary' loading={loading} {...formDisabled}>
 							VERIFY
 						</Button>
 					</div>

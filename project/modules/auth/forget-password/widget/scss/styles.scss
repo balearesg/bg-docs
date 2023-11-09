@@ -16,7 +16,6 @@
         padding: 58px 57px 69px;
         width: 100%;
         max-width: 561px;
-        border: 1px solid var(--outline);
 
         figure.pui-image {
             height: 90px;
@@ -45,6 +44,7 @@
             justify-content: flex-end;
             align-items: center;
             margin: 20.37px 0;
+            cursor: pointer;
 
             .content-remember {
                 display: flex;
@@ -68,7 +68,8 @@
                 font-size: 16px;
                 line-height: 1;
                 display: inline-block;
-                text-align: end;
+                cursor: pointer;
+                text-align: end; 
             }
         }
 

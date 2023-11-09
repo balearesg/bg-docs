@@ -1,0 +1,57 @@
+.base-element-toolbar {
+	display: grid;
+	padding: 0 0.5rem;
+	align-items: center;
+	justify-content: space-between;
+	grid-template-columns: 30px 1fr 40px auto;
+	grid-gap: 4px;
+	color: var(--on-background);
+	font-weight: 500;
+	letter-spacing: 0.24px;
+	height: 4rem;
+	position: absolute;
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: var(--background);
+	cursor: pointer;
+	transition: all 300ms;
+	&:hover {
+		transition: all 300ms;
+		background-color: var(--surface-container-high);
+	}
+	
+	&.no-back {
+		grid-template-columns: 1fr 40px auto;
+	}
+
+	.pragmate-icon-button {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		width: 25px;
+		height: 25px;
+		svg.pragmate-icon {
+			width: 25px;
+			height: 25px;
+			fill: var(--secondary);
+		}
+	}
+
+	span {
+		display: block;
+		justify-self: left;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		line-height: 1;
+		flex: 1;
+	}
+	h3 {
+		text-transform: lowercase;
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+}
