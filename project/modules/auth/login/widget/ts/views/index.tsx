@@ -32,19 +32,15 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 	};
 
 	return (
-		<div className="auth-page__container">
-			<div className="content-auth">
-				<BeyondImage
-					src={`${globalThis.baseDir}assets/logo.png`}
-					alt="logo"
-					className="logo-header"
-				/>
+		<div className='auth-page__container'>
+			<div className='content-auth'>
+				<BeyondImage src={`${globalThis.baseDir}assets/logo.png`} alt='logo' className='logo-header' />
 				<BeyondForm onSubmit={handleSubmit}>
-					<h1 className="title-login">{texts.login}</h1>
-					<div className="content-inputs">
+					<h1 className='title-login'>{texts.login}</h1>
+					<div className='content-inputs'>
 						<Input
 							disabled={fetching}
-							type="email"
+							type='email'
 							loading={fetching}
 							hasError={!!error.error}
 							errorMessage={error?.error}
@@ -52,7 +48,7 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 						/>
 						<Input
 							disabled={fetching}
-							type="password"
+							type='password'
 							password={true}
 							loading={fetching}
 							hasError={!!error.error}
@@ -61,13 +57,14 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 						/>
 					</div>
 
-					<div className="form__actions">
+					<div className='form__actions'>
 						<BeyondButton
-							type="submit"
-							className="btn btn-primary"
+							type='submit'
+							className='btn btn-primary'
 							loading={fetching}
-							colorSpinner="var(--element-bg)"
-							{...formDisabled}>
+							colorSpinner='var(--element-bg)'
+							{...formDisabled}
+						>
 							{texts.init}
 						</BeyondButton>
 					</div>
