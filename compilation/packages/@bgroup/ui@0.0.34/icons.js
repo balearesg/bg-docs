@@ -76,7 +76,7 @@ var __pkg = new __Bundle({
 __pkg.dependencies.update([["react", dependency_1], ["@beyond-js/kernel/routing", dependency_2], ["@beyond-js/kernel/styles", dependency_3]]);
 brequire("@beyond-js/kernel/styles").styles.register("@bgroup/ui@0.0.34/icons");
 var ims = /* @__PURE__ */new Map();
-ims.set("./beyond-icon-button", {
+ims.set("./pragmate-icon-button", {
   hash: 475425774,
   creator: function (require2, exports) {
     "use strict";
@@ -114,7 +114,7 @@ ims.set("./beyond-icon-button", {
         type
       } = props;
       type = !!type ? type : "button";
-      className = className ? `${className} beyond-icon-button` : "beyond-icon-button";
+      className = className ? `${className} pragmate-icon-button` : "pragmate-icon-button";
       const iconAttributes = {
         icon
       };
@@ -173,7 +173,7 @@ ims.set("./icon", {
         ...props
       }, {
         viewBox: props.viewBox ? props.viewBox : viewBox,
-        className: !className ? "beyond-icon" : `beyond-icon ${className}`
+        className: !className ? "pragmate-icon" : `pragmate-icon ${className}`
       });
       props.title ? properties["data-tippy-content"] = props.title : null;
       delete properties.icon;
@@ -784,7 +784,7 @@ transform="translate(-20.5 0.013)"/></g>`
   }
 });
 __pkg.exports.descriptor = [{
-  "im": "./beyond-icon-button",
+  "im": "./pragmate-icon-button",
   "from": "BeyondIconButton",
   "name": "BeyondIconButton"
 }, {
@@ -802,7 +802,7 @@ __pkg.exports.process = function ({
   prop,
   value
 }) {
-  (require2 || prop === "BeyondIconButton") && (BeyondIconButton = require2 ? require2("./beyond-icon-button").BeyondIconButton : value);
+  (require2 || prop === "BeyondIconButton") && (BeyondIconButton = require2 ? require2("./pragmate-icon-button").BeyondIconButton : value);
   (require2 || prop === "BeyondIcon") && (BeyondIcon = require2 ? require2("./icon").BeyondIcon : value);
   (require2 || prop === "BEYOND_ICONS") && (BEYOND_ICONS = require2 ? require2("./icons").BEYOND_ICONS : value);
 };

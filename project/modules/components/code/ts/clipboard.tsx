@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { BeyondIconButton } from '@bgroup/ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 
 export function Clipboard({ text, message }) {
 	const ref = React.useRef(null);
-	const polyfill = (text) => {
+	const polyfill = text => {
 		const textArea = document.createElement('textarea');
 		textArea.value = text;
 
@@ -23,7 +23,7 @@ export function Clipboard({ text, message }) {
 			console.error('Fallback: Oops, unable to copy', err);
 		}
 	};
-	const onClick = async (event) => {
+	const onClick = async event => {
 		const target = event.currentTarget;
 		const text = target.dataset.text;
 		if (!navigator.clipboard) {
@@ -44,9 +44,9 @@ export function Clipboard({ text, message }) {
 
 	return (
 		<div>
-			<div className="clipboard__container" data-text={text} ref={ref} onClick={onClick}>
-				<BeyondIconButton icon="copy" />
-				<span className="action-copied">Copied</span>
+			<div className='clipboard__container' data-text={text} ref={ref} onClick={onClick}>
+				<IconButton icon='copy' />
+				<span className='action-copied'>Copied</span>
 			</div>
 		</div>
 	);

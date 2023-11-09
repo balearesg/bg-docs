@@ -9,7 +9,7 @@ import React, {
 	ReactNode,
 	Ref,
 } from 'react';
-import { BeyondIconButton } from '@bgroup/ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 import { APP_ICONS } from './icons';
 interface props {
 	icon?: string;
@@ -27,21 +27,20 @@ interface props {
 	type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
 }
 
-export /*bundle*/ const AppIconButton: ForwardRefExoticComponent<
-	PropsWithChildren<props> & RefAttributes<unknown>
-> = forwardRef((props: props, ref: Ref<HTMLButtonElement>): JSX.Element => {
-	const icons = APP_ICONS;
+export /*bundle*/ const AppIconButton: ForwardRefExoticComponent<PropsWithChildren<props> & RefAttributes<unknown>> =
+	forwardRef((props: props, ref: Ref<HTMLButtonElement>): JSX.Element => {
+		const icons = APP_ICONS;
 
-	const { icon } = props;
-	const attrs: props = Object.assign({}, props);
-	delete attrs.icon;
+		const { icon } = props;
+		const attrs: props = Object.assign({}, props);
+		delete attrs.icon;
 
-	if (!icons.hasOwnProperty(icon)) {
-		attrs.icon = icon;
-	} else {
-		attrs.icon = icons[icon].icon;
-		attrs.viewBox = icons[icon].viewBox;
-	}
+		if (!icons.hasOwnProperty(icon)) {
+			attrs.icon = icon;
+		} else {
+			attrs.icon = icons[icon].icon;
+			attrs.viewBox = icons[icon].viewBox;
+		}
 
-	return <BeyondIconButton ref={ref} {...attrs} />;
-});
+		return <IconButton ref={ref} {...attrs} />;
+	});

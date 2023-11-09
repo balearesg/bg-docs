@@ -1,5 +1,4 @@
 export const sidebarItems = [
-	['Empty', 'empty', []],
 	['How to use', '/how-to-use', []],
 	['Compilacion QCH', '/compilacion-qch', []],
 	['Plugins', '/plugins', []],

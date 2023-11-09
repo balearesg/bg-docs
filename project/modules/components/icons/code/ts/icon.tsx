@@ -1,5 +1,5 @@
 import React, { SVGAttributes } from 'react';
-import { BeyondIcon } from '@bgroup/ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 import { APP_ICONS } from './icons';
 
 interface props {
@@ -23,5 +23,5 @@ export /*bundle*/ const AppIcon = (props: props): JSX.Element => {
 		attrs.viewBox = icons[icon].viewBox;
 	}
 
-	return <BeyondIcon {...attrs} />;
+	return <IconButton {...attrs} />;
 };

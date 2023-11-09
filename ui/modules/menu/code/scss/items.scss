@@ -21,7 +21,7 @@
      
       }
 
-      .beyond-icon {
+      .pragmate-icon {
         height: 30px;
         width: 30px;
         margin: 0 auto;
@@ -42,7 +42,7 @@
         transition: all 300ms ease-in;
         color: var(--background);
 
-        svg.beyond-icon:not(.sub-icon) {
+        svg.pragmate-icon:not(.sub-icon) {
           transition: all 300ms ease-in;
           fill: var(--background) !important;
           &.user, &.profile {
@@ -51,7 +51,7 @@
           }
         }
 
-        .sub-icon.svg.beyond-icon {
+        .sub-icon.svg.pragmate-icon {
           fill: var(--gray);
           color: var(--gray);
         }

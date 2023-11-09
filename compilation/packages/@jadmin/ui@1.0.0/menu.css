@@ -15,7 +15,7 @@
 .jd-admin-panel .sidebar-left .nav-item span {
   transition: none;
 }
-.jd-admin-panel .sidebar-left .nav-item .beyond-icon {
+.jd-admin-panel .sidebar-left .nav-item .pragmate-icon {
   height: 30px;
   width: 30px;
   margin: 0 auto;
@@ -32,15 +32,15 @@
   transition: all 300ms ease-in;
   color: var(--background);
 }
-.jd-admin-panel .sidebar-left .nav-item:hover svg.beyond-icon:not(.sub-icon) {
+.jd-admin-panel .sidebar-left .nav-item:hover svg.pragmate-icon:not(.sub-icon) {
   transition: all 300ms ease-in;
   fill: var(--background) !important;
 }
-.jd-admin-panel .sidebar-left .nav-item:hover svg.beyond-icon:not(.sub-icon).user, .jd-admin-panel .sidebar-left .nav-item:hover svg.beyond-icon:not(.sub-icon).profile {
+.jd-admin-panel .sidebar-left .nav-item:hover svg.pragmate-icon:not(.sub-icon).user, .jd-admin-panel .sidebar-left .nav-item:hover svg.pragmate-icon:not(.sub-icon).profile {
   fill: none !important;
   stroke: #ffffff;
 }
-.jd-admin-panel .sidebar-left .nav-item:hover .sub-icon.svg.beyond-icon {
+.jd-admin-panel .sidebar-left .nav-item:hover .sub-icon.svg.pragmate-icon {
   fill: var(--gray);
   color: var(--gray);
 }

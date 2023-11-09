@@ -112,7 +112,7 @@
   align-items: center;
   column-gap: 8px;
 }
-.beyond-button.has-icon svg.beyond-icon {
+.beyond-button.has-icon svg.pragmate-icon {
   fill: var(--secondary);
 }
 .beyond-checkbox .cbx {
@@ -383,18 +383,18 @@
 .beyond-element-textarea.has-icon textarea:not(:placeholder-shown) ~ label {
   padding: 0px 19px;
 }
-.beyond-element-input.has-icon .beyond-icon,
-.beyond-element-textarea.has-icon .beyond-icon {
+.beyond-element-input.has-icon .pragmate-icon,
+.beyond-element-textarea.has-icon .pragmate-icon {
   z-index: 10;
 }
 @media screen and (max-width: 450px) {
-  .beyond-element-input.has-icon .beyond-icon-button,
-  .beyond-element-textarea.has-icon .beyond-icon-button {
+  .beyond-element-input.has-icon .pragmate-icon-button,
+  .beyond-element-textarea.has-icon .pragmate-icon-button {
     height: 30px;
   }
 }
-.beyond-element-input .eye.beyond-icon-button svg.beyond-icon,
-.beyond-element-textarea .eye.beyond-icon-button svg.beyond-icon {
+.beyond-element-input .eye.pragmate-icon-button svg.pragmate-icon,
+.beyond-element-textarea .eye.pragmate-icon-button svg.pragmate-icon {
   width: 20px;
   height: 20px;
   color: var(--gray);
