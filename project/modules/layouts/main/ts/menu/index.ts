@@ -23,4 +23,5 @@ export const sidebarItems = [
 	['React Types', '/react-types', []],
 	['Deploy bg docs', '/deploy-bg-docs', []],
 	['Implement Unit Test', '/implement-unit-test', []],
+	['Update Backend of aplication', '/compilation-backend-mobile', []],
 ].sort();
