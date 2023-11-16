@@ -15,6 +15,7 @@ export const sidebarItems = [
 	['Configure Git', '/configure-git', []],
 	['Debug Mobiles Apps', '/debug-mobile-apps', []],
 	['Running Bovino', '/running-bovino', []],
+	['JView', '/jview', []],
 	['Prettier Settings', '/prettier-settings', []],
 	['How to install jadmin', '/how-to-install-jadmin', []],
 	['Gmaps Integration', '/gmaps-integration', []],
