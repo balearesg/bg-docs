@@ -29,8 +29,7 @@ export class StoreManager extends ReactiveModel<StoreManager> {
 			this.#error = true;
 			console.error(error);
 		} finally {
-			this.fethching = false;
-			this.triggerEvent();
+			this.fetching = false;
 		}
 	};
 
