@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useState, useEffect } from 'react';
-import { BeyondIconButton } from '@bgroup/ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 import { Dates } from './dates';
 import { useJViewContext } from './context';
 
@@ -62,6 +62,7 @@ export function Search(): JSX.Element {
 	if (!search) disabled.disabled = true;
 
 	const cls: string = date ? 'date form-group-jview' : 'form-group-jview';
+	const iconBtnCls = date ? 'date' : '';
 	return (
 		<form onSubmit={handleSubmit} className={cls}>
 			{date && <Dates values={values} error={error} handleChange={handleChange} />}
@@ -77,9 +78,7 @@ export function Search(): JSX.Element {
 						placeholder="Buscar"
 						onChange={handleChange}
 					/>
-					{(search || isSearch) && (
-						<BeyondIconButton icon="close" className={date && 'date'} onClick={clearSearch} />
-					)}
+					{(search || isSearch) && <IconButton icon="close" className={iconBtnCls} onClick={clearSearch} />}
 					<button id="search-button" type="submit">
 						<span>Buscar</span>
 					</button>

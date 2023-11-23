@@ -28,6 +28,8 @@ import { default as __chartComponent } from './mdx/chart-component/chart-compone
 import { default as __reactTypes } from './mdx/react-types/react-types.mdx';
 import { default as __deployBgDocs } from './mdx/deploy-bg-docs/deploy-bg-docs.mdx';
 import { default as __launch } from './mdx/launch.json/launch.mdx';
+import { default as __ImplementUnitTest } from './mdx/implement-unit-test/implement-unit-test.mdx';
+import { default as __compilationBackendMobile } from './mdx/compilation-backend-mobile/compilation-backend-mobile.mdx';
 
 // EXPORTS
 export /*bundle*/ const NotFound = __notFound;
@@ -56,6 +58,8 @@ export /*bundle*/ const ChartComponent = __chartComponent;
 export /*bundle*/ const ReactTypes = __reactTypes;
 export /*bundle*/ const DeployBgDocs = __deployBgDocs;
 export /*bundle*/ const LaunchJson = __launch;
+export /*bundle*/ const ImplementUnitTest = __ImplementUnitTest;
+export /*bundle*/ const CompilationBackendMobile = __compilationBackendMobile;
 export /*bundle*/ const data = Array.from(Array(100)).map((_, index) => {
 	return {
 		user: `lorem ipsum ${index + 1}`,

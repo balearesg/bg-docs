@@ -5,15 +5,16 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@beyond-js/backend": "^0.1.4",
+		"@beyond-js/kernel": "~0.1.8",
+		"@beyond-js/local": "^0.1.2",
 		"@beyond-js/react-widgets": "18.20.4",
 		"@bgroup/ui": "^0.0.34",
 		"@mdx-js/mdx": "^2.2.1",
 		"@mdx-js/react": "^2.2.1",
+		"pragmate-ui": "^0.0.3",
 		"prismjs": "^1.29.0",
-		"socket.io-client": "^4.5.3",
-		"@beyond-js/kernel": "~0.1.8",
-		"@beyond-js/local": "^0.1.2",
-		"@beyond-js/backend": "^0.1.4"
+		"socket.io-client": "^4.5.3"
 	},
 	"devDependencies": {
 		"@beyond-js/local": "^0.1.2"

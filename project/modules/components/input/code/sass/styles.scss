@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 11.06px;
-    .beyond-element-input, .beyond-element-textarea {
+    .pui-element-input, .pui-textarea {
         margin: 0;
         border-radius: var(--border-primary);
         border: 1px solid var(--input-bg);
@@ -23,12 +23,12 @@
         &:hover:not(&.disabled) textarea {
             color: var(--text-on-primary);
         }
-       button.beyond-icon-button svg.beyond-icon {
+       button.pragmate-icon-button svg.pragmate-icon {
             fill: var(--icon-color);
         }
     }
-    .beyond-element-input, .beyond-element-textarea {
-        .beyond-element-input-error {
+    .pui-element-input, .pui-textarea {
+        .pui-element-input-error {
             bottom: -1.25rem;
             color: var(--border-error);
             font-size: 12px;
@@ -37,7 +37,7 @@
             border-color: var(--border-error);
         }
     }
-    .beyond-element-textarea  {
+    .pui-textarea  {
         min-height: 135px;
         textarea {
             min-height: inherit;

@@ -1,6 +1,6 @@
 import React, { MutableRefObject } from 'react';
-import { BeyondIconButton } from '@bgroup/ui/icons';
-import { BeyondScrollContainer } from '@bgroup/ui/perfect-scrollbar';
+import { IconButton } from 'pragmate-ui/icons';
+import { ScrollContainer } from 'pragmate-ui/perfect-scrollbar';
 interface Props extends Partial<HTMLElement> {
 	logo?: JSX.Element;
 	onChange?: (isOpen: boolean) => void;
@@ -22,19 +22,14 @@ export function DropdownSidebar(props: Props): JSX.Element {
 
 	return (
 		<aside ref={sidebarRef} className={cls}>
-			<div className="sidebar__header">
-				{logo && <div className="logo">{logo}</div>}
-				<BeyondIconButton
-					title={title}
-					onClick={toggleIsOpen}
-					icon="chevronRight"
-					className="toggle__btn"
-				/>
+			<div className='sidebar__header'>
+				{logo && <div className='logo'>{logo}</div>}
+				<IconButton title={title} onClick={toggleIsOpen} icon='chevronRight' className='toggle__btn' />
 			</div>
-			<BeyondScrollContainer className="sidebar__nav">
-				<p className="documentation-subtitle">DOCUMENTATION</p>
-				<ul className="sidebar__list">{items}</ul>
-			</BeyondScrollContainer>
+			<ScrollContainer className='sidebar__nav'>
+				<p className='documentation-subtitle'>DOCUMENTATION</p>
+				<ul className='sidebar__list'>{items}</ul>
+			</ScrollContainer>
 		</aside>
 	);
 }

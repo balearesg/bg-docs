@@ -16,7 +16,7 @@
 		max-width: 561px;
 		border: 1px solid var(--border);
 
-		figure.beyond-element-image {
+		figure.pui-image {
 			height: 90px;
 			align-self: center;
 			aspect-ratio: 52 / 45;
@@ -33,15 +33,15 @@
 			flex-direction: column;
 			row-gap: 22px;
 
-			.beyond-element-input {
+			.pui-element-input {
 				width: 97%;
 			}
 		}
 		.content-forget-remember {
 			display: flex;
 			width: 100%;
-			justify-content: space-between;
-			align-items: center;
+			justify-content: flex-end;
+			align-items: flex-end;
 			margin: 20.37px 0;
 			.content-remember {
 				display: flex;
@@ -62,7 +62,13 @@
 				font-size: 16px;
 				line-height: 1;
 				display: inline-block;
-				text-align: end;
+				text-align: right;
+				cursor: pointer;
+				transition: all 300ms;
+				&:hover {
+					transition: all 300ms;
+					color: var(--primary);
+				}
 			}
 		}
 		.form__actions {
@@ -70,11 +76,11 @@
 			width: 100%;
 			align-items: center;
 			margin: 40px 0 0;
-			button.beyond-button {
+			button.pragmate-button {
 				width: 100%;
 				height: 47px;
 				max-height: initial;
-				.beyond-element-spinner {
+				.pragmate-element-spinner {
 					width: 55px;
 					height: 55px;
 				}
@@ -128,14 +134,14 @@
 				font-size: 14px;
 			}
 			.form__actions {
-				button.beyond-button {
+				button.pragmate-button {
 					height: 40px;
 				}
 				&.two-actions-code {
 					column-gap: 8px;
 				}
 			}
-			figure.beyond-element-image {
+			figure.pui-image {
 				height: 60px;
 			}
 		}

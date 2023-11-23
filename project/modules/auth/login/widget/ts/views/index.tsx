@@ -6,8 +6,9 @@ import { module } from 'beyond_context';
 import { IForm, init, texts } from '../types';
 import { Model } from '../model';
 import { Input } from '@bg/docs/input';
-import { BeyondImage } from '@bgroup/ui/image';
-import { BeyondCheckbox, BeyondForm, BeyondButton } from '@bgroup/ui/form';
+import { Image } from 'pragmate-ui/image';
+import { Form, Checkbox } from 'pragmate-ui/form';
+import { Button } from 'pragmate-ui/components';
 
 export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 	const [ready, texts] = useTexts<texts>(module.specifier);
@@ -31,47 +32,48 @@ export /*bundle*/ function Page({ store }: { store: Model }): JSX.Element {
 		routing.pushState('/');
 	};
 
+	const navigate = (): void => {
+		routing.pushState('/auth/forget/password');
+	};
+
 	return (
-		<div className="auth-page__container">
-			<div className="content-auth">
-				<BeyondImage
-					src={`${globalThis.baseDir}assets/logo.png`}
-					alt="logo"
-					className="logo-header"
-				/>
-				<BeyondForm onSubmit={handleSubmit}>
-					<h1 className="title-login">{texts.login}</h1>
-					<div className="content-inputs">
+		<div className='auth-page__container'>
+			<div className='content-auth'>
+				<Image src={`${globalThis.baseDir}assets/logo.png`} alt='logo' className='logo-header' />
+				<Form onSubmit={handleSubmit}>
+					<h1 className='title-login'>{texts.login}</h1>
+					<div className='content-inputs'>
 						<Input
 							disabled={fetching}
-							type="email"
+							type='email'
 							loading={fetching}
 							hasError={!!error.error}
+							placeholder='insert email...'
 							errorMessage={error?.error}
 							{...getInput('email', texts.email, 'email', fetching)}
 						/>
 						<Input
 							disabled={fetching}
-							type="password"
+							type='password'
 							password={true}
 							loading={fetching}
+							placeholder='insert password...'
 							hasError={!!error.error}
 							errorMessage={error?.error}
 							{...getInput('password', texts.password, 'password', fetching)}
 						/>
 					</div>
-
-					<div className="form__actions">
-						<BeyondButton
-							type="submit"
-							className="btn btn-primary"
-							loading={fetching}
-							colorSpinner="var(--element-bg)"
-							{...formDisabled}>
-							{texts.init}
-						</BeyondButton>
+					<div className='content-forget-remember'>
+						<a onClick={navigate} className='btn-link forget-password'>
+							Have you forgotten your password?
+						</a>
 					</div>
-				</BeyondForm>
+					<div className='form__actions'>
+						<Button type='submit' variant='primary' loading={fetching} {...formDisabled}>
+							{texts.init}
+						</Button>
+					</div>
+				</Form>
 			</div>
 		</div>
 	);
