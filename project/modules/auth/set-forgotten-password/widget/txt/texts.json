@@ -1,0 +1,42 @@
+{
+	"en": {
+		"save": "Save",
+		"password": "Current Password",
+		"newPassword": "New password",
+		"error": "An error has occurred",
+		"title": {
+			"edit": "change your password",
+			"create": "Create your password"
+		},
+		"passwordError": "The password does not match",
+		"successPassword": "Password generated correctly",
+		"repeatPassword": "Repeat Password",
+		"success_recoverPassword": "Password changed successfully",
+		"information": "The password must contain a minimum of 8 characters, at least one (1) uppercase, one (1) lowercase, one (1) numeric value and one (1) special character.",
+		"lowercase": "At least one lowercase character",
+		"uppercase": "At least one uppercase character",
+		"number": "At least one number",
+		"specialCharacter": "At least one special character",
+		"eightCharacters": "At least 8 characters"
+	},
+	"es": {
+		"save": "Guardar",
+		"password": "Contraseña actual",
+		"newPassword": "Nueva contraseña",
+		"title": {
+			"edit": "Cambia tu contraseña",
+			"create": "Crea tu contraseña"
+		},
+		"error": "Ha ocurrido un error",
+		"repeatPassword": "Repetir Contraseña",
+		"passwordError": "Las contraseña no coincide",
+		"successPassword": "Contraseña generada correctamente",
+		"success_recoverPassword": "Contraseña cambiada exitosamente",
+		"information": "La contraseña debe contener un mínimo de 8 caracteres, al menos una(1) mayúscula, una(1) minúscula, un(1) valor numérico y un(1) carácter especial.",
+		"lowercase": "Al menos un carácter en minúscula",
+		"uppercase": "Al menos un carácter en mayúscula",
+		"number": "Al menos un número",
+		"specialCharacter": "Al menos un carácter especial",
+		"eightCharacters": "Al menos 8 caracteres"
+	}
+}

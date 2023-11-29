@@ -32,6 +32,32 @@
 	}
 
 	form {
+		.code-inputs {
+			margin: 0 0 0.5rem 0;
+			background-color: transparent;
+			border-radius: var(--border-primary);
+			input {
+				max-width: 35px;
+				font-size: 24px;
+				margin: 8px;
+				border: 1px solid var(--gray-variant);
+				background-color: var(--background);
+				width: 38px;
+				height: 54px;
+				font-weight: 500;
+				color: var(--on-surface);
+				caret-color: var(--on-surface);
+				&:-webkit-autofill,
+				&:-webkit-autofill:focus {
+					-webkit-transition: background-color 600000s 0s, color 600000s 0s;
+					transition: background-color 600000s 0s, color 600000s 0s;
+				}
+			}
+			input[data-autocompleted] {
+				background-color: transparent !important;
+			}
+		}
+
 		.content-inputs {
 			display: flex;
 			flex-direction: column;

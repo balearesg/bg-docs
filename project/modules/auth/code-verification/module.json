@@ -1,0 +1,28 @@
+{
+	"name": "code-verification",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	  ],
+	"txt": {
+		"path": "/widget/txt",
+		"multilanguage": true,
+		"files": "*"
+	},
+	"widget": {
+		"element": {
+			"name": "code-verification"
+		},
+		"route": "/auth/code/${token}",
+		"is": "page",
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		}
+	}
+}

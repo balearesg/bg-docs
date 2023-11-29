@@ -1,19 +1,20 @@
-import { Code } from "@bg/docs/code";
-import { Title } from "@bg/docs/components/html";
-import { Info } from "@bg/docs/components/html";
+import { Code } from '@bg/docs/code';
+import { Title } from '@bg/docs/components/html';
+import { Info } from '@bg/docs/components/html';
 
 <Title text="ChartComponent" />
 
 <Info>
-  ChartComponent es un componente React que utiliza la librería Chart.js para
-  generar gráficos personalizados en un canvas{" "}
+	ChartComponent es un componente React que utiliza la librería Chart.js para generar gráficos personalizados en un
+	canvas{' '}
 </Info>
 
 ### Props
 
-- chartData: Objeto con los datos que se van a graficar. Este objeto debe tener la siguiente estructura:
+-   chartData: Objeto con los datos que se van a graficar. Este objeto debe tener la siguiente estructura:
 
-- type (opcional): Tipo de gráfico que se quiere generar. Los valores posibles son: line, bar, radar, doughnut, pie, polarArea, bubble, scatter, area. El valor por defecto es doughnut.
+-   type (opcional): Tipo de gráfico que se quiere generar. Los valores posibles son: line, bar, radar, doughnut, pie,
+    polarArea, bubble, scatter, area. El valor por defecto es doughnut.
 
 ### Uso
 
@@ -21,12 +22,12 @@ Para utilizar el componente `ChartComponent`, sigue los siguientes pasos:
 
 1. Importa el componente en tu archivo de React:
 
-<Code>{`import { ChartComponent } from '@bg/jadmin/chart';`}</Code>
+<Code>{`import { ChartComponent } from '@bg/docs/chart';`}</Code>
 
 2. Crea un objeto con los datos que quieres graficar, este objeto debe tener la siguiente estructura:
 
 <Code>
-  {`const data = {
+	{`const data = {
 labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
 datasets: [
 				{
@@ -64,8 +65,8 @@ datasets: [
 return (
 
 <div>
-  <h1>Mi gráfico</h1>
-  <ChartComponent chartData={data} ref={ref} type="line" />
+	<h1>Mi gráfico</h1>
+	<ChartComponent chartData={data} ref={ref} type="line" />
 </div>
 ); } `}
 

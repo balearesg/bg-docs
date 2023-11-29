@@ -1,0 +1,28 @@
+{
+	"name": "set-forgotten-password",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	  ],
+	"widget": {
+		"element": {
+			"name": "set-forgotten-password"
+		},
+		"route": "/auth/set-forgotten-password/${token}",
+		"is": "page",
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		}
+	},
+	"txt": {
+		"path": "/widget/txt",
+		"multilanguage": true,
+		"files": "*"
+	}
+}

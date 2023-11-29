@@ -34,6 +34,10 @@
 		"application": {
 			"token": "docsbg"
 		},
+		"uploadUrl": {
+			"development": "http://localhost:3002/",
+			"production": "https://docs.balearesgroup.com/"
+		},
 		"sidebarItems": [
 			{
 				"label": "How to use",

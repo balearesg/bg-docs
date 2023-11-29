@@ -1,25 +1,24 @@
-import { Title } from "@bg/docs/components/html";
-import { Code } from "@bg/docs/code";
+import { Title } from '@bg/docs/components/html';
+import { Code } from '@bg/docs/code';
 
-<Title
-  tag="h2"
-  text="Como instalar y configurar el Jadmin en un nuevo proyecto💻"
-/>
+<Title tag="h2" text="Como instalar y configurar el Jadmin en un nuevo proyecto💻" />
 
-1. Lo primero que se necesita es tener en su **"packages.json"** la ruta de su proyecto hasta los package.json de los siguientes proyectos 🗺️:
+1. Lo primero que se necesita es tener en su **"packages.json"** la ruta de su proyecto hasta los package.json de los
+   siguientes proyectos 🗺️:
 
-   - bg-auth/mailer/package.json
-   - bg-auth/auth-models/package.json
-   - bg/bg-auth/auth-api/package.json
-   - reactive-model/package.json
-   - jadmin/project/package.json
-   - jadmin/ui/package.json
+    - bg-auth/mailer/package.json
+    - bg-auth/auth-models/package.json
+    - bg/bg-auth/auth-api/package.json
+    - reactive-model/package.json
+    - jadmin/project/package.json
+    - jadmin/ui/package.json
 
-2. Una vez hecho lo siguiente es ir al `package.json` del proyecto donde quiera implementar el jadmin y agregar las siguientes dependencias:
+2. Una vez hecho lo siguiente es ir al `package.json` del proyecto donde quiera implementar el jadmin y agregar las
+   siguientes dependencias:
 
 <Code>{`libraries: {
    "imports": [
-      "@bg/jadmin",
+      "@bg/docs",
       "@bg/auth-api",
       "@jadmin/ui",
       "@bg/auth-models"
@@ -28,16 +27,20 @@ import { Code } from "@bg/docs/code";
 
 3. Luego si no esta especificado copie la carpeta `routing ` del jadmin y pasela a su proyecto.
 
-4. Ahora en nuestro proyecto crearemos en `modules` una carpeta menu (o como deseemos nombrarla) en esta carpeta crearemos un modulo `start` y en nuestro archivo `ts` (si no existe lo creamos) importaremos la clase `mainLayoutManager`
+4. Ahora en nuestro proyecto crearemos en `modules` una carpeta menu (o como deseemos nombrarla) en esta carpeta
+   crearemos un modulo `start` y en nuestro archivo `ts` (si no existe lo creamos) importaremos la clase
+   `mainLayoutManager`
 
 <Code>{`import { Code } from "@bg/docs/code";`}</Code>
 
-Este en un objeto que nos permitira agregar un arreglos de objetos que seran los elementos de la sidebar de nuestro jadmin. Las estructura seria la siguiente:
+Este en un objeto que nos permitira agregar un arreglos de objetos que seran los elementos de la sidebar de nuestro
+jadmin. Las estructura seria la siguiente:
 
 <Code>{`export const MENU_ITEMS = [{name: "label-del-elemento", icon: "icono-del-elemento", path: "/ruta-del-elemento",}]`}</Code>
 
-Luego al final de nuestro archivo `start` usaremos el metodo `"setMenuItems"` de `mainLayoutManager`. Este metodo nos permitira setear los elemento que agreguemos.
-De esta manera podemos agregar los elementos que necesitemos en nuestra sidebar del jadmin.
+Luego al final de nuestro archivo `start` usaremos el metodo `"setMenuItems"` de `mainLayoutManager`. Este metodo nos
+permitira setear los elemento que agreguemos. De esta manera podemos agregar los elementos que necesitemos en nuestra
+sidebar del jadmin.
 
 5. Asegurese de copiar tambien la carpeta template del jadmin y pasarla a su projecto. 📄
 

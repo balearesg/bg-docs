@@ -6,32 +6,25 @@
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",
-		"supported": [
-			"en",
-			"es"
-		]
+		"supported": ["en", "es"]
 	},
 	"modules": {
 		"path": "modules"
 	},
 	"libraries": {
-		"imports": [
-			"@bg/auth-api",
-			"@bg/auth-models",
-			"@bg/mailer",
-			"@jadmin/ui"
-		]
+		"imports": ["@bg/auth-api", "@bg/auth-models", "@bg/mailer", "@jadmin/ui"]
 	},
 	"params": {
 		"application": {
 			"token": "docsbg"
+		},
+		"uploadUrl": {
+			"development": "http://localhost:3002/",
+			"production": "https://docs.balearesgroup.com/"
 		}
 	},
 	"static": {
-		"includes": [
-			"assets",
-			"modules/content/mdx"
-		]
+		"includes": ["assets", "modules/content/mdx"]
 	},
 	"deployment": {
 		"distributions": [

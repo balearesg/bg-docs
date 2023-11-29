@@ -8,7 +8,6 @@ import { IForm, init, texts } from '../types';
 import { module } from 'beyond_context';
 import { Image } from 'pragmate-ui/image';
 import { routing } from '@beyond-js/kernel/routing';
-import { BaseToolbar } from '@bg/docs/toolbar';
 import { Button } from 'pragmate-ui/components';
 import { StoreManager } from '../store';
 const init: init = { email: '' };
@@ -51,28 +50,31 @@ function View({ store }: { store: StoreManager }): JSX.Element {
 		routing.pushState('/auth/login');
 	};
 	return (
-		<div className='page__container'>
-			<BaseToolbar back={true} title='Login' onClick={navigate} />
-			<div className='content-auth'>
-				<Image src={`${globalThis.baseDir}assets/logo.png`} alt='logo' className='logo-header' />
+		<div className="page__container">
+			<div className="content-auth">
+				<Image src={`${globalThis.baseDir}assets/logo.png`} alt="logo" className="logo-header" />
 				<Form onSubmit={handleSubmit}>
-					<h1 className='title-login title-form'>forgotten password</h1>
-					<span className='texts-subtitle'>
+					<h1 className="title-login title-form">forgotten password</h1>
+					<span className="texts-subtitle">
 						Enter your email to retrieve your password. You will receive an email with instructions.
 					</span>
-					<div className='content-inputs'>
+					<div className="content-inputs">
 						<Input
-							type='email'
-							placeholder='insert email...'
+							type="email"
+							placeholder="Insert email..."
 							hasError={!!error.message}
 							errorMessage={error?.message}
 							{...getInput('email', 'Email', 'email', loading)}
 						/>
 					</div>
 
-					<div className='form__actions'>
-						<Button type='submit' variant='primary' loading={loading} {...formDisabled}>
-							VERIFY
+					<div className="form__actions">
+						<Button type="reset" variant="secondary" onClick={navigate}>
+							Volver
+						</Button>
+
+						<Button type="submit" variant="primary" loading={loading} {...formDisabled}>
+							Verify
 						</Button>
 					</div>
 				</Form>
