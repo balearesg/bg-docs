@@ -1,38 +1,40 @@
-import { Link } from '@bg/docs/components/html';
 import { Code } from '@bg/docs/code';
 
 # Configuración de prettier🔧
 
-El archivo `prettier.json` se utiliza para definir las preferencias de formato y estilo en el formateador de código
-Prettier. Aquí tienes un ejemplo de cómo puedes configurar el archivo `prettier.json` con tus preferencias específicas:
+### 📌El archivo `prettier.json` se utiliza para definir las preferencias de formato y estilo en el formateador de código Prettier. Aquí tienes un ejemplo de cómo puedes configurar el archivo `prettier.json` con tus preferencias específicas:
 
-Integración del Editor : si has instalado la extensión de Prettier en tu editor de codigo, puedes formatear
-automáticamente el código utilizando el atajo de teclado correspondiente o la opción en el menú del editor.
+1. **Integración de editor:** Si has instalado la extensión de Prettier en tu editor de código, puedes formatear
+   automáticamente el código utilizando el atajo de teclado correspondiente o la opción en el menú del editor.
 
-<Link href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Link para la extension</Link>
+Link de la extension: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
-## Configuración del formateo al guardar
+### **💻Configuración del formateo al guardar:**
 
 Para configurar Prettier para que se ejecute automáticamente cada vez que guardas un archivo, puedes seguir estos pasos:
+Asegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está disponible
+para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que tienes la
+extensión de Prettier instalada en tu editor.
 
-1.  Asegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está
-    disponible para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que
-    tienes la extensión de Prettier instalada en tu editor.
+2. Asegúrate de tener Prettier y la extensión correspondiente instalados en tu editor de código. Prettier está
+   disponible para varios editores populares como Visual Studio Code, Atom, Sublime Text, entre otros. Verifica que
+   tienes la extensión de Prettier instalada en tu editor.
 
-2.  Abre la configuración de tu editor. Esto generalmente se hace a través del menú "Preferences" (Preferencias) o
-    "Settings" (Configuración) en el editor.
+3. Abre la configuración de tu editor. Esto generalmente se hace a través del menú **"Preferences"** (Preferencias) o
+   "Settings" (Configuración) en el editor.
 
-3.  Busca la configuración de Prettier. Puede aparecer como "Prettier" o "Format" en la configuración del editor.
-    Selecciona la configuración correspondiente para Prettier.
+4. Busca la configuración de Prettier. Puede aparecer como **"Prettier"** o **"Format"** en la configuración del editor.
+   Selecciona la configuración correspondiente para Prettier.
 
-4.  Dentro de la configuración de Prettier, busca la opción "Format On Save" (Formatear al Guardar) y actívala. Esta
-    opción indica al editor que ejecute automáticamente Prettier cada vez que guardes un archivo.
+5. Dentro de la configuración de Prettier, busca la opción **"Format On Save"** (Formatear al Guardar) y actívala. Esta
+   opción indica al editor que ejecute automáticamente Prettier cada vez que guardes un archivo.
 
-5.  Luego nos aseguraremos de establecer los valores que necesita nuestro editor de texto según estos valores :
+6. Luego nos aseguraremos de establecer los valores que necesita nuestro editor de texto segun estos valores :
 
 <Code>
 	{`
- "tabWidth": 4,
+  "tabWidth": 4,
+>>>>>>> dev-jview
   "arrowParens": "avoid",
   "printWidth": 120,
   "proseWrap": "always",
@@ -43,11 +45,16 @@ Para configurar Prettier para que se ejecute automáticamente cada vez que guard
 `}
 </Code>
 
-6. Para ello en el buscador de la configuracion del editor buscaremos las propiedades de la estructura de arriba ej :
+7. Para ello en el buscador de la configuracion del editor buscaremos las propiedades de la estructura de arriba ej :
    buscaremos primero **tabWidth** y estableceremos su valor como esta arriba en "4" y asi seguiremos con las otras
    propiedades que buscaremos.
 
-    Guarda los cambios en la configuración y cierra la ventana de configuración.
+ejemplo en **Visual Studio Code**👇 :
+
+<img src="./assets/config-prettier.png" alt="image configuration" />
+
+8. Despues de haber ajustados los valores en su editor guarda los cambios en la configuración y cierra la ventana de
+   configuración.
 
 A partir de ahora, cuando guardes un archivo en tu editor de código, Prettier se ejecutará automáticamente y formateará
 el código según las reglas y configuraciones establecidas en tu archivo prettier.json.

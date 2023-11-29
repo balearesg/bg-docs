@@ -1,0 +1,26 @@
+{
+    "en": {
+        "password": "password",
+        "email": "email",
+        "login": "Login",
+        "error": "An error has occurred",
+        "forgetPassword": "Have you forgotten your password?",
+        "success_recoverPassword": "Password changed successfully",
+        "notRegister": "User or password failed",
+        "noSession": "Session expired, please log in again",
+        "init": "Login",
+        "remember": "Remember"
+    },
+    "es": {
+        "password": "Contraseña",
+        "email": "Correo electrónico",
+        "login": "Iniciar sesión",
+        "error": "Ha ocurrido un error",
+        "forgetPassword": "¿Ha olvidado su contraseña?",
+        "success_recoverPassword": "Contraseña cambiada exitosamente",
+        "notRegister": "Usuario o clave incorrectos",
+        "noSession": "Sesión vencida, por favor inicie sesión nuevamente",
+        "init": "Iniciar",
+        "remember": "Recuérdame"
+    }
+}

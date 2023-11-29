@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { routing } from '@beyond-js/kernel/routing';
-import { BeyondIcon } from '@bgroup/ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 import { Client } from './options/client';
 import { ContextMenu } from './context';
-import { BeyondScrollContainer } from '@bgroup/ui/perfect-scrollbar';
+import { ScrollContainer } from 'pragmate-ui/perfect-scrollbar';
 
 type props = {
 	open: boolean;
@@ -11,7 +11,7 @@ type props = {
 };
 
 export /*bundle*/
-function AppMenu(props: props): JSX.Element {
+function AppMenu(props: props) {
 	const { open, menu } = props;
 	const [subMenu, setSubMenu] = React.useState([]);
 	const submenu = React.useRef<HTMLUListElement>(null);
@@ -64,7 +64,7 @@ function AppMenu(props: props): JSX.Element {
 			return (
 				<li data-navigate={option.path} key={option.id} className="list-sub-option" onClick={navigate}>
 					<a className="a-sub-option">
-						<BeyondIcon className="sub-icon" icon={option.icon} />
+						<IconButton className="sub-icon" icon={option.icon} />
 						<span>{option.name}</span>
 					</a>
 				</li>
@@ -74,7 +74,7 @@ function AppMenu(props: props): JSX.Element {
 	return (
 		<ContextMenu.Provider value={value}>
 			<div ref={container}>
-				<BeyondScrollContainer className={cls} data-perfect-scrollbar="" data-suppress-scroll-x="true">
+				<ScrollContainer className={cls} data-perfect-scrollbar="" data-suppress-scroll-x="true">
 					<ul className="navigation-left">
 						<Client menu={menu} />
 					</ul>
@@ -85,7 +85,7 @@ function AppMenu(props: props): JSX.Element {
 					<div className="ps__rail-y">
 						<div className=" ps__thumb-y" tabIndex={0} />
 					</div>
-				</BeyondScrollContainer>
+				</ScrollContainer>
 				<ul ref={submenu} className="tab-sub-container hide">
 					{output}
 				</ul>

@@ -6,7 +6,7 @@
          column-gap: 0.3rem;
     margin-right: 0.3rem;
   }
-  .beyond-element-input input[type="date"] {
+  .pui-element-input input[type="date"] {
     background-image: url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png");
     background-position: right 1em top 44%, 0 0;
     background-repeat: no-repeat;
@@ -20,23 +20,23 @@
       bottom: 10px;
     }
   }
-  .beyond-element-input {
+  .pui-element-input {
     height: 38px;
     margin: 0;
     width: 10rem;
-    .beyond-element-input-error {
+    .pui-element-input-error {
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
     }
     &.form-control-end {
-      .beyond-element-input-error {
+      .pui-element-input-error {
         display: none;
       }
     }
   }
   @media screen and (max-width:450px) {
-    .beyond-element-input input[type="date"] {
+    .pui-element-input input[type="date"] {
       background-position: right 1.2em top 60%,0 0;
     }
   }

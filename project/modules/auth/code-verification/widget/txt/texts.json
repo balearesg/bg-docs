@@ -1,0 +1,18 @@
+{
+	"en": {
+		"title": "Code verification",
+		"verify": "Verify",
+		"resend": "Resend",
+		"info": "Enter the verification code received",
+		"subtitle": "In the next few minutes you will be receiving a 6-digit verification code by email",
+		"invalidCode": "Invalid code, please verify"
+	},
+	"es": {
+		"title": "Verificación de código",
+		"verify": "Verificar",
+		"resend": "REENVIAR",
+		"info": "Ingrese el código de verificación recibido",
+		"subtitle": "En los próximos minutos estará recibiendo por correo electrónico un código de verificación de 6 digitos al correo electrónico ",
+		"invalidCode": "Codigo invalido, por favor verifiquelo."
+	}
+}

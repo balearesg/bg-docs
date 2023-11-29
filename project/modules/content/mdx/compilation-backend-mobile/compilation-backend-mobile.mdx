@@ -1,0 +1,56 @@
+import { ELink } from '@bg/docs/components/html';
+import { Code } from '@bg/docs/code';
+
+# Como actualizar el backend de las aplicaciones
+
+1. Primero obtenga el archivo `.zip` de la compilacion backend.
+
+2. Luego asegurese de tener el repositorio del backend de su aplicacion, una vez alli, acceda a la carpeta del
+   repositorio del backend y elimine todos los archivos excepto : _.git_ y el archivo **notifications.zip**.
+
+3. Procedera a descomprimir los datos del archivo .zip que usted obtuvo de la compilacion backend (de su proyecto
+   principal) y los pegara en la carpeta del repositorio backend.
+
+4. Una vez pegados, abriremos el archivo **start.js** y nos ubicaremos por ahi en la linea 37, que tendra esto :
+
+<Code>{`(0, _listen.listen)();`}</Code>
+
+Esa linea siempre que hayamos hecho una nueva compilacion no tendra un puerto asignado, normalmente la persona asignada
+disponibiliza un puerto especifico para ese backend, consultalo y agrega ese puerto ahi:
+
+<Code>{`(0, _listen.listen)(PUERTO);`}</Code>
+
+5. Luego nos ubicaremos en este sitio de google Cloud :
+
+<ELink href="https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/jida-service-dev?authuser=0&project=abiding-arch-301819">
+	Servidores en Google Cloud
+</ELink>
+
+7. Ahi nos saldran una lista de servicios activos, nosotros le daremos en **jida-services-dev**.
+
+8. Una vez alli, buscaremos un boton que dice **SSH**, usualmente esta arriba de subtitulo que dice `Registros`; y al
+   boton daremos click.
+
+9. Al dar click al boton se nos abrira una terminal de **SSH**, ahi actualizaremos la terminal primero con el siguiente
+   comando :
+
+<Code>{`sudo su`}</Code>
+
+10. Una vez ahi, accederemos con el comando :
+
+<Code>{`cd`}</Code>{' '}
+
+a **/opt**.
+
+<Code>{`cd /opt`}</Code>{' '}
+
+12. Luego ejecutemos el comando :
+
+<Code>{`ls -l`}</Code>{' '}
+
+Esto lo hacemos para ver si esta nuestro repositorio (el del backend), accedemos al repositorio del backend y hacemos
+git pull.
+
+13. Por ultimo ejecutaremo el comando :
+
+<Code>{`pm2 restart [nombre-del-repositorio]`}</Code>
