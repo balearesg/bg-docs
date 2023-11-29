@@ -19,7 +19,6 @@ export class StoreManager extends ReactiveModel<StoreManager> {
 		this.triggerEvent();
 		try {
 			const response = await session.recoverPassword({ ...params, appToken: config.params.application.token });
-			console.log(response);
 			if (response.error) throw new Error(response.error.message);
 			localStorage.setItem('__temp', params.email);
 			routing.pushState(`/auth/code/${response.token}?forget=true`);
@@ -30,7 +29,6 @@ export class StoreManager extends ReactiveModel<StoreManager> {
 			console.error(error);
 		} finally {
 			this.fetching = false;
-			this.triggerEvent();
 		}
 	};
 

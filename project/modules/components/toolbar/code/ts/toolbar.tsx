@@ -23,7 +23,6 @@ export /*bundle*/ function BaseToolbar(props: React.PropsWithChildren<props>): J
 	}
 
 	function handleOnClick() {
-		console.log('cliock');
 		onClick();
 	}
 	const { fetching, children, actions, refresh, title } = props;
@@ -38,7 +37,7 @@ export /*bundle*/ function BaseToolbar(props: React.PropsWithChildren<props>): J
 
 	return (
 		<nav className={className} onClick={handleOnClick}>
-			{back && <IconButton className='beyond-back-button circle' onClick={onBack} icon='backArrow' />}
+			{back && <IconButton className="beyond-back-button circle" onClick={onBack} icon="backArrow" />}
 			{title && <h3>{title}</h3>}
 			<Children children={children} spinner={spinner} actions={actions} refresh={refresh} />
 		</nav>
