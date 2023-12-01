@@ -1,0 +1,58 @@
+@import "~template/sass/variables";
+.page__container {
+	form {
+		position: relative;
+		.code-inputs {
+			margin: 0 0 0.5rem 0;
+			background-color: transparent;
+			border-radius: var(--border-primary);
+			input {
+				max-width: 35px;
+				font-size: 24px;
+				margin: 8px;
+				border: 1px solid var(--gray-variant);
+				background-color: var(--background);
+				width: 38px;
+				height: 54px;
+				font-weight: 500;
+				color: var(--on-surface);
+				caret-color: var(--on-surface);
+				&:-webkit-autofill,
+				&:-webkit-autofill:focus {
+					-webkit-transition: background-color 600000s 0s, color 600000s 0s;
+					transition: background-color 600000s 0s, color 600000s 0s;
+				}
+			}
+			input[data-autocompleted] {
+				background-color: transparent !important;
+			}
+		}
+		.break {
+			word-break: break-all;
+		}
+		.info {
+			margin: 0 0 21.98px;
+			text-align: center;
+			display: block;
+			color: var(--on-surface);
+		}
+		.code-error {
+			position: absolute;
+			display: inline-block;
+			line-height: 1;
+			color: var(--on-error);
+			left: 30%;
+			transform: translateX(-20%);
+		}
+
+		.form__actions {
+			padding: 0.5rem 0 0 0;
+		}
+	}
+	@media (max-width: 450px) {
+		form .code-inputs input {
+			margin: 4px;
+			width: 30px;
+		}
+	}
+}
